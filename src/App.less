@@ -1,0 +1,24 @@
+@import './styles/colors.less';
+
+.language-setup {
+  position: fixed;
+  display: flex;
+  padding: 8px;
+  background-color: #fafafa;
+  min-width: 60%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  align-content: center;
+  max-height: 90%;
+  overflow: auto;
+  border: @border;
+}
+
+.lang-list {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+}
