@@ -1,27 +1,42 @@
 import React from 'react';
 import { Provider, observer } from 'mobx-react';
-// import { BrowserRouter as Router, hashHistory } from 'react-router-dom';
-// import { YMInitializer } from 'react-yandex-metrika';
+import {
+  BrowserRouter as Router,
+} from 'react-router-dom';
 
-// import { YmId } from './metrikaHelper';
+import { IntlProvider, addLocaleData } from 'react-intl';
+import ru from 'react-intl/locale-data/ru';
+import en from 'react-intl/locale-data/en';
 
-// import AppRouter from './routes';
-import Map from './containers/Map';
-import LanguageSetup from './containers/LanguageSetup';
+import AppRouter from './routes';
 
-const UI = () => (
-  <div>
-    <Map />
-    <LanguageSetup />
-  </div>
-);
+import localeDataRU from './locales/ru.json';
+import localeDataEN from './locales/en.json';
+addLocaleData([...en, ...ru]);
+
 
 @observer
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      locale: 'en',
+      messages: localeDataRU
+    };
+  }
+
   render() {
     return (
       <Provider store={this.props.store}>
-        <UI />
+        <IntlProvider
+          locale={this.state.locale}
+          key={this.state.locale}
+          messages={this.state.messages}
+        >
+          <Router>
+            <AppRouter />
+          </Router>
+        </IntlProvider>
       </Provider>
     );
   }

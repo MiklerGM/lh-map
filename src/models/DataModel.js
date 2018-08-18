@@ -61,5 +61,5 @@ export default class DataModel {
 
   @observable langauges = [];
 
-  @observable countries = ['United States', 'Somalia', 'Russia'];
+  @observable countries = [];
 }

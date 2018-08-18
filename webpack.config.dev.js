@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -9,7 +10,19 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
+  devServer: {
+    historyApiFallback: true,
+    inline: true,
+    hot: true,
+    hotOnly: true,
+    compress: true,
+    https: false,
+    proxy: {
+      '/graphql': 'http://localhost:4000',
+    }
+  },
   module: {
     rules: [
       {
