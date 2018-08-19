@@ -5,7 +5,7 @@
             "eng": "English"
         },
         "search": ["English", "Fyukbqcrfz", "Английский", "Утпдшыр"],
-        "countries": [],
+        "countries": ["ATG","BRB","BLZ","BWA","BDI","CMR","CAN","COK","DMA","FSM","FJI","GMB","GHA","GRD","GUY","IND","IRL","JAM","KEN","KIR","LSO","LBR","MWI","MLT","MHL","MRT","NAM","NRU","NPL","NGA","NIU","PAK","PLW","PNG","PHL","RWA","KNA","LCA","VCT","WSM","SYC","SLE","SGP","SLB","ZAF","SDS","SDN","SWZ","TON","TTO","UGA","VUT","ZMB","ZWE","GBR","USA","NZL","AUS"],
         "counter":400000000
     },
     "ALB": {
@@ -50,8 +50,8 @@
             "eng": "Breton"
         },
         "search": ["Breton", "<htnjycrbq", "brezhoneg", "Бретонский", "Икуещт"],
-        "countries": [],
-        "counter":0
+        "countries": ["FR-E"],
+        "counter":270000
     },
     "CAT": {
         "i18n": {
@@ -104,8 +104,8 @@
             "eng": "Scottish Gaelic"
         },
         "search": ["Scottish", "Gaelic", " Scots Gaelic", "Celtic", "Шотландский", "Кельтский", "Гэльский"],
-        "countries": [],
-        "counter":0
+        "countries": ["GB-SCT","CA-NS"],
+        "counter":57000
     },
     "DAN": {
         "i18n": {
@@ -397,12 +397,12 @@
     },
     "PER": {
         "i18n": {
-            "rus": "Farsi",
-            "eng": "Фарси"
+            "rus": "Фарси",
+            "eng": "Farsi"
         },
         "search": ["Persian", "Farsi", "Персидский", "Фарси", "فارسی"],
         "countries": ["IRN","AFG","TJK"],
-        "counter":0
+        "counter":110000000
     },
     "FRA": {
         "i18n": {
@@ -410,8 +410,8 @@
             "eng": "French"
         },
         "search": ["French", "Французский", "français"],
-        "countries": [],
-        "counter":0
+        "countries": ["BEL","BEN","BFA","BDI","CMR","CAN","CAF","TCD","COM","COG","COD","DJI","GNQ","FRA","GAB","GIN","HTI","CIV","LUX","MDG","MLI","MCO","NER","RWA","SEN","SYC","CHE","TGO","VUT"],
+        "counter":274000000
     },
     "FIN": {
         "i18n": {
@@ -447,7 +447,7 @@
         },
         "search": ["hrvatski jezik", "Croatian", "Хорватский", "[jhdfncrbq"],
         "countries": ["HRV","BIH"],
-        "counter":0
+        "counter":5600000
     },
     "SWE": {
         "i18n": {
@@ -487,8 +487,8 @@
     },
     "EST": {
         "i18n": {
-            "rus": "Estonian",
-            "eng": "Эстонский"
+            "rus": "Эстонский",
+            "eng": "Estonian"
         },
         "search": ["Estonian", "cnjycrbq", "Эстонский", "eesti"],
         "countries": ["EST"],
