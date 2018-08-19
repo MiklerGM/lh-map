@@ -69,27 +69,39 @@ class Map extends React.Component {
             data: map,
             stroked: true,
             filled: true,
+            wireframe: true,
+            extruded: true,
             lineWidthMinPixels: 2,
+            getLineWidth: 1,
+            lineWidthScale: 20,
             getElevation: (f) => {
-              const { name, admin, adm0_a3 } = f.properties;
-              if (name === admin) { // Spain
-                return adm[adm0_a3] === true ? 100 : 10;
+              const { region, adm0_a3: key } = f.properties;
+              if (region === '') { // Spain
+                return adm[key] === true ? 1000 : 10;
               }
               // region
-              return adm[adm0_a3] === true ? 110 : 0;
+              return adm[key] === true ? 110 : 0;
             },
-            // lineWidthMinPixels: 2,
-            getLineColor: () => [100, 100, 100],
+            getLineColor: (f) => {
+              const { region, adm0_a3: key } = f.properties;
+              const sel = adm[key] === true;
+              const sub = (region !== '');
+              if (sub === true && sel === false) {
+                return [100, 100, 100, 0];
+              }
+              return [100, 100, 100, 255];
+            },
             getFillColor: (f) => {
-              const { name, admin, adm0_a3 } = f.properties;
-              const sel = adm[adm0_a3];
-              const sub = (name !== admin);
+              const { region, adm0_a3: key } = f.properties;
+              const sel = adm[key] === true;
+              const sub = (region !== '');
               if (sub === true && sel === false) {
                 return [200, 200, 200, 0]; // transparent
               }
               return sel ? [150, 150, 250, 255] : [200, 200, 200, 255];
             },
             updateTriggers: {
+              getLineColor: adm,
               getFillColor: adm,
               getElevation: adm,
             },
