@@ -53,7 +53,6 @@ class Map extends React.Component {
   render() {
     const { map, selected, lang } = this.props;
     const { viewState } = this.state;
-
     // convert selected languages to countries
     const adm = Object.keys(selected).filter(f => selected[f] === true)
       .reduce((p, c) => ([...p, ...lang[c].countries]), []) // list of all countries

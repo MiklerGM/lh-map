@@ -7,7 +7,7 @@ class ButtonTag extends React.Component {
       <button
         className='button-tag'
         type='button'
-        onClick={() => this.props.cb({ [this.props.name]: false })}
+        onClick={() => this.props.cb(this.props.name)}
       >
         {this.props.value}
         <i className="lnr lnr-cross button-tag__close" />

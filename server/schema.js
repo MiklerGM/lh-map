@@ -86,7 +86,7 @@ const schema = new GraphQLSchema({
           }
         },
         resolve: (obj, args) => {
-          console.log('langauge type resole', obj, args);
+          console.log('language type resole', obj, args);
           return pgpool.query(`
             SELECT * FROM languages
             WHERE id = $1

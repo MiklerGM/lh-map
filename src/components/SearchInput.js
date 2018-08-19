@@ -1,8 +1,6 @@
 import React from 'react';
 import Select, { Option } from 'rc-select';
 
-// import langData from '../../data/lang.json';
-
 class SearchInput extends React.Component {
   state = {
     disabled: false,
@@ -15,7 +13,7 @@ class SearchInput extends React.Component {
         <Select
           disabled={this.state.disabled}
           style={{ width: '400px' }}
-          onSelect={v => this.props.cb({ [v]: true })}
+          onSelect={e => this.props.cb(e)}
           notFoundContent=""
           dropdownMenuStyle={{ maxHeight: 300 }}
           placeholder='placeholder'
@@ -29,11 +27,13 @@ class SearchInput extends React.Component {
           // onChange={this.onChange}
           // filterOption={false}
         >
-          {Object.keys(this.props.selectedLang)
-            .filter(key => !this.props.selectedLang[key])
-            .map((i) => {
-            return <Option value={i} key={i} text={String(i)}> { i } </Option>;
-          })
+          {Object.keys(this.props.selected)
+            .filter(key => !this.props.selected[key])
+            .map(i => (
+              <Option value={i} key={i} text={String(i)}>
+                { i }
+              </Option>
+            ))
           }
         </Select>
       </div>

@@ -30,13 +30,23 @@ class App extends React.Component {
     }), {}),
   }
 
+  select(lng) {
+    const { selected } = this.state;
+    this.setState({
+      selected: {
+        ...selected,
+        [lng]: !selected[lng],
+      }
+    });
+  }
+
   render() {
     const { intl, selected } = this.state;
     return (
       <IntlProvider {...intl}>
         <div>
           <Map map={map} lang={lang} selected={selected} />
-          <Main />
+          <Main lang={lang} selected={selected} select={lng => this.select(lng)} />
         </div>
       </IntlProvider>
     );
