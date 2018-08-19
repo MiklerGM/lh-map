@@ -1,5 +1,6 @@
 import React from 'react';
 import Select, { Option } from 'rc-select';
+import { FormattedMessage } from 'react-intl';
 
 class SearchInput extends React.Component {
   state = {
@@ -31,7 +32,7 @@ class SearchInput extends React.Component {
             .filter(key => !this.props.selected[key])
             .map(i => (
               <Option value={i} key={i} text={String(i)}>
-                { i }
+                <FormattedMessage id={`${i}.full`} />
               </Option>
             ))
           }

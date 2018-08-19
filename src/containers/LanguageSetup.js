@@ -3,14 +3,6 @@ import React from 'react';
 import ButtonToggle from '../components/ButtonToggle';
 
 class LanguageSetup extends React.Component {
-  handleData(data) {
-  //   Object.keys(data).map((cur) => {
-  //     this.props.store.data.data[cur] = data[cur];
-  //     return false;
-  //   });
-    console.log('data', data);
-  }
-
   proceed() {
     this.props.updateUI({ langGrid: false });
   }
@@ -28,7 +20,6 @@ class LanguageSetup extends React.Component {
             <ButtonToggle
               key={`key_${lang}`}
               name={lang}
-              label={lang}
               checked={this.props.selected[lang]}
               cb={e => this.props.cb(e)}
             />
