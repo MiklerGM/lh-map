@@ -26,8 +26,56 @@
 .langauge-search {
   position: fixed;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 8px;
+  border: 1px solid @border;
+  border-radius: 2px;
+  background-color: #fafafa;
   bottom: 10px;
-  right: 20px;
-  width: 50%;
+  left: 20px;
+  // width: 50%;
   height: 60px;
+  @media screen and (max-width: 600px) {
+    width: 90%;
+    left: 5%;
+  }
+}
+
+.langauge-bread {
+  position: fixed;
+  display: flex;
+  width: 350px;
+  flex-wrap: wrap-reverse;
+  bottom: 100px;
+  left: 20px;
+  @media screen and (max-width: 600px) {
+    width: 90%;
+    left: 5%;
+  }
+}
+
+.button-tag {
+  background-color: #f0f8fa;
+  color: @black;
+  min-width: 50px;
+  max-width: 120px;
+  font-size: 12px;
+  padding: 2px 3px;
+  height: 25px;
+  border: 1px solid @border;
+  border-radius: 2px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  &:hover {
+    border: 1px solid @main-blue;
+    color: @dark-grey;
+  }
+
+}
+
+.button-tag__close {
+  margin-bottom:  0;
+  margin-left: 3px;
+
 }

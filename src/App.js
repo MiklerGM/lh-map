@@ -34,7 +34,10 @@ class App extends React.Component {
     const { intl, selected } = this.state;
     return (
       <IntlProvider {...intl}>
-        <Map map={map} lang={lang} selected={selected} />
+        <div>
+          <Map map={map} lang={lang} selected={selected} />
+          <Main />
+        </div>
       </IntlProvider>
     );
   }

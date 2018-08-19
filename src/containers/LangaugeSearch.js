@@ -1,14 +1,18 @@
 import React from 'react';
 
-class LangaugeSearch extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+import SearchInput from '../components/SearchInput';
 
+class LangaugeSearch extends React.Component {
   render() {
     return (
-      <div className='langauge-search layer-3'>
-        LangaugeSearch
+      <div className='langauge-search layer-4'>
+        <p>LangaugeSearch</p>
+        <SearchInput
+          selectedLang={this.props.selectedLang}
+          cb={this.props.cb}
+        />
+        <button onClick={() => this.props.updateUI({ langgrid: true })}> more </button>
+        <button> share </button>
       </div>
     );
   }

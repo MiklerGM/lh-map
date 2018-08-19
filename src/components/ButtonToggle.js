@@ -7,7 +7,7 @@ const ButtonToggle = ({ name, checked, label, cb, disabled = false }) => (
     htmlFor={name}
     className={checked ? 'button-toggle__checked button-toggle ' : 'button-toggle '}
     onChange={(e) => {
-      cb({ [name]: Number(e.target.checked) });
+      cb({ [name]: Boolean(e.target.checked) });
     }}
   >
     <input
@@ -17,7 +17,7 @@ const ButtonToggle = ({ name, checked, label, cb, disabled = false }) => (
       checked={checked}
       disabled={disabled}
       onChange={(e) => {
-        cb({ [name]: Number(e.target.checked) });
+        cb({ [name]: Boolean(e.target.checked) });
       }}
     />
     {label}
@@ -27,7 +27,7 @@ const ButtonToggle = ({ name, checked, label, cb, disabled = false }) => (
 
 ButtonToggle.propTypes = {
   name: PropTypes.string.isRequired,
-  checked: PropTypes.number.isRequired,
+  checked: PropTypes.bool.isRequired,
   label: PropTypes.string.isRequired,
   cb: PropTypes.func.isRequired
 };

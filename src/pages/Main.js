@@ -2,23 +2,49 @@ import React from 'react';
 
 import LanguageSetup from '../containers/LanguageSetup';
 import LangaugeSearch from '../containers/LangaugeSearch';
+import TagsWrapper from '../containers/TagsWrapper';
+
+import langData from '../../data/lang.json';
+import selectedLang from '../../data/selectedLang.json';
 
 class Main extends React.Component {
-  constructor(props) {
-    super(props);
+  state = {
+    selectedLang: selectedLang,
+    data: langData,
+    runtime: {
+      langgrid: false,
+    }
+  };
+
+  handleSelectedLang(value) {
+    this.setState({ selectedLang: { ...this.state.selectedLang, ...value } });
   }
 
-  componentDidMount() {
-    console.log('main mount:', this.props);
+  updateUI(value) {
+    this.setState({ runtime: { ...this.state.runtime, ...value } });
   }
 
   render() {
     return (
       <div>
-        <div className='language-setup layer-3'>
-          <h1> Main </h1>
-        </div>
-        <LangaugeSearch />
+        <LangaugeSearch
+          selectedLang={this.state.selectedLang}
+          updateUI={v => this.updateUI(v)}
+          cb={(e) => this.handleSelectedLang(e)}
+        />
+        <TagsWrapper
+          selectedLang={this.state.selectedLang}
+          cb={(e) => this.handleSelectedLang(e)}
+        />
+        {this.state.runtime.langgrid
+          ? <LanguageSetup
+            data={this.state.data}
+            selectedLang={this.state.selectedLang}
+            updateUI={v => this.updateUI(v)}
+            cb={(e) => this.handleSelectedLang(e)}
+          />
+          : null
+        }
       </div>
     );
   }
