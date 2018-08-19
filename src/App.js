@@ -1,8 +1,5 @@
 import React from 'react';
 import { Provider, observer } from 'mobx-react';
-import {
-  BrowserRouter as Router,
-} from 'react-router-dom';
 
 import { IntlProvider, addLocaleData } from 'react-intl';
 import ru from 'react-intl/locale-data/ru';
@@ -21,7 +18,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       locale: 'en',
-      messages: localeDataRU
+      messages: localeDataEN
     };
   }
 
@@ -33,9 +30,7 @@ class App extends React.Component {
           key={this.state.locale}
           messages={this.state.messages}
         >
-          <Router>
-            <AppRouter />
-          </Router>
+          <AppRouter />
         </IntlProvider>
       </Provider>
     );

@@ -1,4 +1,3 @@
-// languages 
 {
     "ENG": {
         "i18n": {
@@ -43,7 +42,7 @@
         },
         "search": ["Баскский", "<fcrcrbq", "Basque", "Ифыйгу", "euskera", "euskara"],
         "contries": ["ES-PV","ES-NC"],
-        "counter":1185500 
+        "counter":1185500
     },
     "BRE": {
         "i18n": {
