@@ -4,13 +4,10 @@ import App from './App';
 
 import './style.less';
 import './App.less';
-import StoreModel from './models';
-
-window.store = new StoreModel();
 
 function renderApp(component) {
   const Application = component;
-  render(<Application store={window.store} />, document.body.appendChild(document.createElement('div')));
+  render(<Application />, document.body.appendChild(document.createElement('div')));
 }
 
 renderApp(App);
