@@ -27,7 +27,7 @@ class App extends React.Component {
     selected: Object.keys(lang).reduce((prev, cur) => ({
       ...prev,
       [cur]: false
-    })),
+    }), {}),
   }
 
   render() {
