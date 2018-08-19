@@ -14,7 +14,9 @@ class LanguageSearch extends React.Component {
         <button onClick={() => this.props.updateUI({ langGrid: true })}>
           {' more '}
         </button>
-        <button>{' share '}</button>
+        <button>
+          {' share '}
+        </button>
       </div>
     );
   }

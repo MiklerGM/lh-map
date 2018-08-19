@@ -5,20 +5,19 @@ import DeckGL, {
 } from 'deck.gl';
 
 class Map extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      width: window.innerWidth,
-      height: window.innerHeigh,
-      viewState: {
+  state = {
+    width: window.innerWidth,
+    height: window.innerHeigh,
+    viewState: window.store.viewState === null
+      ? {
         longitude: 0,
         latitude: 0,
         zoom: 1,
         pitch: 0,
         bearing: 0
       }
-    };
-  }
+      : window.store.viewState,
+  };
 
   componentDidMount() {
     window.addEventListener('resize', () => this.resize(), false);
@@ -47,6 +46,7 @@ class Map extends React.Component {
   }
 
   updateViewState(value) {
+    window.store.viewState = value;
     this.setState({ viewState: value });
   }
 

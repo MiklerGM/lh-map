@@ -16,16 +16,18 @@ import Map from './containers/Map';
 import localeDataRU from './locales/ru.json';
 import localeDataEN from './locales/en.json';
 
+console.time('Calculating Locales');
 const localeLang = Object.keys(lang).reduce((p, c) => ({
   en: {
     ...p.en,
-    [`${c}.full`]: lang[c].i18n.eng  
+    [`${c}.full`]: lang[c].i18n.eng
   },
   ru: {
     ...p.ru,
-    [`${c}.full`]: lang[c].i18n.rus  
+    [`${c}.full`]: lang[c].i18n.rus
   }
 }), { en: {}, ru: {} });
+console.timeEnd('Calculating Locales');
 
 addLocaleData([...en, ...ru]);
 
@@ -45,19 +47,23 @@ class App extends React.Component {
 
   state = {
     intl: this.locales.ru,
-    selected: Object.keys(lang).reduce((prev, cur) => ({
-      ...prev,
-      [cur]: false
-    }), {}),
+    selected: window.store.selected === null
+      ? Object.keys(lang).reduce((prev, cur) => ({
+        ...prev,
+        [cur]: false
+      }), {})
+      : window.store.selected,
   }
 
   select(lng) {
     const { selected } = this.state;
+    const newSelected = {
+      ...selected,
+      [lng]: !selected[lng],
+    };
+    window.store.selected = newSelected;
     this.setState({
-      selected: {
-        ...selected,
-        [lng]: !selected[lng],
-      }
+      selected: newSelected
     });
   }
 
