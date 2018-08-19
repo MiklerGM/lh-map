@@ -5,8 +5,5 @@ import App from './App';
 
 import './style.less';
 import './App.less';
-import StoreModel from './models';
 
-window.store = new StoreModel();
-
-ReactDOM.render(<App store={window.store} />, document.body.appendChild(document.createElement('div')));
+ReactDOM.render(<App />, document.body.appendChild(document.createElement('div')));

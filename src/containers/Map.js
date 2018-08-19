@@ -3,14 +3,7 @@ import DeckGL, {
   GeoJsonLayer,
   MapView,
 } from 'deck.gl';
-import { inject, observer } from 'mobx-react';
 
-const GEOJSON =
-  'https://raw.githubusercontent.com/datasets/geo-boundaries-world-110m/master/countries.geojson'; //eslint-disable-line
-
-
-@inject('store')
-@observer
 class Map extends React.Component {
   constructor(props) {
     super(props);
@@ -37,17 +30,20 @@ class Map extends React.Component {
   }
 
   get view() {
+    const { width, height } = this.state;
     return new MapView({
       id: 'id-view',
-      width: this.state.width,
-      height: this.state.height,
+      width,
+      height,
       controller: true
     });
   }
 
   resize() {
-    this.setState({ width: window.innerWidth });
-    this.setState({ height: window.innerHeight });
+    this.setState({
+      width: window.innerWidth,
+      height: window.innerHeight
+    });
   }
 
   updateViewState(value) {
@@ -55,20 +51,54 @@ class Map extends React.Component {
   }
 
   render() {
+    const { map, selected, lang } = this.props;
+    const { viewState } = this.state;
+
+    // convert selected languages to countries
+    const adm = Object.keys(selected).filter(f => selected[f] === true)
+      .reduce((p, c) => ([...p, ...lang[c].countries]), []) // list of all countries
+      .reduce((p, c) => ({ ...p, [c]: true }), {}); // uniq countries
+
     return (
       <DeckGL
         views={this.view}
-        viewState={this.state.viewState}
+        viewState={viewState}
         onViewStateChange={v => this.updateViewState(v.viewState)}
         layers={[
           new GeoJsonLayer({
             id: 'geojson-layer',
-            data: GEOJSON,
+            data: map,
             stroked: true,
             filled: true,
             lineWidthMinPixels: 2,
-            getLineColor: () => [255, 255, 255],
-            getFillColor: d => this.props.store.data.countries.includes(d.properties.name) ? [150, 150, 250] : [200, 200, 200]
+            getElevation: (f) => {
+              const { name, admin, adm0_a3 } = f.properties;
+              if (name === admin) { // Spain
+                return adm[adm0_a3] === true ? 100 : 10;
+              }
+              // region
+              return adm[adm0_a3] === true ? 110 : 0;
+            },
+            // lineWidthMinPixels: 2,
+            getLineColor: () => [100, 100, 100],
+            getFillColor: (f) => {
+              const { name, admin, adm0_a3 } = f.properties;
+              const sel = adm[adm0_a3];
+              const sub = (name !== admin);
+              if (sub === true && sel === false) {
+                return [200, 200, 200, 0]; // transparent
+              }
+              return sel ? [150, 150, 250, 255] : [200, 200, 200, 255];
+            },
+            updateTriggers: {
+              getFillColor: adm,
+              getElevation: adm,
+            },
+            transitions: {
+              getFillColor: 1000,
+              getElevation: 1000,
+              geometry: 3000,
+            }
           })
         ]}
       />

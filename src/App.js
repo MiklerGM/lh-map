@@ -1,43 +1,41 @@
 import React from 'react';
-import { Provider, observer } from 'mobx-react';
-import {
-  BrowserRouter as Router,
-} from 'react-router-dom';
 
 import { IntlProvider, addLocaleData } from 'react-intl';
 import ru from 'react-intl/locale-data/ru';
 import en from 'react-intl/locale-data/en';
 
-import AppRouter from './routes';
+// Need to fetch this data instead of importing
+import map from '../data/map.json';
+import lang from '../data/lang.json';
+
+// import AppRouter from './routes';
+import Main from './pages/Main';
+// import Result from './pages/Result';
+import Map from './containers/Map';
 
 import localeDataRU from './locales/ru.json';
-import localeDataEN from './locales/en.json';
+// import localeDataEN from './locales/en.json';
 addLocaleData([...en, ...ru]);
 
-
-@observer
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+  state = {
+    intl: {
       locale: 'en',
+      key: 'en',
       messages: localeDataRU
-    };
+    },
+    selected: Object.keys(lang).reduce((prev, cur) => ({
+      ...prev,
+      [cur]: false
+    })),
   }
 
   render() {
+    const { intl, selected } = this.state;
     return (
-      <Provider store={this.props.store}>
-        <IntlProvider
-          locale={this.state.locale}
-          key={this.state.locale}
-          messages={this.state.messages}
-        >
-          <Router>
-            <AppRouter />
-          </Router>
-        </IntlProvider>
-      </Provider>
+      <IntlProvider {...intl}>
+        <Map map={map} lang={lang} selected={selected} />
+      </IntlProvider>
     );
   }
 }
