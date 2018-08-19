@@ -5,7 +5,7 @@
             "eng": "English"
         },
         "search": ["English", "Fyukbqcrfz", "Английский", "Утпдшыр"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "ALB": {
@@ -14,7 +14,7 @@
             "eng": "Albanian"
         },
         "search": ["Albanian", "Fk,fycrbq", "Албанский", "Фдифтшфт", "Shqip"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "ARA": {
@@ -23,7 +23,7 @@
             "eng": "Arabic"
         },
         "search": ["Арабский", "Fhf,crbq", "Фкфишс", "Arabic", "العربية"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "ARM": {
@@ -32,7 +32,7 @@
             "eng": "Armenian"
         },
         "search": ["Armenian", "Fhvzycrbq", "Армянский", "Фкьутшфт", "Հայերեն"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "BAQ": {
@@ -41,7 +41,7 @@
             "eng": "Basque"
         },
         "search": ["Баскский", "<fcrcrbq", "Basque", "Ифыйгу", "euskera", "euskara"],
-        "contries": ["ES-PV","ES-NC"],
+        "countries": ["ES-PV","ES-NC"],
         "counter":1185500
     },
     "BRE": {
@@ -50,7 +50,7 @@
             "eng": "Breton"
         },
         "search": ["Breton", "<htnjycrbq", "brezhoneg", "Бретонский", "Икуещт"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "CAT": {
@@ -59,7 +59,7 @@
             "eng": "Catalan (Valencian)"
         },
         "search": ["Catalan", "Velencian", "català", "valencià", "Каталанский", "Каталонский", "Валенсийский"],
-        "contries": ["ES-CT","ES-VC","AND"],
+        "countries": ["ES-CT","ES-VC","AND"],
         "counter":11530160
     },
     "WEL": {
@@ -68,7 +68,7 @@
             "eng": "Welsh"
         },
         "search": ["Welsh", "Cymraeg", "Валлийсий", "Уэльский", "Цудыр", "Dfkkbqcrbq"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "HUN": {
@@ -77,7 +77,7 @@
             "eng": "Hungarian"
         },
         "search": ["Hungarian", "Венгерский", "Dthutycrbq", "Ргтпфкшфт", "Magyar"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "GRE": {
@@ -86,7 +86,7 @@
             "eng": "Greek"
         },
         "search": ["Greek", "Uhtxtcrbq", "Пкуул", "Греческий", "ελληνικά"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "GEO": {
@@ -95,7 +95,7 @@
             "eng": "Georgian"
         },
         "search": ["ქართული", "Georgian", "Uhepbycrbq", "Грузинский", "Пущкпшфт"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "GLA": {
@@ -104,7 +104,7 @@
             "eng": "Scottish Gaelic"
         },
         "search": ["Scottish", "Gaelic", " Scots Gaelic", "Celtic", "Шотландский", "Кельтский", "Гэльский"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "DAN": {
@@ -113,7 +113,7 @@
             "eng": "Danish"
         },
         "search": ["Danish", "Lfncrbq", "Датский", "Вфтшыр"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "RSL": {
@@ -122,7 +122,7 @@
             "eng": "Russian Sign Language"
         },
         "search": ["Russian Sign Language", "Sign Language", "Русский жестовый", "Жестовый", "Язык немых"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "HEB": {
@@ -131,7 +131,7 @@
             "eng": "Hebrew"
         },
         "search": ["עברית", "Hebrew", "Bdhbn", "Иврит", "Руикуц"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "IND": {
@@ -140,7 +140,7 @@
             "eng": "Indonesian"
         },
         "search": ["Indonesian", "Byljytpbqcrbq", "Индонезийский", "Штвщтуышфт", "Bahasa Indonesia"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "GLE": {
@@ -149,7 +149,7 @@
             "eng": "Irish"
         },
         "search": ["Irish", "Bhkfylcrbq", "Ирландский", "Шкшыр", "Gaeilge"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "ICE": {
@@ -158,7 +158,7 @@
             "eng": "Исландский"
         },
         "search": ["Icelandic", "Исландский", "Шсудфтвшс", "Bckflycrbq", "Íslenska"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "SPA": {
@@ -167,7 +167,7 @@
             "eng": "Spanish"
         },
         "search": ["Spanish", "Bcgfycrbq", "Испанский", "Ызфтшыр", "Español", "Castilian"],
-        "contries": ["ARG","BOL","VEN","GTM","HND","DOM","ESP","COL","CRI","CUB","MEX","NIC","PAN","PRY","PER","PRI","URY","CHL","ECU","GNQ","SLV"],
+        "countries": ["ARG","BOL","VEN","GTM","HND","DOM","ESP","COL","CRI","CUB","MEX","NIC","PAN","PRY","PER","PRI","URY","CHL","ECU","GNQ","SLV"],
         "counter":437000000
     },
     "ITA": {
@@ -176,7 +176,7 @@
             "eng": "Italian"
         },
         "search": ["Italian", "Bnfkmzycrbq", "Итальянский", "Шефдшфт"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "TLH": {
@@ -185,7 +185,7 @@
             "eng": "Klingon"
         },
         "search": ["Klingon", "tlhIngan Hol", "Клингонский"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "KOM": {
@@ -194,7 +194,7 @@
             "eng": "Komi"
         },
         "search": ["Коми", "Komi", "коми кыв", "rjvb", "лщьш"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "COP": {
@@ -203,7 +203,7 @@
             "eng": "Coptic"
         },
         "search": [],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "KOR": {
@@ -212,7 +212,7 @@
             "eng": "Korean"
         },
         "search": ["Korean", "한국어", "Корейский", "Rjhtqcrbq"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "LAT": {
@@ -221,7 +221,7 @@
             "eng": "Latin"
         },
         "search": ["Latin", "Латинский", "Kfnbycrbq", "latine", "lingua latina"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "LAV": {
@@ -230,7 +230,7 @@
             "eng": "Latvian"
         },
         "search": ["Latvian", "latviešu valoda", "Латвийский", "Kfndbqcrbq"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "LIT": {
@@ -239,7 +239,7 @@
             "eng": "Lithuanian"
         },
         "search": ["Lithuanian", "Литовский", "Kbnjdcrbq", "lietuvių kalbacc"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "MLT": {
@@ -248,7 +248,7 @@
             "eng": "Meltese"
         },
         "search": ["Meltese", "Malti", "Мальтийский"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "GLV": {
@@ -257,7 +257,7 @@
             "eng": "Manx"
         },
         "search": ["Manx", "Мэнский", "Gailck", "Gaelg"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "GER": {
@@ -266,7 +266,7 @@
             "eng": "German"
         },
         "search": ["German", "Немецкий", "Ytvtwrbq", "Deutsch"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "NEP": {
@@ -275,7 +275,7 @@
             "eng": "Nepali"
         },
         "search": ["Nepali", "Nepalian", "Непальский", "Непали", "नेपाली"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "DUT": {
@@ -284,7 +284,7 @@
             "eng": "Dutch"
         },
         "search": ["Dutch", "Нидерландский", "Голандский", "Holand", "Flemish", "Фломанский", "Nederlands", "Vlaams"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "NOR": {
@@ -293,7 +293,7 @@
             "eng": "Norwegian"
         },
         "search": ["Norwegian", "Norsk", "Норвежский"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "POL": {
@@ -302,7 +302,7 @@
             "eng": "Polish"
         },
         "search": ["Polish", "Польский", "język polski", "polszczyzna"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "POR": {
@@ -311,7 +311,7 @@
             "eng": "Portuguese"
         },
         "search": ["Portuguese", "Португальский", "Gjhneufkmcrbq"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "RUN": {
@@ -320,7 +320,7 @@
             "eng": "Romanian"
         },
         "search": ["Romanian", "Moldavian", "Moldovan", "Румынский", "Rumanian", "Молдовский", "română"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "RUS": {
@@ -329,7 +329,7 @@
             "eng": "Russian"
         },
         "search": ["Russian", "Русский", "Российский"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "SRP": {
@@ -338,7 +338,7 @@
             "eng": "Serbian"
         },
         "search": ["српски језик", "Serbian", "Сербский"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "SLO": {
@@ -347,7 +347,7 @@
             "eng": "Slovak"
         },
         "search": ["Slovenčina", "Slovak", "Словацкий"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "TAI": {
@@ -356,7 +356,7 @@
             "eng": "Thai"
         },
         "search": ["ไทย", "Thai", "Тайский"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "TAT": {
@@ -365,7 +365,7 @@
             "eng": "Tatar"
         },
         "search": ["Tatar", "Tatar tele", "Татарский", "татар теле"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "TUR": {
@@ -374,7 +374,7 @@
             "eng": "Turkish"
         },
         "search": ["Turkish", "Турецкий", "Türkçe"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "UKR": {
@@ -383,7 +383,7 @@
             "eng": "Ukranian"
         },
         "search": ["Украинский", "Ukranian", "Українська"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "FAO": {
@@ -392,7 +392,7 @@
             "eng": "Faroese"
         },
         "search": ["føroyskt", "Faroese", "Фарерский"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "PER": {
@@ -401,7 +401,7 @@
             "eng": "Фарси"
         },
         "search": ["Persian", "Farsi", "Персидский", "Фарси", "فارسی"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "FRA": {
@@ -410,7 +410,7 @@
             "eng": "French"
         },
         "search": ["French", "Французский", "français"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "FIN": {
@@ -419,7 +419,7 @@
             "eng": "Finnish"
         },
         "search": ["Finnish", "Финский", "suomi", "suomen kieli"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "HIN": {
@@ -428,7 +428,7 @@
             "eng": "Hindi"
         },
         "search": ["Hindi", "Хинди", "{bylb", "Рштвш", "हिंदी", "हिन्दी"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "URD": {
@@ -437,7 +437,7 @@
             "eng": "Urdu"
         },
         "search": ["Urdu", "اردو", "Урду", "Ehle"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "HRV": {
@@ -446,7 +446,7 @@
             "eng": "Croatian"
         },
         "search": ["hrvatski jezik", "Croatian", "Хорватский", "[jhdfncrbq"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "SWE": {
@@ -455,7 +455,7 @@
             "eng": "Swedish"
         },
         "search": ["Swedish", "Svenska", "IDtlcrbq", "Шведский"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "CZE": {
@@ -464,7 +464,7 @@
             "eng": "Czech"
         },
         "search": ["čeština", "český jazyk", "Czech", "Чешский", "Xticrbq"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "CHR": {
@@ -473,7 +473,7 @@
             "eng": "Cherokee"
         },
         "search": ["Cherokee", "ᏣᎳᎩ ᎦᏬᏂᎯᏍᏗ", "ᎦᏬᏂᎯᏍᏗ", "Чероки", "Tsalagi", "Тсалаги"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "CHV": {
@@ -482,7 +482,7 @@
             "eng": "Chuvash"
         },
         "search": ["Chuvash", "Чувашский", "чӑваш чӗлхи", "Xedficrbq"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "EST": {
@@ -491,7 +491,7 @@
             "eng": "Эстонский"
         },
         "search": ["Estonian", "cnjycrbq", "Эстонский", "eesti"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "EPO": {
@@ -500,7 +500,7 @@
             "eng": "Esperanto"
         },
         "search": ["Esperanto", "Эсперанто"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "YKG": {
@@ -509,7 +509,7 @@
             "eng": "Yukaghir"
         },
         "search": ["Юкагирский", "Yukaghir", "тундровый", "вадульский", "Tundra Yukaghir", "Northern Yukaghir", "Одун ажуу", "одульский", "колы́мский"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "JAP": {
@@ -518,7 +518,7 @@
             "eng": "Japanese"
         },
         "search": ["Японский", "Japanese", "Zgjcyrbq"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "CHN": {
@@ -527,7 +527,7 @@
             "eng": "Simplified chinese"
         },
         "search": [" 汉语", "hanyu", "Мандарин", "Путунхуа", "Putonghua"],
-        "contries": [],
+        "countries": [],
         "counter":0
     },
     "SCH": {
@@ -536,7 +536,7 @@
             "eng": "Traditional chinese"
         },
         "search": ["漢語", "Cantonese", "Кантонский", "Guǎngdōng huà"],
-        "contries": [],
+        "countries": [],
         "counter":0
     }
 }
