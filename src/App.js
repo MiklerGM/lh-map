@@ -14,16 +14,37 @@ import Main from './pages/Main';
 import Map from './containers/Map';
 
 import localeDataRU from './locales/ru.json';
-// import localeDataEN from './locales/en.json';
+import localeDataEN from './locales/en.json';
+
+const localeLang = Object.keys(lang).reduce((p, c) => ({
+  en: {
+    ...p.en,
+    [`${c}.full`]: lang[c].i18n.eng  
+  },
+  ru: {
+    ...p.ru,
+    [`${c}.full`]: lang[c].i18n.rus  
+  }
+}), { en: {}, ru: {} });
+
 addLocaleData([...en, ...ru]);
 
 class App extends React.Component {
-  state = {
-    intl: {
+  locales = {
+    en: {
       locale: 'en',
       key: 'en',
-      messages: localeDataRU
+      messages: { ...localeDataEN, ...localeLang.en }
     },
+    ru: {
+      locale: 'ru',
+      key: 'ru',
+      messages: { ...localeDataRU, ...localeLang.ru }
+    }
+  }
+
+  state = {
+    intl: this.locales.ru,
     selected: Object.keys(lang).reduce((prev, cur) => ({
       ...prev,
       [cur]: false
