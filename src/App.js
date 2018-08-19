@@ -15,6 +15,7 @@ import Map from './containers/Map';
 
 import localeDataRU from './locales/ru.json';
 import localeDataEN from './locales/en.json';
+import RareLanguages from './containers/RareLanguages';
 
 console.time('Calculating Locales');
 const localeLang = Object.keys(lang).reduce((p, c) => ({
@@ -74,6 +75,7 @@ class App extends React.Component {
         <div>
           <Map map={map} lang={lang} selected={selected} />
           <Main lang={lang} selected={selected} select={lng => this.select(lng)} />
+          <RareLanguages selected={selected} />
         </div>
       </IntlProvider>
     );
