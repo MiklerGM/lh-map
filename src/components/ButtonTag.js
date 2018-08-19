@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FormattedMessage } from 'react-intl';
+
 
 class ButtonTag extends React.Component {
   render() {
@@ -9,7 +11,7 @@ class ButtonTag extends React.Component {
         type='button'
         onClick={() => this.props.cb({ [this.props.name]: false })}
       >
-        {this.props.value}
+        <FormattedMessage id={`${this.props.value}.full`} />
         <i className="lnr lnr-cross button-tag__close" />
       </button>
     );

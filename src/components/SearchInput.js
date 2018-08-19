@@ -1,5 +1,6 @@
 import React from 'react';
 import Select, { Option } from 'rc-select';
+import { FormattedMessage } from 'react-intl';
 
 // import langData from '../../data/lang.json';
 
@@ -32,8 +33,12 @@ class SearchInput extends React.Component {
           {Object.keys(this.props.selectedLang)
             .filter(key => !this.props.selectedLang[key])
             .map((i) => {
-            return <Option value={i} key={i} text={String(i)}> { i } </Option>;
-          })
+              return (
+                <Option value={i} key={i} text={String(i)}>
+                  <FormattedMessage id={`${i}.full`} />
+                </Option>
+              );
+            })
           }
         </Select>
       </div>
