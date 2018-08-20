@@ -12,7 +12,7 @@ const ButtonToggle = ({ name, checked, cb }) => (
           htmlFor={name}
           className={checked ? 'button-toggle__checked button-toggle ' : 'button-toggle '}
           onChange={(e) => {
-            cb({ [name]: Boolean(e.target.checked) });
+            cb(name);
           }}
         >
           <input
@@ -20,8 +20,8 @@ const ButtonToggle = ({ name, checked, cb }) => (
             type='checkbox'
             className='button-toggle'
             checked={checked}
-            onChange={(e) => {
-              cb({ [name]: Boolean(e.target.checked) });
+            onChange={() => {
+              cb(name);
             }}
           />
           {fullname}

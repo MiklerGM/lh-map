@@ -27,7 +27,7 @@ export default class RareLanguages extends React.Component {
     return (
       <div style={style}>
         {Object.keys(decorations).map(d => (
-          selected[d] && <img width={w} heigh={w} src={decorations[d]} alt={d} />
+          selected[d] && <img width={w} heigh={w} key={d} src={decorations[d]} alt={d} />
         ))}
       </div>
     );
