@@ -9,8 +9,9 @@
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.dev.js",
     "server": "node server/server.js",
-    "build": "webpack",
-    "release": "webpack",
+    "build": "rimraf dist && npm-run-all build:*",
+    "build:prod": "webpack --config ./webpack.config.prod.js",
+    "build:ssr": "webpack --config ./webpack.config.ssr.js",
     "clean": "rimraf node_modules dist"
   },
   "devDependencies": {
@@ -45,6 +46,7 @@
     "less": "^3.8.1",
     "less-loader": "^4.0.5",
     "luma.gl": "^6.0.0",
+    "mini-css-extract-plugin": "^0.4.1",
     "nodemon": "^1.18.3",
     "npm": "^6.3.0",
     "pg": "^7.4.3",
@@ -58,6 +60,7 @@
     "style-loader": "^0.22.1",
     "url-loader": "^1.0.1",
     "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0"
+    "webpack-cli": "^3.1.0",
+    "webpack-node-externals": "^1.7.2"
   }
 }

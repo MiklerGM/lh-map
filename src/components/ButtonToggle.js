@@ -2,8 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
-import './ButtonToggle.less';
-
 const ButtonToggle = ({ name, checked, cb }) => (
   <FormattedMessage id={`${name}.full`}>
     {(fullname) => {
