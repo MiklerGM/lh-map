@@ -20,7 +20,9 @@ module.exports = {
     compress: true,
     https: false,
     proxy: {
-      '/graphql': 'http://localhost:4000',
+      '/preview': 'http://localhost:4000',
+      '/share': 'http://localhost:4000',
+      '/result': 'http://localhost:4000',
     }
   },
   module: {

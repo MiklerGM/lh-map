@@ -17,6 +17,7 @@ class Main extends React.Component {
     return (
       <div>
         <LanguageSearch
+          share={this.props.share}
           selected={this.props.selected}
           updateUI={v => this.updateUI(v)}
           cb={this.props.select}
@@ -26,14 +27,13 @@ class Main extends React.Component {
           cb={this.props.select}
         />
         {this.state.langGrid
-          ? (
+          && (
             <LanguageSetup
               data={this.props.lang}
               selected={this.props.selected}
               updateUI={v => this.updateUI(v)}
               cb={this.props.select}
             />)
-          : null
         }
       </div>
     );

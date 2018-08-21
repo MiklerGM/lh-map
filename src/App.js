@@ -47,6 +47,8 @@ class App extends React.Component {
   }
 
   state = {
+    shared: null,
+    population: window.store.population || 0,
     intl: this.locales.ru,
     selected: window.store.selected === null
       ? Object.keys(lang).reduce((prev, cur) => ({
@@ -57,24 +59,81 @@ class App extends React.Component {
   }
 
   select(lng) {
-    const { selected } = this.state;
-    const newSelected = {
-      ...selected,
-      [lng]: !selected[lng],
+    const { selected: oldSelected } = this.state;
+    const selected = {
+      ...oldSelected,
+      [lng]: !oldSelected[lng],
     };
-    window.store.selected = newSelected;
+    const population = Object.keys(selected).reduce((prev, cur) => (
+      selected[cur] === true
+        ? prev + lang[cur].counter
+        : prev), 0);
+
+    window.store.population = population;
+    window.store.selected = selected;
     this.setState({
-      selected: newSelected
+      population,
+      selected,
     });
   }
 
+  share() {
+    const { population, selected, shared } = this.state;
+    if (shared !== null) return null;
+    const body = {
+      selected: Object.keys(selected).filter(f => selected[f]),
+      pop: population,
+      i18n: null,
+    };
+
+    const url = '/share';
+    const req = {
+      method: 'POST',
+      credentials: 'same-origin',
+      body: JSON.stringify(body),
+      headers: { 'Content-Type': 'application/json' }
+    };
+    fetch(url, req).then((response) => {
+      const success = response.status === 200;
+      if (success) {
+        console.log('Success', response);
+        try {
+          response.json().then((j) => {
+            console.log('>>> Success');
+            console.log(j);
+            console.log(j.result);
+            this.setState({
+              shared: j.result
+            });
+          });
+        } catch (e) {
+          console.error('Something bad happened on server', e);
+        }
+      } else {
+        console.error('Sending was unsuccesdcdcsdcsdc');
+      }
+    });
+    return null;
+  }
+
   render() {
-    const { intl, selected } = this.state;
+    const {
+      intl,
+      selected,
+      shared,
+    } = this.state;
+
     return (
       <IntlProvider {...intl}>
         <div>
           <Map map={map} lang={lang} selected={selected} />
-          <Main lang={lang} selected={selected} select={lng => this.select(lng)} />
+          <Main
+            lang={lang}
+            selected={selected}
+            select={lng => this.select(lng)}
+            share={() => this.share()}
+            shared={shared}
+          />
           <RareLanguages selected={selected} />
         </div>
       </IntlProvider>
