@@ -13,11 +13,11 @@ class SearchInput extends React.Component {
       <div>
         <Select
           disabled={this.state.disabled}
-          style={{ width: '400px' }}
+          style={{ width: '300px' }}
           onSelect={e => this.props.cb(e)}
           notFoundContent=""
           dropdownMenuStyle={{ maxHeight: 300 }}
-          placeholder='placeholder'
+          placeholder='Placeholder'
           value={this.state.value}
           // backfill
           // labelInValue

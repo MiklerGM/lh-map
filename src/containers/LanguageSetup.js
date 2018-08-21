@@ -14,7 +14,6 @@ class LanguageSetup extends React.Component {
           <span className="lnr lnr-cross" />
         </button>
         <h3>Choose language</h3>
-
         <div className='lang-list'>
           {Object.keys(this.props.selected).map(lang => (
             <ButtonToggle

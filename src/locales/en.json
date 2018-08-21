@@ -1,3 +1,6 @@
 {
-  "test.test": "Test message"
+  "test.test": "Test message",
+  "search.title": "Languages",
+  "search.more": "more",
+  "search.share": "Share"
 }
