@@ -5,7 +5,7 @@
             "eng": "English"
         },
         "search": ["English", "Fyukbqcrfz", "Английский", "Утпдшыр"],
-        "countries": ["ATG","BRB","BLZ","BWA","BDI","CMR","CAN","COK","DMA","FSM","FJI","GMB","GHA","GRD","GUY","IND","IRL","JAM","KEN","KIR","LSO","LBR","MWI","MLT","MHL","MRT","NAM","NRU","NPL","NGA","NIU","PAK","PLW","PNG","PHL","RWA","KNA","LCA","VCT","WSM","SYC","SLE","SGP","SLB","ZAF","SDS","SDN","SWZ","TON","TTO","UGA","VUT","ZMB","ZWE","GBR","USA","NZL","AUS"],
+        "countries": ["ATG","BRB","BLZ","BWA","BDI","CMR","CAN","COK","DMA","FSM","FJI","GMB","GHA","GRD","GUY","IND","IRL","JAM","KEN","KIR","LSO","LBR","MWI","MLT","MHL","MUS","NAM","NRU","NPL","NGA","NIU","PAK","PLW","PNG","PHL","RWA","KNA","LCA","VCT","WSM","SYC","SLE","SGP","SLB","ZAF","SDS","SDN","SWZ","TON","TTO","UGA","VUT","ZMB","ZWE","GBR","USA","NZL","AUS"],
         "counter":400000000
     },
     "ALB": {
@@ -23,7 +23,7 @@
             "eng": "Arabic"
         },
         "search": ["Арабский", "Fhf,crbq", "Фкфишс", "Arabic", "العربية"],
-        "countries": [],
+        "countries": ["DZA","BHR","COM","TCD","EGY","ERI","IRQ","JOR","KWT","LBN","LBY","MRT","MAR","OMN","PSX","QAT","SAH","SAU","SDN","SYR","TZA","TUN","ARE","YEM"],
         "counter":0
     },
     "ARM": {
@@ -112,8 +112,8 @@
             "rus": "Датский",
             "eng": "Danish"
         },
-        "search": ["Danish", "Lfncrbq", "Датский", "Вфтшыр"],
-        "countries": ["FRO","DNK"],
+        "search": ["Danish", "Lfncrbq", "Датский", "Вфтшыр","dansk "],
+        "countries": ["FRO","DNK","GRL"],
         "counter":5500000
     },
     "RSL": {
@@ -284,7 +284,7 @@
             "eng": "Dutch"
         },
         "search": ["Dutch", "Нидерландский", "Голандский", "Holand", "Flemish", "Фломанский", "Nederlands", "Vlaams"],
-        "countries": ["NDL","BEL","ABW","CUW","SUR","SXM"],
+        "countries": ["NLD","BEL","ABW","CUW","SUR","SXM"],
         "counter":22000000
     },
     "NOR": {
