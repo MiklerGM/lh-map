@@ -1,4 +1,6 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
+
 
 import ButtonToggle from '../components/ButtonToggle';
 
@@ -13,7 +15,9 @@ class LanguageSetup extends React.Component {
         <button onClick={() => this.props.updateUI({ langGrid: false })} className='close-window' type='button'>
           <span className="lnr lnr-cross" />
         </button>
-        <h3>Choose language</h3>
+        <h3>
+          <FormattedMessage id='langsetup.title' />
+        </h3>
         <div className='lang-list'>
           {Object.keys(this.props.selected).map(lang => (
             <ButtonToggle
@@ -24,9 +28,6 @@ class LanguageSetup extends React.Component {
             />
           ))}
         </div>
-        <button onClick={() => this.proceed()} type='button'>
-          {'Proceed'}
-        </button>
       </div>
     );
   }

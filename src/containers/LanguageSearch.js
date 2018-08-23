@@ -14,10 +14,10 @@ class LanguageSearch extends React.Component {
           selected={this.props.selected}
           cb={this.props.cb}
         />
-        <button className='more-button decorless' onClick={() => this.props.updateUI({ langGrid: true })}>
+        <button className='more-button decorless' onClick={() => this.props.updateUI({ langGrid: !this.props.uiState.langGrid })}>
           <FormattedMessage id='search.more' />
         </button>
-        <button className='button--share' onClick={() => this.props.share()}>
+        <button className='button--share' onClick={() => this.props.updateUI({ sharePanel: !this.props.uiState.sharePanel })}>
           <FormattedMessage id='search.share' />
           <i className='icon-share' />
         </button>

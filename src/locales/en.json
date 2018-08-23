@@ -2,5 +2,6 @@
   "test.test": "Test message",
   "search.title": "Languages",
   "search.more": "more",
-  "search.share": "Share"
+  "search.share": "Share",
+  "langsetup.title": "Choose language"
 }

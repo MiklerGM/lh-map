@@ -2,5 +2,6 @@
   "test.test": "Тест месседж",
   "search.title": "Языки",
   "search.more": "ещё",
-  "search.share": "Поделиться"
+  "search.share": "Поделиться",
+  "langsetup.title": "Выберите языки"
 }

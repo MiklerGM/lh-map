@@ -126,20 +126,21 @@
 
 .more-button {
   // background-color: grey;
-  padding: 0 5px;
+  padding: 0 5px
 }
 
 .button--share {
   background-color: @red;
   border-radius: 10px;
   width: auto;
-  min-width: none;
+  min-width: 0;
   max-width: none;
   & i {
     display: none;
   }
   @media screen and (max-width: 600px) {
-    width: 36px;
+    width: 36px !important;
+    height: 36px;
     padding: 3px;
     border-radius: 50%;
     & span {
@@ -150,3 +151,4 @@
     }
   }
 }
+

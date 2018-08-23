@@ -1,6 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
 
 module.exports = {
   mode: 'development',
@@ -9,8 +11,16 @@ module.exports = {
     app: path.resolve('./src/index.js')
   },
   plugins: [
-    new HtmlWebpackPlugin(),
-    new webpack.HotModuleReplacementPlugin()
+    new HtmlWebpackPlugin({
+      template: './index.html',
+      inject: 'body',
+      filename: 'index.html'
+    }),
+    new webpack.HotModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin({
+      analyzerPort: '3001',
+      openAnalyzer: false,
+    }),
   ],
   devServer: {
     historyApiFallback: true,
