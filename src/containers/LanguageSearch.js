@@ -11,6 +11,7 @@ class LanguageSearch extends React.Component {
           <FormattedMessage id='search.title' />
         </span>
         <SearchInput
+          lang={this.props.lang}
           selected={this.props.selected}
           cb={this.props.cb}
         />

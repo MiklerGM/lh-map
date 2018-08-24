@@ -26,7 +26,10 @@ class SearchInput extends React.Component {
           // multiple
           // onSearch={this.fetchData}
           // onChange={this.onChange}
-          // filterOption={false}
+          filterOption={(s, o) => {
+            const { search } = this.props.lang[o.key];
+            return search.some(f => f.toLowerCase().indexOf(s.toLowerCase()) > -1);
+          }}
         >
           {Object.keys(this.props.selected)
             .filter(key => !this.props.selected[key])

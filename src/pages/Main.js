@@ -21,6 +21,7 @@ class Main extends React.Component {
     return (
       <div>
         <LanguageSearch
+          lang={this.props.lang}
           share={this.props.share}
           selected={this.props.selected}
           uiState={this.state}
