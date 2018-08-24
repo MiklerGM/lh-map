@@ -526,7 +526,7 @@
             "rus": "Упрощенный китайский",
             "eng": "Simplified chinese"
         },
-        "search": [" 汉语", "hanyu", "Мандарин", "Путунхуа", "Putonghua"],
+        "search": ["китайский", "rbnfqcrbq", "chinese", "汉语", "hanyu", "Мандарин", "Путунхуа", "Putonghua"],
         "countries": ["CHN","SGP","TWN"],
         "counter":1375000000
     },
@@ -535,7 +535,7 @@
             "rus": "Традиционный китайский",
             "eng": "Traditional chinese"
         },
-        "search": ["漢語", "Cantonese", "Кантонский", "Guǎngdōng huà"],
+        "search": ["китайский", "rbnfqcrbq", "chinese", "漢語", "Cantonese", "Кантонский", "Guǎngdōng huà"],
         "countries": ["HKG","MAC"],
         "counter":70000000
     }
