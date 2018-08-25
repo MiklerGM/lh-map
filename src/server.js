@@ -3,6 +3,10 @@ import fs from 'fs';
 import sharp from 'sharp';
 import bodyParser from 'body-parser';
 
+import crypto from 'crypto';
+
+// import cloud from 'd3-cloud';
+
 import lang from '../data/lang.json';
 
 import genImage from './genImage';
@@ -13,11 +17,6 @@ const PREVIEW = 'preview';
 
 const earthPop = 7.6 * (10 ** 9);
 
-function getReqId() {
-  const date = Date.now().toString(36);
-  const rand = Math.random().toString(36).substr(2, 5);
-  return `${date}${rand}`;
-}
 
 function getImgUrl(id) {
   return `${PREVIEW}/${id}.png`;
@@ -69,13 +68,24 @@ app.use('/result/:url', (req, res) => {
 });
 
 app.post('/share', (req, res) => {
-  const id = getReqId();
-  console.log('New ID', id);
+  // const id = getReqId();
+  // console.log('New ID', id);
   // console.log(req);
   // req.json().then(j => console.log('Hey Json', j));
   // console.log('body', req.body);
-  const { selected, pop } = req.body;
+  const { selected, pop, i18n } = req.body;
+
+  // const lngIds = selected.map(s => s.split('').map(c => c.charCodeAt()).join(''));
+  // const id = lngIds.sort().join('_');
+
+  const valid = selected.every(s => s in lang);
+  // const id = selected.sort().join('');
+  const hash = crypto.createHash('md5')
+    .update(selected.sort().join('')).digest('hex');
+  const id = `${i18n}${hash}`;
+
   console.log(
+    `> New ReqID: ${id}, ${valid}`,
     `> Total: ${earthPop}`,
     `> Sharing: ${pop}`,
     `> I can understand every ${Math.round(earthPop / Number(pop))} Earther`,
@@ -83,31 +93,40 @@ app.post('/share', (req, res) => {
   );
 
   try {
-    const imgSvg = Buffer.from(genImage(selected));
-    fs.writeFile(`${PREVIEW}/${id}.svg`, imgSvg);
-
-    sharp(imgSvg)
-      .png()
-      .toFile(getImgUrl(id))
-      .then(() => {
-        console.log('sharp is OK');
+    const file = getImgUrl(id);
+    fs.access(file, fs.constants.F_OK, (err) => {
+      if (err) {
+        const imgSvg = Buffer.from(genImage(selected));
+        sharp(imgSvg)
+          .png()
+          .toFile(file)
+          .then(() => {
+            console.log('sharp is OK (new image ready)');
+            res.send({
+              success: true,
+              result: id,
+            });
+          })
+          .catch((e) => {
+            console.log('Sharp error', e);
+            res.send({
+              success: false,
+              result: null,
+            });
+          });
+      } else {
         res.send({
           success: true,
-          result: `/result/${id}`,
+          result: id,
         });
-      })
-      .catch((e) => {
-        console.log('Sharp error', e);
-        res.send({
-          success: false,
-          result: null,
-        });
-      });
+      }
+    });
+    // fs.writeFile(`${PREVIEW}/${id}.svg`, imgSvg);
   } catch (e) {
     console.log('Share error', e);
     res.send({
       success: false,
-      result: `/result/${id}`,
+      result: id,
     });
   }
 });

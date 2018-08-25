@@ -45,6 +45,8 @@ class Main extends React.Component {
         {this.state.sharePanel
           && (
             <SharePanel
+              result={this.props.result}
+              shared={this.props.shared}
               updateUI={v => this.updateUI(v)}
               uiState={sharePanel}
             />)

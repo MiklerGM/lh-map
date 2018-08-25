@@ -32,6 +32,11 @@ console.timeEnd('Calculating Locales');
 
 addLocaleData([...en, ...ru]);
 
+const genResultLink = res => ({
+  url: `${window.location.href}/result/${res}`,
+  img: `${window.location.href}/preview/${res}.png`,
+});
+
 class App extends React.Component {
   locales = {
     en: {
@@ -47,7 +52,10 @@ class App extends React.Component {
   }
 
   state = {
+    idx: 0,
+    i18n: 'ru',
     shared: null,
+    result: genResultLink('hello'),
     population: window.store.population || 0,
     intl: this.locales.ru,
     selected: window.store.selected === null
@@ -58,7 +66,17 @@ class App extends React.Component {
       : window.store.selected,
   }
 
+  changeLocale(loc) {
+    if (loc in this.locales) {
+      this.setState({
+        i18n: loc,
+        intl: this.locales[loc],
+      });
+    }
+  }
+
   select(lng) {
+    console.log('Selecting', lng);
     const { selected: oldSelected } = this.state;
     const selected = {
       ...oldSelected,
@@ -71,19 +89,20 @@ class App extends React.Component {
 
     window.store.population = population;
     window.store.selected = selected;
+    const idx = this.state.idx + 1;
     this.setState({
+      idx,
       population,
       selected,
     });
+    this.share(population, selected, idx);
   }
 
-  share() {
-    const { population, selected, shared } = this.state;
-    if (shared !== null) return null;
+  share(population, selected, idx) {
     const body = {
       selected: Object.keys(selected).filter(f => selected[f]),
       pop: population,
-      i18n: null,
+      i18n: this.state.i18n,
     };
 
     const url = '/share';
@@ -96,15 +115,23 @@ class App extends React.Component {
     fetch(url, req).then((response) => {
       const success = response.status === 200;
       if (success) {
-        console.log('Success', response);
         try {
           response.json().then((j) => {
-            console.log('>>> Success');
+            console.log('>>> Shared result');
             console.log(j);
-            console.log(j.result);
-            this.setState({
-              shared: j.result
-            });
+            if (j.success) {
+              if (this.state.idx >= idx) {
+                this.setState({
+                  shared: j.result,
+                  result: genResultLink(j.result)
+                });
+              } else {
+                console.error('Stalled data on sharing');
+                console.log(idx, this.state.idx);
+              }
+            } else {
+              console.error('Terrible error happened, but not handled correctly');
+            }
           });
         } catch (e) {
           console.error('Something bad happened on server', e);
@@ -121,6 +148,7 @@ class App extends React.Component {
       intl,
       selected,
       shared,
+      result,
     } = this.state;
 
     return (
@@ -133,6 +161,7 @@ class App extends React.Component {
             select={lng => this.select(lng)}
             share={() => this.share()}
             shared={shared}
+            result={result}
           />
           <RareLanguages selected={selected} />
         </div>

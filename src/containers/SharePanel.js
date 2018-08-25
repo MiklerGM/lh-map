@@ -4,16 +4,11 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import SocialButton from '../components/SocialButton';
 import './SharePanel.less';
 
-import HelloPng from '../../preview/hello.png';
-
 class SocialButtonWrapper extends React.Component {
-  get url() {
-    return 'localhost:3000';
-  }
+  url = window.location.href;
 
-  get text() {
-    return 'dumb text';
-  }
+  // depend on locale in future
+  text = 'dumb text';
 
   link = (s) => {
     switch (s) {
@@ -43,13 +38,13 @@ class SocialButtonWrapper extends React.Component {
   }
 }
 
-const url = 'https://localohost:3000/result/3000';
-
-class RusultWrapper extends React.Component {
+class ResultWrapper extends React.Component {
   render() {
+    const { img, url } = this.props.result;
+
     return (
       <div className='share-panel__result'>
-        <img src={HelloPng} alt='hello.png' />
+        <img src={img} alt='Richpreview sharing' />
         <CopyToClipboard
           text={url}
           onCopy={() => console.log('oncopy callback')}
@@ -66,7 +61,7 @@ class SharePanel extends React.Component {
     return (
       <div className='share-panel layer-4'>
         <SocialButtonWrapper />
-        <RusultWrapper />
+        <ResultWrapper result={this.props.result} shared={this.props.shared} />
       </div>
     );
   }
