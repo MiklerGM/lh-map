@@ -4,28 +4,22 @@ import { FormattedMessage } from 'react-intl';
 
 const ButtonToggle = ({ name, checked, cb }) => (
   <FormattedMessage id={`${name}.full`}>
-    {(fullname) => {
-      return (
-        <label
-          htmlFor={name}
-          className={checked ? 'button-toggle__checked button-toggle ' : 'button-toggle '}
-          onChange={(e) => {
-            cb(name);
-          }}
-        >
-          <input
-            id={name}
-            type='checkbox'
-            className='button-toggle'
-            checked={checked}
-            onChange={() => {
-              cb(name);
-            }}
-          />
-          {fullname}
-        </label>
-      );
-    }}
+    {fullName => (
+      <label
+        htmlFor={name}
+        className={checked ? 'button-toggle__checked button-toggle ' : 'button-toggle '}
+        onChange={() => cb(name)}
+      >
+        <input
+          id={name}
+          type='checkbox'
+          className='button-toggle'
+          checked={checked}
+          onChange={() => cb(name)}
+        />
+        {fullName}
+      </label>
+    )}
   </FormattedMessage>
 );
 

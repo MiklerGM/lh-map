@@ -149,6 +149,7 @@ class App extends React.Component {
       selected,
       shared,
       result,
+      population,
     } = this.state;
 
     return (
@@ -159,9 +160,9 @@ class App extends React.Component {
             lang={lang}
             selected={selected}
             select={lng => this.select(lng)}
-            share={() => this.share()}
             shared={shared}
             result={result}
+            population={population}
           />
           <RareLanguages selected={selected} />
         </div>

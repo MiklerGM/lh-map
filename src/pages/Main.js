@@ -4,6 +4,7 @@ import LanguageSetup from '../containers/LanguageSetup';
 import LanguageSearch from '../containers/LanguageSearch';
 import TagsWrapper from '../containers/TagsWrapper';
 import SharePanel from '../containers/SharePanel';
+import NativeSpeakers from '../components/NativeSpeakers';
 
 class Main extends React.Component {
   state = {
@@ -22,7 +23,6 @@ class Main extends React.Component {
       <div>
         <LanguageSearch
           lang={this.props.lang}
-          share={this.props.share}
           selected={this.props.selected}
           uiState={this.state}
           updateUI={v => this.updateUI(v)}
@@ -51,6 +51,7 @@ class Main extends React.Component {
               uiState={sharePanel}
             />)
         }
+        <NativeSpeakers population={this.props.population} />
       </div>
     );
   }
