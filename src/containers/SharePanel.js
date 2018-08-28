@@ -1,5 +1,6 @@
 import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
+import { FormattedMessage } from 'react-intl';
 
 import SocialButton from '../components/SocialButton';
 import './SharePanel.less';
@@ -7,33 +8,41 @@ import './SharePanel.less';
 class SocialButtonWrapper extends React.Component {
   url = window.location.href;
 
-  // depend on locale in future
-  text = 'dumb text';
+  social = ['twitter', 'facebook', 'gplus', 'vkontakte', 'odnoklassniki'];
 
-  link = (s) => {
+  link = (s, title, desc) => {
     switch (s) {
-      case 'twitter': return `https://twitter.com/intent/tweet?url=${this.url}&text=${this.text}&via=chronist`;
-      case 'facebook': return `https://www.facebook.com/sharer/sharer.php?u=${this.url}&title=${this.text}&description=${this.text}&picture=${this.text}`;
+      case 'twitter': return `https://twitter.com/intent/tweet?url=${this.url}&text=${desc}&via=chronist`;
+      case 'facebook': return `https://www.facebook.com/sharer/sharer.php?u=${this.url}&title=${title}&description=${desc}&picture=${desc}`;
       case 'gplus': return `https://plus.google.com/share?url=${this.url}`;
-      case 'vkontakte': return `https://vk.com/share.php?url=${this.url}&title=${this.text}&description=${this.text}&image=${this.text}`;
+      case 'vkontakte': return `https://vk.com/share.php?url=${this.url}&title=${title}&description=${desc}&image=${desc}`;
       case 'odnoklassniki': return '';
       default: return 'error';
     }
   }
 
-  handleClick(s) {
-    console.log('handleClick', s);
-    const link = this.link(s);
+  handleClick(s, t) {
+    console.log('handleClick', s, t);
+    const link = this.link(s, encodeURI(t.title), encodeURI(t.description));
     window.open(link, '', 'menubar=no, toolbar=no, resizable=yes,scrollbars=yes,height=400,width=400');
   }
 
   render() {
     return (
-      <div className='share-panel__social'>
-        {
-          ['twitter', 'facebook', 'gplus', 'vkontakte', 'odnoklassniki'].map(sns => <SocialButton key={sns} name={sns} cb={s => this.handleClick(s)} />)
-        }
-      </div>
+      <FormattedMessage id='share.description'>
+        {description => (
+          <FormattedMessage id='share.title'>
+            {title => (
+              <div className='share-panel__social'>
+                {this.social.map(sns => (
+                  <SocialButton
+                    key={sns}
+                    name={sns}
+                    cb={s => this.handleClick(s, { description, title })}
+                  />))}
+              </div>)}
+          </FormattedMessage>)}
+      </FormattedMessage>
     );
   }
 }
