@@ -12,6 +12,7 @@ import lang from '../data/lang.json';
 import Main from './pages/Main';
 // import Result from './pages/Result';
 import Map from './containers/Map';
+import Tooltip from './components/Tooltip';
 
 import localeDataRU from './locales/ru.json';
 import localeDataEN from './locales/en.json';
@@ -55,6 +56,9 @@ class App extends React.Component {
     idx: 0,
     i18n: 'ru',
     shared: null,
+    tooltipActive: false,
+    tooltipCoord: [0, 0],
+    tooltipInfo: '',
     result: genResultLink('hello'),
     population: window.store.population || 0,
     intl: this.locales.ru,
@@ -64,6 +68,14 @@ class App extends React.Component {
         [cur]: false
       }), {})
       : window.store.selected,
+  }
+
+  componentDidMount() {
+    if (navigator.language === 'ru-RU') {
+      this.changeLocale('ru');
+    } else {
+      this.changeLocale('en');
+    }
   }
 
   changeLocale(loc) {
@@ -143,6 +155,22 @@ class App extends React.Component {
     return null;
   }
 
+  setTooltip(e) {
+    // e.color === null ? null : d.object.key;
+    // this.props.store.pins.setActive(key, false);
+    // this.props.store.pins.setPosition(d.x, d.y);
+    if (e.color === null) {
+      this.setState({ tooltipActive: false });
+    } else {
+      this.setState({
+        tooltipActive: true,
+        tooltipCoord: e.pixel,
+        tooltipInfo: e.object.properties.admin
+      });
+    }
+
+  }
+
   render() {
     const {
       intl,
@@ -150,12 +178,15 @@ class App extends React.Component {
       shared,
       result,
       population,
+      tooltipActive,
+      tooltipCoord,
+      tooltipInfo
     } = this.state;
 
     return (
       <IntlProvider {...intl}>
         <div>
-          <Map map={map} lang={lang} selected={selected} />
+          <Map map={map} lang={lang} selected={selected} setTooltip={e => this.setTooltip(e)} />
           <Main
             lang={lang}
             selected={selected}
@@ -164,6 +195,7 @@ class App extends React.Component {
             result={result}
             population={population}
           />
+          {tooltipActive ? <Tooltip coord={tooltipCoord} info={tooltipInfo} /> : null}
           <RareLanguages selected={selected} />
         </div>
       </IntlProvider>

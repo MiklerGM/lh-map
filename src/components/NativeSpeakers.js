@@ -2,18 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 
-const style = {
-  position: 'fixed',
-  top: 100,
-  left: 10,
-  pointerEvents: 'none',
-};
-
 const PopulationSticker = ({ population }) => (
-  <div style={style}>
-    <FormattedMessage id='population' />
+  <div className='native-speakers'>
+    <strong>
+      <FormattedMessage id='population' />
+    </strong>
     {' '}
-    {population}
+    {population.toLocaleString('ru-RU')}
   </div>
 );
 

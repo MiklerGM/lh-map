@@ -67,6 +67,7 @@ class Map extends React.Component {
           new GeoJsonLayer({
             id: 'geojson-layer',
             data: map,
+            pickable: true,
             stroked: true,
             filled: true,
             wireframe: true,
@@ -109,7 +110,9 @@ class Map extends React.Component {
               getFillColor: 1000,
               getElevation: 1000,
               geometry: 3000,
-            }
+            },
+            onHover: e => this.props.setTooltip(e),
+            onClick: e => this.props.setTooltip(e)
           })
         ]}
       />

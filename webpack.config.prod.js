@@ -1,10 +1,10 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'production',
-  devtool: 'inline-source-map',
   entry: {
     app: path.resolve('./src/index.js')
   },
@@ -20,26 +20,24 @@ module.exports = {
   optimization: {
     noEmitOnErrors: true,
     nodeEnv: 'production',
+    minimizer: [
+      new UglifyJsPlugin()
+    ],
     splitChunks: {
       chunks: 'async',
-      minSize: 30000,
-      maxSize: 0,
-      minChunks: 1,
-      maxAsyncRequests: 5,
+      maxAsyncRequests: 3,
       maxInitialRequests: 3,
-      automaticNameDelimiter: '~',
       name: true,
+      automaticNameDelimiter: '.',
       cacheGroups: {
-        vendors: {
+        node_vendors: {
           test: /[\\/]node_modules[\\/]/,
-          priority: -10
-        },
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true
+          chunks: 'initial',
+          maxSize: 1000000,
+          minSize: 300000,
+          priority: 1
         }
-      }
+      },
     }
   },
   stats: {
