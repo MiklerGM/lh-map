@@ -4,11 +4,12 @@
 
 .share-panel {
   position: fixed;
+  z-index: 53;
   display: flex;
   padding: 8px;
   background-color: @blueish;
   min-width: 80%;
-  max-width: 100%;
+  max-width: 800px;
   width: auto;
   left: 50%;
   // height: auto;
@@ -22,28 +23,53 @@
   overflow: auto;
   border: @border;
   border-radius: 2px;
-  // @media screen and (max-width: 600px) {
-
-  // }
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .share-panel__social {
-  width: 15%;
+  width: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  @media screen and (max-width: 600px) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+    padding: 0 30px;
+  }
 }
 
 .share-panel__result {
+  padding: 10px 30px;
   width: auto;
   display: block;
+  // background: #fafafa;
+  box-sizing: border-box;
+}
+
+.share-panel_inputwrapper {
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+.share-panel_picwrapper {
+  width: auto;
+  height: auto;
+  margin: 10px 0;
+  padding: 30px;
+  & img {
+    box-shadow: 0 3px 12px rgba(17, 17, 17, 0.8);
+  }
 }
 
 .btn-sns {
   background: transparent;
-  min-width: 0;
-  max-width: none;
+  // min-width: 0;
+  // max-width: 60px !important;
   width: 60px;
   height: 60px;
   // height: auto;
@@ -56,8 +82,8 @@
   text-align: center;
   & span {
     font-size: 1.5em;
-    // width: 60px;
-    // height: 60px;
+    width: 60px;
+    height: 60px;
     padding: 13px;
     border-radius: 50%;
     text-align: center;

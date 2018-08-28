@@ -44,13 +44,17 @@ class ResultWrapper extends React.Component {
 
     return (
       <div className='share-panel__result'>
-        <img src={img} alt='Richpreview sharing' />
-        <CopyToClipboard
-          text={url}
-          onCopy={() => console.log('oncopy callback')}
-        >
-          <input type='text' value={url} readOnly onFocus={e => e.target.select()} />
-        </CopyToClipboard>
+        <div className='share-panel_picwrapper'>
+          <img src={img} alt='Richpreview sharing' width='100%' />
+        </div>
+        <div className='share-panel_inputwrapper'>
+          <CopyToClipboard
+            text={url}
+            onCopy={() => console.log('oncopy callback')}
+          >
+            <input type='text' value={url} readOnly onFocus={e => e.target.select()} />
+          </CopyToClipboard>
+        </div>
       </div>
     );
   }
