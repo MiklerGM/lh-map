@@ -168,7 +168,6 @@ class App extends React.Component {
         tooltipInfo: e.object.properties.admin
       });
     }
-
   }
 
   render() {

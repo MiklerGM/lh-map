@@ -12,7 +12,7 @@
   max-width: 800px;
   width: auto;
   left: 50%;
-  // height: auto;
+  max-height: 100vh;
   overflow-y: hidden;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -49,11 +49,42 @@
   display: block;
   // background: #fafafa;
   box-sizing: border-box;
+  @media screen and (max-width: 600px) {
+    padding: 6px 15px;
+  }
 }
 
 .share-panel_inputwrapper {
   padding: 0 30px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  // * {
+    // margin-right: 5px;
+  // }
+  input {
+    width: calc(~'100% - 40px');
+    display: inline-block;
+  }
+  & span { width: 55px; }
+}
+
+.input_status {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 150ms linear, opacity 150ms linear;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+
+}
+
+.input_status_visible {
+  visibility: visible;
+  transition: visibility 150ms linear, opacity 150ms linear;
+  opacity: 1;
+  letter-spacing: -0.2px;
+  font-weight: 600;
 }
 
 .share-panel_picwrapper {

@@ -1,6 +1,6 @@
 @import './styles/colors.less';
 @import './styles/ButtonToggle.less';
-@import './styles/simple-line-icons.less';
+// @import './styles/simple-line-icons.less';
 
 .language-setup {
   position: fixed;
@@ -46,16 +46,56 @@
   }
 }
 
+// .language-search {
+//   position: fixed;
+//   box-sizing: border-box;
+//   // display: flex;
+//   // flex-direction: row;
+//   // justify-content: space-between;
+//   display: grid;
+//   grid-template-columns: 1fr 5fr 1fr 2fr;
+//   grid-template-rows: 36px;
+//   grid-column-gap: 10px;
+//   align-content: center;
+//   height: 52px;
+//   padding: 8px;
+//   border: 1px solid @border;
+//   border-radius: 2px;
+//   background-color: #fafafa;
+//   bottom: 10px;
+//   left: 20px;
+//   // width: 50%;
+//   // height: 60px;
+//   & span {
+//     line-height: 30px;
+//     text-align: center;
+//   }
+//   & .rc-select-selection__rendered,
+//   & .rc-select,
+//   & .rc-select-selection--single  {
+//     height: 30px;
+//   }
+//   @media screen and (max-width: 600px) {
+//     width: 90%;
+//     left: 5%;
+//     & .rc-select,
+//     & .search-title {
+//       display: none;
+//     }
+//   }
+// }
+
+
 .language-search {
   position: fixed;
   box-sizing: border-box;
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
-  display: grid;
-  grid-template-columns: 1fr 5fr 1fr 2fr;
-  grid-template-rows: 36px;
-  grid-column-gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  // display: grid;
+  // grid-template-columns: 1fr 5fr 1fr 2fr;
+  // grid-template-rows: 36px;
+  // grid-column-gap: 10px;
   align-content: center;
   height: 52px;
   padding: 8px;
@@ -66,6 +106,9 @@
   left: 20px;
   // width: 50%;
   // height: 60px;
+  * {
+    margin: 0 5px;
+  }
   & span {
     line-height: 30px;
     text-align: center;
@@ -76,8 +119,11 @@
     height: 30px;
   }
   @media screen and (max-width: 600px) {
-    width: 90%;
-    left: 5%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 4px;
+    height: 44px;
     & .rc-select,
     & .search-title {
       display: none;
@@ -126,8 +172,19 @@
 }
 
 .more-button {
-  // background-color: grey;
-  padding: 0 5px
+  padding: 0 5px;
+  display: block;
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.more-button_mobile {
+  display: none;
+  @media screen and (max-width: 600px) {
+    display: block;
+    padding: 0 5px;
+  }
 }
 
 .button--share {

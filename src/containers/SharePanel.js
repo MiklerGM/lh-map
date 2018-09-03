@@ -12,10 +12,10 @@ class SocialButtonWrapper extends React.Component {
 
   link = (s, title, desc) => {
     switch (s) {
-      case 'twitter': return `https://twitter.com/intent/tweet?url=${this.url}&text=${desc}&via=chronist`;
-      case 'facebook': return `https://www.facebook.com/sharer/sharer.php?u=${this.url}&title=${title}&description=${desc}&picture=${desc}`;
-      case 'gplus': return `https://plus.google.com/share?url=${this.url}`;
-      case 'vkontakte': return `https://vk.com/share.php?url=${this.url}&title=${title}&description=${desc}&image=${desc}`;
+      case 'twitter': return `https://twitter.com/intent/tweet?url=${encodeURI(this.props.result.url)}&text=${desc}&via=chronist`;
+      case 'facebook': return `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
+      case 'gplus': return `https://plus.google.com/share?url=${encodeURI(this.props.result.url)}`;
+      case 'vkontakte': return `https://vk.com/share.php?url=${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
       case 'odnoklassniki': return '';
       default: return 'error';
     }
@@ -48,6 +48,17 @@ class SocialButtonWrapper extends React.Component {
 }
 
 class ResultWrapper extends React.Component {
+  state = {
+    class: 'input_status'
+  }
+
+  onCopy() {
+    this.setState({ class: 'input_status_visible' });
+    setTimeout(() => {
+      this.setState({ class: 'input_status' });
+    }, 2000);
+  }
+
   render() {
     const { img, url } = this.props.result;
 
@@ -59,10 +70,18 @@ class ResultWrapper extends React.Component {
         <div className='share-panel_inputwrapper'>
           <CopyToClipboard
             text={url}
-            onCopy={() => console.log('oncopy callback')}
+            onCopy={() => this.onCopy()}
           >
-            <input type='text' value={url} readOnly onFocus={e => e.target.select()} />
+            <div style={{display: 'flex', flexDirection: 'row' }}>
+              <span style={{ display: 'inline-block', width: '40px' }}>
+                URL:
+              </span>
+              <input type='text' value={url} readOnly onFocus={e => e.target.select()} />
+            </div>
           </CopyToClipboard>
+          <span className={this.state.class}>
+            <FormattedMessage id='share.linkcopy' />
+          </span>
         </div>
       </div>
     );
@@ -73,7 +92,7 @@ class SharePanel extends React.Component {
   render() {
     return (
       <div className='share-panel layer-4'>
-        <SocialButtonWrapper />
+        <SocialButtonWrapper result={this.props.result} />
         <ResultWrapper result={this.props.result} shared={this.props.shared} />
       </div>
     );

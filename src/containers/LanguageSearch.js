@@ -26,6 +26,9 @@ class LanguageSearch extends React.Component {
         <button className='more-button decorless' onClick={this.moreBtn}>
           <FormattedMessage id='search.more' />
         </button>
+        <button className='more-button_mobile decorless' onClick={this.moreBtn}>
+          <FormattedMessage id='search.more_mobile' />
+        </button>
         <button className='button--share' onClick={this.shareBtn}>
           <FormattedMessage id='search.share' />
           <i className='icon-share' />

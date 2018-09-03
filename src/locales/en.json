@@ -2,9 +2,11 @@
   "test.test": "Test message",
   "search.title": "Languages",
   "search.more": "more",
+  "search.more_mobile": "Add Languages",
   "search.share": "Share",
   "population": "Speakers",
   "langsetup.title": "Choose language",
   "share.description": "Join Language Heroes to mark new countries in 12 weeks!",
-  "share.title": "The polyglot games"
+  "share.title": "The polyglot games",
+  "share.linkcopy": "Copied"
 }

@@ -11,6 +11,7 @@
     "build": "rimraf dist && npm-run-all build:*",
     "build:prod": "webpack --config ./webpack.config.prod.js",
     "build:ssr": "webpack --config ./webpack.config.ssr.js",
+    "server": "nodemon dist/server.js",
     "clean": "rimraf node_modules dist"
   },
   "devDependencies": {

@@ -2,9 +2,11 @@
   "test.test": "Тест месседж",
   "search.title": "Языки",
   "search.more": "ещё",
+  "search.more_mobile": "Добавить языки",
   "search.share": "Поделиться",
   "population": "Носителей",
   "langsetup.title": "Выберите языки",
   "share.description": "Приходи в Language Heroes изучать любой язык и через 12 недель отметь новые страны!",
-  "share.title": "Игры полиглотов"
+  "share.title": "Игры полиглотов",
+  "share.linkcopy": "Скопировано"
 }
