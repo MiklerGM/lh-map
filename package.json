@@ -37,6 +37,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.18.3",
+    "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
     "d3-cloud": "^1.2.5",
     "deck.gl": "^6.0.1",

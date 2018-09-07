@@ -12,12 +12,14 @@ class LanguageSetup extends React.Component {
   render() {
     return (
       <div className='language-setup layer-3'>
-        <button onClick={() => this.props.updateUI({ langGrid: false })} className='close-window' type='button'>
-          <span className="lnr lnr-cross" />
-        </button>
-        <h3>
-          <FormattedMessage id='langsetup.title' />
-        </h3>
+        <div className='language-setup_head'>
+          <h3>
+            <FormattedMessage id='langsetup.title' />
+          </h3>
+          <button onClick={() => this.props.updateUI({ langGrid: false })} className='close-window' type='button'>
+            <span className="lnr lnr-cross" />
+          </button>
+        </div>
         <div className='lang-list'>
           {Object.keys(this.props.selected).map(lang => (
             <ButtonToggle
@@ -28,6 +30,7 @@ class LanguageSetup extends React.Component {
             />
           ))}
         </div>
+        <hr />
       </div>
     );
   }

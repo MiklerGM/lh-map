@@ -6,7 +6,7 @@
   position: fixed;
   z-index: 52;
   display: flex;
-  padding: 8px;
+  padding: 0;
   background-color: #fafafa;
   min-width: 80%;
   max-width: 100%;
@@ -19,14 +19,35 @@
   // align-items: center;
   align-content: center;
   max-height: 80vh;
-  overflow: auto;
+  overflow: hidden;
   border: @border;
+  border-radius: 2px;
   @media screen and (max-width: 600px) {
+    width: 98%;
 
   }
 }
 
+.language-setup_head {
+  padding: 8px;
+  margin: 0;
+  background-color: @main-blue;
+  color: @white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  & h3 {
+    text-align: left;
+  }
+}
+
+hr {
+  margin: 10px 0 5px;
+  border-color: #fafafa;
+}
+
 .lang-list {
+  // padding: 8px;
   display: grid;
   padding: 8px 4px;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;

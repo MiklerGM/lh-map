@@ -1,7 +1,7 @@
 @import './styles/baloons.less';
 @import './styles/checkbox.less';
 @import './styles/colors.less';
-// @import './styles/LineIcon.less';
+@import './styles/LineIcon.less';
 @import './styles/fontello.less';
 @import './styles/number.less';
 @import './styles/radio.less';
@@ -95,7 +95,7 @@ h2 {
 
 h3 {
   font-size: 24px;
-  margin: 7px auto;
+  margin: 7px 7px;
 }
 
 h4 {
@@ -287,26 +287,31 @@ button.decorless {
 
 button.close-window {
   cursor: pointer;
-  position: absolute;
-  right: 0;
-  top: 0;
+  position: relative;
+  // right: 0;
+  // top: 0;
   min-width: auto;
-  width: 40px;
-  height: 40px;
+  // width: 40px;
+  // height: 40px;
+  font-size: 24px;
+  margin: 7px 0;
   background: none;
   padding: auto;
-  margin: 0;
+  // margin: 0;
   border: none;
   box-sizing: border-box;
+  color: @white;
   line-height: auto;
-  color: inherit;
-  transition: opacity 0.2s ease-in-out;
-
+  // color: inherit;
+  transition: text-shadow 200ms ease-in-out, transform 200ms ease-in-out;
   &:hover {
+    transform: translate(0, -1px);
     outline: none !important;
-    opacity: 0.7;
+    // opacity: 0.7;
+    box-shadow: none;
     border: none !important;
-    color: @main-blue;
+    color: @light-grey;
+    text-shadow: 4px 4px 12px #000000;
   }
 }
 

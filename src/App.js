@@ -4,13 +4,9 @@ import { IntlProvider, addLocaleData } from 'react-intl';
 import ru from 'react-intl/locale-data/ru';
 import en from 'react-intl/locale-data/en';
 
-// Need to fetch this data instead of importing
-import map from '../data/map.json';
 import lang from '../data/lang.json';
 
-// import AppRouter from './routes';
 import Main from './pages/Main';
-// import Result from './pages/Result';
 import Map from './containers/Map';
 import Tooltip from './components/Tooltip';
 
@@ -53,6 +49,7 @@ class App extends React.Component {
   }
 
   state = {
+    map: {},
     idx: 0,
     i18n: 'ru',
     shared: null,
@@ -76,13 +73,20 @@ class App extends React.Component {
     } else {
       this.changeLocale('en');
     }
+    this.loadData();
   }
 
-  changeLocale(loc) {
-    if (loc in this.locales) {
+  setTooltip(e) {
+    // e.color === null ? null : d.object.key;
+    // this.props.store.pins.setActive(key, false);
+    // this.props.store.pins.setPosition(d.x, d.y);
+    if (e.color === null) {
+      this.setState({ tooltipActive: false });
+    } else {
       this.setState({
-        i18n: loc,
-        intl: this.locales[loc],
+        tooltipActive: true,
+        tooltipCoord: e.pixel,
+        tooltipInfo: e.object.properties.admin
       });
     }
   }
@@ -155,23 +159,24 @@ class App extends React.Component {
     return null;
   }
 
-  setTooltip(e) {
-    // e.color === null ? null : d.object.key;
-    // this.props.store.pins.setActive(key, false);
-    // this.props.store.pins.setPosition(d.x, d.y);
-    if (e.color === null) {
-      this.setState({ tooltipActive: false });
-    } else {
+  changeLocale(loc) {
+    if (loc in this.locales) {
       this.setState({
-        tooltipActive: true,
-        tooltipCoord: e.pixel,
-        tooltipInfo: e.object.properties.admin
+        i18n: loc,
+        intl: this.locales[loc],
       });
     }
   }
 
+  loadData() {
+    fetch('./map.json')
+      .then(response => response.json())
+      .then(map => this.setState({ map }));
+  }
+
   render() {
     const {
+      map,
       intl,
       selected,
       shared,
