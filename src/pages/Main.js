@@ -5,6 +5,7 @@ import LanguageSearch from '../containers/LanguageSearch';
 import TagsWrapper from '../containers/TagsWrapper';
 import SharePanel from '../containers/SharePanel';
 import NativeSpeakers from '../components/NativeSpeakers';
+import Watermarks from '../containers/Watermarks';
 
 class Main extends React.Component {
   state = {
@@ -13,7 +14,6 @@ class Main extends React.Component {
   };
 
   updateUI(value) {
-    console.log('updateUI', value);
     this.setState({ ...value });
   }
 
@@ -52,6 +52,7 @@ class Main extends React.Component {
             />)
         }
         <NativeSpeakers population={this.props.population} />
+        <Watermarks />
       </div>
     );
   }
