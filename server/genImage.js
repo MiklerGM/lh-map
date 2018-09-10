@@ -1,5 +1,3 @@
-
-import fs from 'fs';
 import cloud from 'd3-cloud';
 
 import Canvas from 'canvas';
@@ -67,10 +65,6 @@ function genSVG(cloudWords, size) {
   ].join(' ');
   return cloudInBox;
 }
-
-// function saveImage(res, file, id, cloudWords, size) {
-  
-// }
 
 function calcCloud(words, endCb) {
   cloud().size([width, height])

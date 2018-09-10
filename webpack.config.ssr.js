@@ -16,7 +16,7 @@ module.exports = {
   },
   // externals: ['react-helmet'],
   externals: [nodeExternals()],
-  entry: './src/server.js',
+  entry: './server/server.js',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'server.js',
