@@ -18,11 +18,11 @@ console.time('Calculating Locales');
 const localeLang = Object.keys(lang).reduce((p, c) => ({
   en: {
     ...p.en,
-    [`${c}.full`]: lang[c].i18n.eng
+    [`${c}.full`]: lang[c].i18n.en
   },
   ru: {
     ...p.ru,
-    [`${c}.full`]: lang[c].i18n.rus
+    [`${c}.full`]: lang[c].i18n.ru
   }
 }), { en: {}, ru: {} });
 console.timeEnd('Calculating Locales');

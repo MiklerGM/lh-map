@@ -1,15 +1,14 @@
 import Express from 'express';
 import fs from 'fs';
-import sharp from 'sharp';
 import bodyParser from 'body-parser';
 
 import crypto from 'crypto';
 
-// import cloud from 'd3-cloud';
+import sharp from 'sharp';
 
 import lang from '../data/lang.json';
 
-import genImage from './genImage';
+import generatePreviewImage from './genImage';
 
 const PORT = process.env.LH_API_PORT || 4000;
 
@@ -68,52 +67,49 @@ app.use('/result/:url', (req, res) => {
 });
 
 app.post('/share', (req, res) => {
-  // const id = getReqId();
-  // console.log('New ID', id);
-  // console.log(req);
-  // req.json().then(j => console.log('Hey Json', j));
-  // console.log('body', req.body);
   const { selected, pop, i18n } = req.body;
 
-  // const lngIds = selected.map(s => s.split('').map(c => c.charCodeAt()).join(''));
-  // const id = lngIds.sort().join('_');
-
   const valid = selected.every(s => s in lang);
-  // const id = selected.sort().join('');
+
   const hash = crypto.createHash('md5')
     .update(selected.sort().join('')).digest('hex');
-  const id = `${i18n}${hash}`;
 
+  const id = `${i18n}${hash}`;
+  console.time(id);
   console.log(
-    `> New ReqID: ${id}, ${valid}`,
-    `> Total: ${earthPop}`,
-    `> Sharing: ${pop}`,
-    `> I can understand every ${Math.round(earthPop / Number(pop))} Earther`,
-    `> Languages: ${selected.join(' ')}`,
+    `> New ReqID: ${id}, ${valid}\n`,
+    `> Total: ${earthPop}\n`,
+    `> Sharing: ${pop}\n`,
+    `> I can understand every ${Math.round(earthPop / Number(pop))} Earther\n`,
+    `> Languages: ${selected.join(' ')}\n`,
   );
 
   try {
     const file = getImgUrl(id);
+    // check if file already exists
     fs.access(file, fs.constants.F_OK, (err) => {
       if (err) {
-        const imgSvg = Buffer.from(genImage(selected));
-        sharp(imgSvg)
-          .png()
-          .toFile(file)
-          .then(() => {
-            console.log('sharp is OK (new image ready)');
-            res.send({
-              success: true,
-              result: id,
+        const saveImg = (imgSvg) => {
+          fs.writeFile(`${PREVIEW}/${id}.svg`, imgSvg);
+          sharp(imgSvg)
+            .png()
+            .toFile(file)
+            .then(() => {
+              console.log('sharp is OK (new image ready)');
+              res.send({
+                success: true,
+                result: id,
+              });
+            })
+            .catch((e) => {
+              console.log('Sharp error', e);
+              res.send({
+                success: false,
+                result: null,
+              });
             });
-          })
-          .catch((e) => {
-            console.log('Sharp error', e);
-            res.send({
-              success: false,
-              result: null,
-            });
-          });
+        };
+        generatePreviewImage(res, i18n, pop, selected, saveImg);
       } else {
         res.send({
           success: true,
@@ -121,7 +117,6 @@ app.post('/share', (req, res) => {
         });
       }
     });
-    // fs.writeFile(`${PREVIEW}/${id}.svg`, imgSvg);
   } catch (e) {
     console.log('Share error', e);
     res.send({
@@ -129,6 +124,7 @@ app.post('/share', (req, res) => {
       result: id,
     });
   }
+  console.timeEnd(id);
 });
 app.use(`/${PREVIEW}`, Express.static(PREVIEW));
 

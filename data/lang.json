@@ -1,8 +1,8 @@
 {
     "ENG": {
         "i18n": {
-            "rus": "Английский",
-            "eng": "English"
+            "ru": "Английский",
+            "en": "English"
         },
         "search": ["English", "Fyukbqcrfz", "Английский", "Утпдшыр"],
         "countries": ["ATG","BRB","BLZ","BWA","BDI","CMR","CAN","COK","DMA","FSM","FJI","GMB","GHA","GRD","GUY","IND","IRL","JAM","KEN","KIR","LSO","LBR","MWI","MLT","MHL","MUS","NAM","NRU","NPL","NGA","NIU","PAK","PLW","PNG","PHL","RWA","KNA","LCA","VCT","WSM","SYC","SLE","SGP","SLB","ZAF","SDS","SDN","SWZ","TON","TTO","UGA","VUT","ZMB","ZWE","GBR","USA","NZL","AUS"],
@@ -10,8 +10,8 @@
     },
     "ALB": {
         "i18n": {
-            "rus": "Албанский",
-            "eng": "Albanian"
+            "ru": "Албанский",
+            "en": "Albanian"
         },
         "search": ["Albanian", "Fk,fycrbq", "Албанский", "Фдифтшфт", "Shqip"],
         "countries": ["ALB","KOS"],
@@ -19,8 +19,8 @@
     },
     "ARA": {
         "i18n": {
-            "rus": "Арабский",
-            "eng": "Arabic"
+            "ru": "Арабский",
+            "en": "Arabic"
         },
         "search": ["Арабский", "Fhf,crbq", "Фкфишс", "Arabic", "العربية"],
         "countries": ["DZA","BHR","COM","TCD","EGY","ERI","IRQ","JOR","KWT","LBN","LBY","MRT","MAR","OMN","PSX","QAT","SAH","SAU","SDN","SYR","TZA","TUN","ARE","YEM"],
@@ -28,8 +28,8 @@
     },
     "ARM": {
         "i18n": {
-            "rus": "Армянский",
-            "eng": "Armenian"
+            "ru": "Армянский",
+            "en": "Armenian"
         },
         "search": ["Armenian", "Fhvzycrbq", "Армянский", "Фкьутшфт", "Հայերեն"],
         "countries": ["ARM"],
@@ -37,8 +37,8 @@
     },
     "BAQ": {
         "i18n": {
-            "rus": "Баскский",
-            "eng": "Basque"
+            "ru": "Баскский",
+            "en": "Basque"
         },
         "search": ["Баскский", "<fcrcrbq", "Basque", "Ифыйгу", "euskera", "euskara"],
         "countries": ["ES-PV","ES-NC"],
@@ -46,8 +46,8 @@
     },
     "BRE": {
         "i18n": {
-            "rus": "Бретонский",
-            "eng": "Breton"
+            "ru": "Бретонский",
+            "en": "Breton"
         },
         "search": ["Breton", "<htnjycrbq", "brezhoneg", "Бретонский", "Икуещт"],
         "countries": ["FR-E"],
@@ -55,8 +55,8 @@
     },
     "CAT": {
         "i18n": {
-            "rus": "Каталанский (Валенсийский)",
-            "eng": "Catalan (Valencian)"
+            "ru": "Каталанский (Валенсийский)",
+            "en": "Catalan (Valencian)"
         },
         "search": ["Catalan", "Velencian", "català", "valencià", "Каталанский", "Каталонский", "Валенсийский"],
         "countries": ["ES-CT","ES-VC","AND"],
@@ -64,8 +64,8 @@
     },
     "WEL": {
         "i18n": {
-            "rus": "Валлийский",
-            "eng": "Welsh"
+            "ru": "Валлийский",
+            "en": "Welsh"
         },
         "search": ["Welsh", "Cymraeg", "Валлийсий", "Уэльский", "Цудыр", "Dfkkbqcrbq"],
         "countries": ["GB-WLS"],
@@ -73,8 +73,8 @@
     },
     "HUN": {
         "i18n": {
-            "rus": "Венгенский",
-            "eng": "Hungarian"
+            "ru": "Венгенский",
+            "en": "Hungarian"
         },
         "search": ["Hungarian", "Венгерский", "Dthutycrbq", "Ргтпфкшфт", "Magyar"],
         "countries": ["HUN"],
@@ -82,8 +82,8 @@
     },
     "GRE": {
         "i18n": {
-            "rus": "Греческий",
-            "eng": "Greek"
+            "ru": "Греческий",
+            "en": "Greek"
         },
         "search": ["Greek", "Uhtxtcrbq", "Пкуул", "Греческий", "ελληνικά"],
         "countries": ["GRC","CYP"],
@@ -91,8 +91,8 @@
     },
     "GEO": {
         "i18n": {
-            "rus": "Грузинский",
-            "eng": "Georgian"
+            "ru": "Грузинский",
+            "en": "Georgian"
         },
         "search": ["ქართული", "Georgian", "Uhepbycrbq", "Грузинский", "Пущкпшфт"],
         "countries": ["GEO"],
@@ -100,8 +100,8 @@
     },
     "GLA": {
         "i18n": {
-            "rus": "Шотландский (Кельтский)",
-            "eng": "Scottish Gaelic"
+            "ru": "Шотландский (Кельтский)",
+            "en": "Scottish Gaelic"
         },
         "search": ["Scottish", "Gaelic", " Scots Gaelic", "Celtic", "Шотландский", "Кельтский", "Гэльский"],
         "countries": ["GB-SCT","CA-NS"],
@@ -109,8 +109,8 @@
     },
     "DAN": {
         "i18n": {
-            "rus": "Датский",
-            "eng": "Danish"
+            "ru": "Датский",
+            "en": "Danish"
         },
         "search": ["Danish", "Lfncrbq", "Датский", "Вфтшыр","dansk "],
         "countries": ["FRO","DNK","GRL"],
@@ -118,8 +118,8 @@
     },
     "RSL": {
         "i18n": {
-            "rus": "Русский жестовый",
-            "eng": "Russian Sign Language"
+            "ru": "Русский жестовый",
+            "en": "Russian Sign Language"
         },
         "search": ["Russian Sign Language", "Sign Language", "Русский жестовый", "Жестовый", "Язык немых"],
         "countries": ["SIGN"],
@@ -127,8 +127,8 @@
     },
     "HEB": {
         "i18n": {
-            "rus": "Иврит",
-            "eng": "Hebrew"
+            "ru": "Иврит",
+            "en": "Hebrew"
         },
         "search": ["עברית", "Hebrew", "Bdhbn", "Иврит", "Руикуц"],
         "countries": ["ISR"],
@@ -136,8 +136,8 @@
     },
     "IND": {
         "i18n": {
-            "rus": "Индонезийский",
-            "eng": "Indonesian"
+            "ru": "Индонезийский",
+            "en": "Indonesian"
         },
         "search": ["Indonesian", "Byljytpbqcrbq", "Индонезийский", "Штвщтуышфт", "Bahasa Indonesia"],
         "countries": ["IDN"],
@@ -145,8 +145,8 @@
     },
     "GLE": {
         "i18n": {
-            "rus": "Ирландский",
-            "eng": "Irish"
+            "ru": "Ирландский",
+            "en": "Irish"
         },
         "search": ["Irish", "Bhkfylcrbq", "Ирландский", "Шкшыр", "Gaeilge"],
         "countries": ["IRL"],
@@ -154,8 +154,8 @@
     },
     "ICE": {
         "i18n": {
-            "rus": "Исландский",
-            "eng": "Icelandic"
+            "ru": "Исландский",
+            "en": "Icelandic"
         },
         "search": ["Icelandic", "Исландский", "Шсудфтвшс", "Bckflycrbq", "Íslenska"],
         "countries": ["ISL"],
@@ -163,8 +163,8 @@
     },
     "SPA": {
         "i18n": {
-            "rus": "Испанский",
-            "eng": "Spanish"
+            "ru": "Испанский",
+            "en": "Spanish"
         },
         "search": ["Spanish", "Bcgfycrbq", "Испанский", "Ызфтшыр", "Español", "Castilian"],
         "countries": ["ARG","BOL","VEN","GTM","HND","DOM","ESP","COL","CRI","CUB","MEX","NIC","PAN","PRY","PER","PRI","URY","CHL","ECU","GNQ","SLV"],
@@ -172,8 +172,8 @@
     },
     "ITA": {
         "i18n": {
-            "rus": "Итальянский",
-            "eng": "Italian"
+            "ru": "Итальянский",
+            "en": "Italian"
         },
         "search": ["Italian", "Bnfkmzycrbq", "Итальянский", "Шефдшфт"],
         "countries": ["ITA","VAT","CHE","SMR"],
@@ -181,8 +181,8 @@
     },
     "TLH": {
         "i18n": {
-            "rus": "Клингонский",
-            "eng": "Klingon"
+            "ru": "Клингонский",
+            "en": "Klingon"
         },
         "search": ["Klingon", "tlhIngan Hol", "Клингонский"],
         "countries": ["KLINGON"],
@@ -190,8 +190,8 @@
     },
     "KOM": {
         "i18n": {
-            "rus": "Коми",
-            "eng": "Komi"
+            "ru": "Коми",
+            "en": "Komi"
         },
         "search": ["Коми", "Komi", "коми кыв", "rjvb", "лщьш"],
         "countries": ["RU-CO"],
@@ -199,8 +199,8 @@
     },
     "COP": {
         "i18n": {
-            "rus": "Коптский",
-            "eng": "Coptic"
+            "ru": "Коптский",
+            "en": "Coptic"
         },
         "search": ["Коптский","Coptic"],
         "countries": [],
@@ -208,8 +208,8 @@
     },
     "KOR": {
         "i18n": {
-            "rus": "Корейский",
-            "eng": "Korean"
+            "ru": "Корейский",
+            "en": "Korean"
         },
         "search": ["Korean", "한국어", "Корейский", "Rjhtqcrbq"],
         "countries": ["CH-JL","PRK","KOR"],
@@ -217,8 +217,8 @@
     },
     "LAT": {
         "i18n": {
-            "rus": "Латинский",
-            "eng": "Latin"
+            "ru": "Латинский",
+            "en": "Latin"
         },
         "search": ["Latin", "Латинский", "Kfnbycrbq", "latine", "lingua latina"],
         "countries": ["LATIN"],
@@ -226,8 +226,8 @@
     },
     "LAV": {
         "i18n": {
-            "rus": "Латвийский",
-            "eng": "Latvian"
+            "ru": "Латвийский",
+            "en": "Latvian"
         },
         "search": ["Latvian", "latviešu valoda", "Латвийский", "Kfndbqcrbq"],
         "countries": ["LVA"],
@@ -235,8 +235,8 @@
     },
     "LIT": {
         "i18n": {
-            "rus": "Литовский",
-            "eng": "Lithuanian"
+            "ru": "Литовский",
+            "en": "Lithuanian"
         },
         "search": ["Lithuanian", "Литовский", "Kbnjdcrbq", "lietuvių kalbacc"],
         "countries": ["LTU"],
@@ -244,8 +244,8 @@
     },
     "MLT": {
         "i18n": {
-            "rus": "Мальтийский",
-            "eng": "Meltese"
+            "ru": "Мальтийский",
+            "en": "Meltese"
         },
         "search": ["Meltese", "Malti", "Мальтийский"],
         "countries": ["MLT"],
@@ -253,8 +253,8 @@
     },
     "GLV": {
         "i18n": {
-            "rus": "Мэнский",
-            "eng": "Manx"
+            "ru": "Мэнский",
+            "en": "Manx"
         },
         "search": ["Manx", "Мэнский", "Gailck", "Gaelg"],
         "countries": ["IMN"],
@@ -262,8 +262,8 @@
     },
     "GER": {
         "i18n": {
-            "rus": "Немецкий",
-            "eng": "German"
+            "ru": "Немецкий",
+            "en": "German"
         },
         "search": ["German", "Немецкий", "Ytvtwrbq", "Deutsch"],
         "countries": ["AUT","BEL","DEU","LIE","LUX","CHE"],
@@ -271,8 +271,8 @@
     },
     "NEP": {
         "i18n": {
-            "rus": "Непали",
-            "eng": "Nepali"
+            "ru": "Непали",
+            "en": "Nepali"
         },
         "search": ["Nepali", "Nepalian", "Непальский", "Непали", "नेपाली"],
         "countries": ["NPL","IN-WB","IN-SK"],
@@ -280,8 +280,8 @@
     },
     "DUT": {
         "i18n": {
-            "rus": "Нидерландский",
-            "eng": "Dutch"
+            "ru": "Нидерландский",
+            "en": "Dutch"
         },
         "search": ["Dutch", "Нидерландский", "Голандский", "Holand", "Flemish", "Фломанский", "Nederlands", "Vlaams"],
         "countries": ["NLD","BEL","ABW","CUW","SUR","SXM"],
@@ -289,8 +289,8 @@
     },
     "NOR": {
         "i18n": {
-            "rus": "Норвежский",
-            "eng": "Norwegian"
+            "ru": "Норвежский",
+            "en": "Norwegian"
         },
         "search": ["Norwegian", "Norsk", "Норвежский"],
         "countries": ["NOR"],
@@ -298,8 +298,8 @@
     },
     "POL": {
         "i18n": {
-            "rus": "Польский",
-            "eng": "Polish"
+            "ru": "Польский",
+            "en": "Polish"
         },
         "search": ["Polish", "Польский", "język polski", "polszczyzna"],
         "countries": ["POL"],
@@ -307,8 +307,8 @@
     },
     "POR": {
         "i18n": {
-            "rus": "Португальский",
-            "eng": "Portuguese"
+            "ru": "Португальский",
+            "en": "Portuguese"
         },
         "search": ["Portuguese", "Португальский", "Gjhneufkmcrbq"],
         "countries": ["AGO","BRA","CPV","TLS","GNQ","GNB","MOZ","PRT","STP"],
@@ -316,8 +316,8 @@
     },
     "RUN": {
         "i18n": {
-            "rus": "Румынский",
-            "eng": "Romanian"
+            "ru": "Румынский",
+            "en": "Romanian"
         },
         "search": ["Romanian", "Moldavian", "Moldovan", "Румынский", "Rumanian", "Молдовский", "română"],
         "countries": ["ROU","MDA"],
@@ -325,8 +325,8 @@
     },
     "RUS": {
         "i18n": {
-            "rus": "Русский",
-            "eng": "Russian"
+            "ru": "Русский",
+            "en": "Russian"
         },
         "search": ["Russian", "Русский", "Российский"],
         "countries": ["RUS","BLR","KAZ","KGZ","TJK"],
@@ -334,8 +334,8 @@
     },
     "SRP": {
         "i18n": {
-            "rus": "Сербский",
-            "eng": "Serbian"
+            "ru": "Сербский",
+            "en": "Serbian"
         },
         "search": ["српски језик", "Serbian", "Сербский"],
         "countries": ["SRB","KOS","BIH"],
@@ -343,8 +343,8 @@
     },
     "SLO": {
         "i18n": {
-            "rus": "Словацкий",
-            "eng": "Slovak"
+            "ru": "Словацкий",
+            "en": "Slovak"
         },
         "search": ["Slovenčina", "Slovak", "Словацкий"],
         "countries": ["SVK"],
@@ -352,8 +352,8 @@
     },
     "TAI": {
         "i18n": {
-            "rus": "Тайский",
-            "eng": "Thai"
+            "ru": "Тайский",
+            "en": "Thai"
         },
         "search": ["ไทย", "Thai", "Тайский", "Siamese"],
         "countries": ["THA"],
@@ -361,8 +361,8 @@
     },
     "TAT": {
         "i18n": {
-            "rus": "Татарский",
-            "eng": "Tatar"
+            "ru": "Татарский",
+            "en": "Tatar"
         },
         "search": ["Tatar", "Tatar tele", "Татарский", "татар теле"],
         "countries": ["RU-TT"],
@@ -370,8 +370,8 @@
     },
     "TUR": {
         "i18n": {
-            "rus": "Турецкий",
-            "eng": "Turkish"
+            "ru": "Турецкий",
+            "en": "Turkish"
         },
         "search": ["Turkish", "Турецкий", "Türkçe"],
         "countries": ["CYN","CYP","TUR"],
@@ -379,8 +379,8 @@
     },
     "UKR": {
         "i18n": {
-            "rus": "Украинский",
-            "eng": "Ukranian"
+            "ru": "Украинский",
+            "en": "Ukranian"
         },
         "search": ["Украинский", "Ukranian", "Українська"],
         "countries": ["UKR"],
@@ -388,8 +388,8 @@
     },
     "FAO": {
         "i18n": {
-            "rus": "Фарерский",
-            "eng": "Faroese"
+            "ru": "Фарерский",
+            "en": "Faroese"
         },
         "search": ["føroyskt", "Faroese", "Фарерский"],
         "countries": ["FRO"],
@@ -397,8 +397,8 @@
     },
     "PER": {
         "i18n": {
-            "rus": "Фарси",
-            "eng": "Farsi"
+            "ru": "Фарси",
+            "en": "Farsi"
         },
         "search": ["Persian", "Farsi", "Персидский", "Фарси", "فارسی"],
         "countries": ["IRN","AFG","TJK"],
@@ -406,8 +406,8 @@
     },
     "FRA": {
         "i18n": {
-            "rus": "Французский",
-            "eng": "French"
+            "ru": "Французский",
+            "en": "French"
         },
         "search": ["French", "Французский", "français"],
         "countries": ["BEL","BEN","BFA","BDI","CMR","CAN","CAF","TCD","COM","COG","COD","DJI","GNQ","FRA","GAB","GIN","HTI","CIV","LUX","MDG","MLI","MCO","NER","RWA","SEN","SYC","CHE","TGO","VUT"],
@@ -415,8 +415,8 @@
     },
     "FIN": {
         "i18n": {
-            "rus": "Финский",
-            "eng": "Finnish"
+            "ru": "Финский",
+            "en": "Finnish"
         },
         "search": ["Finnish", "Финский", "suomi", "suomen kieli"],
         "countries": ["FIN"],
@@ -424,8 +424,8 @@
     },
     "HIN": {
         "i18n": {
-            "rus": "Хинди",
-            "eng": "Hindi"
+            "ru": "Хинди",
+            "en": "Hindi"
         },
         "search": ["Hindi", "Хинди", "{bylb", "Рштвш", "हिंदी", "हिन्दी"],
         "countries": ["IND"],
@@ -433,8 +433,8 @@
     },
     "URD": {
         "i18n": {
-            "rus": "Урду",
-            "eng": "Urdu"
+            "ru": "Урду",
+            "en": "Urdu"
         },
         "search": ["Urdu", "اردو", "Урду", "Ehle"],
         "countries": ["IND","PAK"],
@@ -442,8 +442,8 @@
     },
     "HRV": {
         "i18n": {
-            "rus": "Хорватский",
-            "eng": "Croatian"
+            "ru": "Хорватский",
+            "en": "Croatian"
         },
         "search": ["hrvatski jezik", "Croatian", "Хорватский", "[jhdfncrbq"],
         "countries": ["HRV","BIH"],
@@ -451,8 +451,8 @@
     },
     "SWE": {
         "i18n": {
-            "rus": "Шведский",
-            "eng": "Swedish"
+            "ru": "Шведский",
+            "en": "Swedish"
         },
         "search": ["Swedish", "Svenska", "IDtlcrbq", "Шведский"],
         "countries": ["SWE","FIN"],
@@ -460,8 +460,8 @@
     },
     "CZE": {
         "i18n": {
-            "rus": "Чешский",
-            "eng": "Czech"
+            "ru": "Чешский",
+            "en": "Czech"
         },
         "search": ["čeština", "český jazyk", "Czech", "Чешский", "Xticrbq"],
         "countries": ["CZE"],
@@ -469,8 +469,8 @@
     },
     "CHR": {
         "i18n": {
-            "rus": "Чероки",
-            "eng": "Cherokee"
+            "ru": "Чероки",
+            "en": "Cherokee"
         },
         "search": ["Cherokee", "ᏣᎳᎩ ᎦᏬᏂᎯᏍᏗ", "ᎦᏬᏂᎯᏍᏗ", "Чероки", "Tsalagi", "Тсалаги"],
         "countries": [],
@@ -478,8 +478,8 @@
     },
     "CHV": {
         "i18n": {
-            "rus": "Чувашский",
-            "eng": "Chuvash"
+            "ru": "Чувашский",
+            "en": "Chuvash"
         },
         "search": ["Chuvash", "Чувашский", "чӑваш чӗлхи", "Xedficrbq"],
         "countries": ["RU-CU"],
@@ -487,8 +487,8 @@
     },
     "EST": {
         "i18n": {
-            "rus": "Эстонский",
-            "eng": "Estonian"
+            "ru": "Эстонский",
+            "en": "Estonian"
         },
         "search": ["Estonian", "cnjycrbq", "Эстонский", "eesti"],
         "countries": ["EST"],
@@ -496,8 +496,8 @@
     },
     "EPO": {
         "i18n": {
-            "rus": "Эсперанто",
-            "eng": "Esperanto"
+            "ru": "Эсперанто",
+            "en": "Esperanto"
         },
         "search": ["Esperanto", "Эсперанто"],
         "countries": ["ESPERANTO"],
@@ -505,8 +505,8 @@
     },
     "YKG": {
         "i18n": {
-            "rus": "Юкагирский",
-            "eng": "Yukaghir"
+            "ru": "Юкагирский",
+            "en": "Yukaghir"
         },
         "search": ["Юкагирский", "Yukaghir", "тундровый", "вадульский", "Tundra Yukaghir", "Northern Yukaghir", "Одун ажуу", "одульский", "колы́мский"],
         "countries": ["RU-SA","RU-CHU"],
@@ -514,8 +514,8 @@
     },
     "JAP": {
         "i18n": {
-            "rus": "Японский",
-            "eng": "Japanese"
+            "ru": "Японский",
+            "en": "Japanese"
         },
         "search": ["Японский", "Japanese", "Zgjcyrbq"],
         "countries": ["JPN"],
@@ -523,8 +523,8 @@
     },
     "CHN": {
         "i18n": {
-            "rus": "Упрощенный китайский",
-            "eng": "Simplified chinese"
+            "ru": "Упрощенный китайский",
+            "en": "Simplified chinese"
         },
         "search": ["китайский", "rbnfqcrbq", "chinese", "汉语", "hanyu", "Мандарин", "Путунхуа", "Putonghua"],
         "countries": ["CHN","SGP","TWN"],
@@ -532,8 +532,8 @@
     },
     "SCH": {
         "i18n": {
-            "rus": "Традиционный китайский",
-            "eng": "Traditional chinese"
+            "ru": "Традиционный китайский",
+            "en": "Traditional chinese"
         },
         "search": ["китайский", "rbnfqcrbq", "chinese", "漢語", "Cantonese", "Кантонский", "Guǎngdōng huà"],
         "countries": ["HKG","MAC"],
