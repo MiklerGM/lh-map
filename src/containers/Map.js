@@ -2,6 +2,7 @@ import React from 'react';
 import DeckGL, {
   GeoJsonLayer,
   MapView,
+  MapController
 } from 'deck.gl';
 
 class Map extends React.Component {
@@ -34,7 +35,7 @@ class Map extends React.Component {
       id: 'id-view',
       width,
       height,
-      controller: true
+      controller: { type: MapController, dragRotate: false }
     });
   }
 
