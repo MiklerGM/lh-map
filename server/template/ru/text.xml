@@ -1,0 +1,24 @@
+    <text
+       style="font-weight:bold;font-size:36px;font-family:OpenSans-Bold, 'Open Sans';fill:#013243"
+       font-weight="bold"
+       font-size="36"
+       id="Меня-понимает-каждый">
+      <tspan
+         id="tspan11"
+         y="47"
+         x="360">Меня понимает</tspan>
+      <tspan
+         id="tspan13"
+         y="96"
+         x="360">каждый</tspan>
+    </text>
+    <text
+       style="font-weight:bold;font-size:36px;font-family:OpenSans-Bold, 'Open Sans';fill:#013243"
+       font-weight="bold"
+       font-size="36"
+       id="Я-знаю">
+      <tspan
+         id="tspan25"
+         y="145"
+         x="360">Я знаю</tspan>
+    </text>

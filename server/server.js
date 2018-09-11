@@ -109,7 +109,7 @@ app.post('/share', (req, res) => {
               });
             });
         };
-        generatePreviewImage(res, i18n, pop, selected, saveImg);
+        generatePreviewImage(i18n, pop, selected, saveImg);
       } else {
         res.send({
           success: true,

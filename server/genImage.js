@@ -4,6 +4,9 @@ import Canvas from 'canvas';
 
 import lang from '../data/lang.json';
 
+import compileTemplate from './template/template';
+
+
 const angles = [-90, -45, 0, 45, 90];
 const colors = ['FF6161', '263F66', 'F9AA54', '75D5EF', 'A55F94', '669966', '944564'];
 const fontFamily = 'Open Sans';
@@ -34,6 +37,7 @@ function getWords(selected, i18n) {
 }
 
 function getSize(size) {
+  if (size === null) return '0 0 0 0';
   const padding = 8;
   const top = size[0].x - padding;
   const left = size[0].y - padding;
@@ -57,7 +61,7 @@ function genSVG(cloudWords, size) {
   const viewBox = getSize(size);
 
   const cloudInBox = [
-    `<svg width="${width}" height="${height}" viewBox="${viewBox}">`,
+    `<svg width="600" height="300" viewBox="${viewBox}">`,
     `<g transform="translate(${width / 2}, ${height / 2})">`,
     ...svg,
     '</g>',
@@ -78,14 +82,16 @@ function calcCloud(words, endCb) {
     .start();
 }
 
-function generatePreviewImage(res, i18n, pop, selected, saveImg) {
+function generatePreviewImage(i18n, pop, selected, saveImg) {
   console.time('genImg');
   const words = getWords(selected, i18n);
   console.time('calCloud');
   const endCb = (cloudWords, size) => {
     console.timeEnd('calCloud');
     console.log('Size >', size);
-    const imgSvg = Buffer.from(genSVG(cloudWords, size));
+    const cloudSVG = genSVG(cloudWords, size);
+    const template = compileTemplate(cloudSVG, pop, i18n);
+    const imgSvg = Buffer.from(template);
     saveImg(imgSvg);
   };
   calcCloud(words, endCb);
