@@ -30,8 +30,8 @@ console.timeEnd('Calculating Locales');
 addLocaleData([...en, ...ru]);
 
 const genResultLink = res => ({
-  url: `${window.location.href}/result/${res}`,
-  img: `${window.location.href}/preview/${res}.png`,
+  url: `${window.location.href}result/${res}`,
+  img: `${window.location.href}preview/${res}.png`,
 });
 
 class App extends React.Component {
