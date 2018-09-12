@@ -7,7 +7,8 @@ import lang from '../data/lang.json';
 import compileTemplate from './template/template';
 
 
-const angles = [-90, -45, 0, 45, 90];
+// const angles = [-90, -45, 0, 45, 90];
+const angles = [45];
 const colors = ['FF6161', '263F66', 'F9AA54', '75D5EF', 'A55F94', '669966', '944564'];
 const fontFamily = 'Open Sans';
 const width = 1600;
@@ -30,8 +31,8 @@ function getWords(selected, i18n) {
       text: d,
       size: base - d.length + Math.round(Math.random() * (base / 2)),
       // size: 14 + Math.round(Math.random() * 44),
-      rotate: angles[Math.round(Math.random() * 4)],
-      color: colors[Math.round(Math.random() * 6)],
+      rotate: angles[Math.round(Math.random() * (angles.length - 1))],
+      color: colors[Math.round(Math.random() * (colors.length - 1))],
       opacity: 1 - (Math.random() * 0.2), // opacity from 0.8 to 1
     }));
 }
