@@ -90,7 +90,9 @@ app.post('/share', (req, res) => {
     fs.access(file, fs.constants.F_OK, (err) => {
       if (err) {
         const saveImg = (imgSvg) => {
-          fs.writeFile(`${PREVIEW}/${id}.svg`, imgSvg);
+          fs.writeFile(`${PREVIEW}/${id}.svg`, imgSvg, (e) => {
+            if (e) throw e;
+          });
           sharp(imgSvg)
             .png()
             .toFile(file)
