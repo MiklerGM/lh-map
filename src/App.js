@@ -83,11 +83,17 @@ class App extends React.Component {
     if (e.color === null) {
       this.setState({ tooltipActive: false });
     } else {
-      this.setState({
-        tooltipActive: true,
-        tooltipCoord: e.pixel,
-        tooltipInfo: e.object.properties.admin
-      });
+      (this.state.i18n === 'ru')
+        ? this.setState({
+          tooltipActive: true,
+          tooltipCoord: e.pixel,
+          tooltipInfo: e.object.properties.adminRu
+        })
+        : this.setState({
+          tooltipActive: true,
+          tooltipCoord: e.pixel,
+          tooltipInfo: e.object.properties.admin
+        });
     }
   }
 
