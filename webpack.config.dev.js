@@ -74,6 +74,10 @@ module.exports = {
         },
       },
       {
+        test: /\.ico$/,
+        use: ['file-loader?name=[name].[ext]']
+      },
+      {
         test: /\.less$/,
         use: ['style-loader', 'css-loader', 'less-loader']
       },

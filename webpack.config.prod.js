@@ -82,6 +82,10 @@ module.exports = {
         ]
       },
       {
+        test: /\.ico$/,
+        use: ['file-loader?name=[name].[ext]']
+      },
+      {
         test: /\.png$/,
         use: 'url-loader'
       },

@@ -4,6 +4,7 @@ import App from './App';
 
 import './style.less';
 import './App.less';
+import './assets/favicon.ico';
 
 window.store = {
   viewState: null,
