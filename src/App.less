@@ -7,7 +7,7 @@
   z-index: 52;
   display: flex;
   padding: 0;
-  background-color: #fafafa;
+  background-color: @white;
   min-width: 80%;
   max-width: 100%;
   width: auto;
@@ -209,7 +209,8 @@ hr {
 }
 
 .button--share {
-  background-color: @red;
+  // background-color: @red;
+  background-color: #c1332f;
   border-radius: 10px;
   width: auto;
   min-width: 0;
@@ -266,17 +267,35 @@ strong {
   border-radius: 2px;
   padding: 2px 2px;
   transform: translate(-10%, 20px);
-  font-weight: 700;
-}
+  font-weight: 700
+;}
 
 .watermark {
   // max-width: 150px;
   height: 100%;
   margin: 2em;
   max-height: 60px;
+  user-select: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   & img {
     max-width: 100%;
     max-height: 60px;
     height: auto;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
+}
+
+.rare-wrapper {
+
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 
-import lhLogo from '../assets/watermark-lh-full.png';
+
+import lhLogo from '../assets/watermark-lh-full.svg';
 import chLogo from '../assets/watermark-chrono-full.svg';
 
 class Watermarks extends React.Component {
@@ -18,10 +19,14 @@ class Watermarks extends React.Component {
         }}
       >
         <div className='watermark'>
-          <img src={chLogo} alt='Chronist logo' />
+          <a className='decorless' href='https://chronist.ru/'>
+            <img src={chLogo} alt='Chronist logo' />
+          </a>
         </div>
         <div className='watermark'>
-          <img src={lhLogo} alt='Language Heroes logo' />
+          <a className='decorless' href='http://lh12.ru/'>
+            <img src={lhLogo} alt='Language Heroes logo' />
+          </a>
         </div>
       </div>
     );

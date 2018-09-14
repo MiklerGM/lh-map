@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import img from '../assets/lh-cat.png';
+import img from '../assets/lh-kat.svg';
 
 
 import ButtonToggle from '../components/ButtonToggle';
