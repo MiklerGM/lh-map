@@ -6,9 +6,17 @@ import DeckGL, {
 } from 'deck.gl';
 
 
-// границы #80cece - rga(128, 206, 206)
-// заливка #f0f8fa rgb(240, 248, 250)
-// выделение розовое #d94266 - rgb(217,66, 102)
+const LIGHT_SETTINGS = {
+  lightsPosition: [0, 0, 4000],
+  ambientRatio: 1,
+  diffuseRatio: 0.8,
+  specularRatio: 0.9,
+  // ambientRatio: 0.3,
+  // diffuseRatio: 0.6,
+  // specularRatio: 0.4,
+  lightsStrength: [1, 0.0],
+  numberOfLights: 1
+};
 
 class Map extends React.Component {
   state = {
@@ -81,6 +89,7 @@ class Map extends React.Component {
             lineWidthMinPixels: 2,
             getLineWidth: 1,
             lineWidthScale: 20,
+            lightSettings: LIGHT_SETTINGS,
             getElevation: (f) => {
               const { region, adm0_a3: key } = f.properties;
               if (region === '') { // Spain
@@ -105,7 +114,7 @@ class Map extends React.Component {
               if (sub === true && sel === false) {
                 return [200, 200, 200, 0]; // transparent
               }
-              return sel ? [217, 66, 102] : [240, 248, 250, 256];
+              return sel ? [217, 66, 102, 255] : [240, 248, 250, 255];
             },
             updateTriggers: {
               getLineColor: adm,

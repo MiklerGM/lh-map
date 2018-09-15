@@ -74,12 +74,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    // if (navigator.language === 'ru-RU') {
-    //   this.changeLocale('ru');
-    // } else {
-    //   this.changeLocale('en');
-    // }
-    this.changeLocale('ru');
+    if (navigator.language === 'ru-RU') {
+      this.changeLocale('ru');
+    } else {
+      this.changeLocale('en');
+    }
     this.loadData();
   }
 
