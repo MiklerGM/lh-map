@@ -8,15 +8,15 @@ import './SharePanel.less';
 class SocialButtonWrapper extends React.Component {
   url = window.location.href;
 
-  social = ['twitter', 'facebook', 'gplus', 'vkontakte', 'odnoklassniki'];
+  social = ['bird', 'zucc', 'gminus', 'vpashe', 'odnoglaziki'];
 
   link = (s, title, desc) => {
     switch (s) {
-      case 'twitter': return `https://twitter.com/intent/tweet?url=${encodeURI(this.props.result.url)}&text=${desc}&via=chronist`;
-      case 'facebook': return `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
-      case 'gplus': return `https://plus.google.com/share?url=${encodeURI(this.props.result.url)}`;
-      case 'vkontakte': return `https://vk.com/share.php?url=${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
-      case 'odnoklassniki': return '';
+      case 'bird': return `https://twitter.com/intent/tweet?url=${encodeURI(this.props.result.url)}&text=${desc}&via=chronist`;
+      case 'zucc': return `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
+      case 'gminus': return `https://plus.google.com/share?url=${encodeURI(this.props.result.url)}`;
+      case 'vpashe': return `https://vk.com/share.php?url=${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
+      case 'odnoglaziki': return '';
       default: return 'error';
     }
   }
@@ -33,7 +33,7 @@ class SocialButtonWrapper extends React.Component {
         {description => (
           <FormattedMessage id='share.title'>
             {title => (
-              <div className='share-panel__social'>
+              <div className='meme-panel__circles'>
                 {this.social.map(sns => (
                   <SocialButton
                     key={sns}
@@ -63,11 +63,11 @@ class ResultWrapper extends React.Component {
     const { img, url } = this.props.result;
 
     return (
-      <div className='share-panel__result'>
-        <div className='share-panel_picwrapper'>
+      <div className='meme-panel__result'>
+        <div className='meme-panel_picwrapper'>
           <img src={img} alt='Richpreview sharing' width='100%' />
         </div>
-        <div className='share-panel_inputwrapper'>
+        <div className='meme-panel_inputwrapper'>
           <CopyToClipboard
             text={url}
             onCopy={() => this.onCopy()}
@@ -91,9 +91,21 @@ class ResultWrapper extends React.Component {
 class SharePanel extends React.Component {
   render() {
     return (
-      <div className='share-panel layer-4'>
-        <SocialButtonWrapper result={this.props.result} />
-        <ResultWrapper result={this.props.result} shared={this.props.shared} />
+      <div className='meme-panel__modal layer-4'>
+        <div className='modal_head' style={{ backgroundColor: '#C6E5EE' }}>
+          <h3>
+            {' '}
+          </h3>
+          <h3>
+            <button onClick={() => this.props.updateUI({ sharePanel: false })} className='close-window' type='button'>
+              <span className="lnr lnr-cross" />
+            </button>
+          </h3>
+        </div>
+        <div className='meme-panel'>
+          <SocialButtonWrapper result={this.props.result} />
+          <ResultWrapper result={this.props.result} shared={this.props.shared} />
+        </div>
       </div>
     );
   }

@@ -3,7 +3,6 @@ import { FormattedMessage } from 'react-intl';
 
 import img from '../assets/lh-kat.svg';
 
-
 import ButtonToggle from '../components/ButtonToggle';
 
 class LanguageSetup extends React.Component {
@@ -14,7 +13,7 @@ class LanguageSetup extends React.Component {
   render() {
     return (
       <div className='language-setup layer-3'>
-        <div className='language-setup_head'>
+        <div className='modal_head'>
           <h3>
             <img
               src={img}

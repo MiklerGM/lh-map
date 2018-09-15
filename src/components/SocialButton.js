@@ -1,8 +1,8 @@
 import React from 'react';
 
 const SocialButton = ({ name, cb }) => (
-  <button className='btn-sns' onClick={() => cb(name)}>
-    <span className={`icon-${name}`} />
+  <button className='btn-circle' onClick={() => cb(name)}>
+    <span className={`circle-${name}`} />
   </button>
 );
 

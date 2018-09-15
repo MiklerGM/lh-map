@@ -25,7 +25,7 @@ export default class RareLanguages extends React.Component {
     const defaultSize = 128;
     const w = defaultSize / window.devicePixelRatio;
     return (
-      <div style={style}>
+      <div className='rare-wrapper' style={style}>
         {Object.keys(decorations).map(d => (
           selected[d] && <img width={w} heigh={w} key={d} src={decorations[d]} alt={d} />
         ))}

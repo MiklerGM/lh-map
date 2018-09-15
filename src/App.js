@@ -4,6 +4,8 @@ import { IntlProvider, addLocaleData } from 'react-intl';
 import ru from 'react-intl/locale-data/ru';
 import en from 'react-intl/locale-data/en';
 
+import createHistory from 'history/createBrowserHistory';
+
 import lang from '../data/lang.json';
 
 import Main from './pages/Main';
@@ -13,6 +15,8 @@ import Tooltip from './components/Tooltip';
 import localeDataRU from './locales/ru.json';
 import localeDataEN from './locales/en.json';
 import RareLanguages from './containers/RareLanguages';
+
+const history = createHistory()
 
 console.time('Calculating Locales');
 const localeLang = Object.keys(lang).reduce((p, c) => ({
@@ -29,9 +33,11 @@ console.timeEnd('Calculating Locales');
 
 addLocaleData([...en, ...ru]);
 
+const linkTemplate = (process.env.WEBPACK === 'production') ? 'http://lh.chron.ist/' : 'http://localhost:8080/';
+
 const genResultLink = res => ({
-  url: `${window.location.href}result/${res}`,
-  img: `${window.location.href}preview/${res}.png`,
+  url: `${linkTemplate}result/${res}`,
+  img: `${linkTemplate}preview/${res}.png`,
 });
 
 class App extends React.Component {
@@ -68,11 +74,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    if (navigator.language === 'ru-RU') {
-      this.changeLocale('ru');
-    } else {
-      this.changeLocale('en');
-    }
+    // if (navigator.language === 'ru-RU') {
+    //   this.changeLocale('ru');
+    // } else {
+    //   this.changeLocale('en');
+    // }
+    this.changeLocale('ru');
     this.loadData();
   }
 
@@ -147,6 +154,8 @@ class App extends React.Component {
                   shared: j.result,
                   result: genResultLink(j.result)
                 });
+                console.log('history', history);
+                history.push(`/result/${j.result}`);
               } else {
                 console.error('Stalled data on sharing');
                 console.log(idx, this.state.idx);

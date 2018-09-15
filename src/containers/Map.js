@@ -5,6 +5,11 @@ import DeckGL, {
   MapController
 } from 'deck.gl';
 
+
+// границы #80cece - rga(128, 206, 206)
+// заливка #f0f8fa rgb(240, 248, 250)
+// выделение розовое #d94266 - rgb(217,66, 102)
+
 class Map extends React.Component {
   state = {
     width: window.innerWidth,
@@ -91,7 +96,7 @@ class Map extends React.Component {
               if (sub === true && sel === false) {
                 return [100, 100, 100, 0];
               }
-              return [100, 100, 100, 255];
+              return [128, 206, 206];
             },
             getFillColor: (f) => {
               const { region, adm0_a3: key } = f.properties;
@@ -100,7 +105,7 @@ class Map extends React.Component {
               if (sub === true && sel === false) {
                 return [200, 200, 200, 0]; // transparent
               }
-              return sel ? [150, 150, 250, 255] : [200, 200, 200, 255];
+              return sel ? [217, 66, 102] : [240, 248, 250, 256];
             },
             updateTriggers: {
               getLineColor: adm,

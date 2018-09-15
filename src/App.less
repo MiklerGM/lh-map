@@ -1,6 +1,15 @@
 @import './styles/colors.less';
 @import './styles/ButtonToggle.less';
 // @import './styles/simple-line-icons.less';
+@import './styles/baloons.less';
+@import './styles/checkbox.less';
+@import './styles/LineIcon.less';
+@import './styles/fontello.less';
+@import './styles/number.less';
+@import './styles/radio.less';
+@import './styles/select.less';
+@import './styles/slider.less';
+@import './styles/tooltip.less';
 
 .language-setup {
   position: fixed;
@@ -28,16 +37,25 @@
   }
 }
 
-.language-setup_head {
+.modal_head {
+  box-sizing: border-box;
   padding: 8px;
   margin: 0;
-  background-color: @main-blue;
-  color: @white;
+  background-color: @white;
+  color: @black;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  // border-bottom: 1px solid #fafafa;
   & h3 {
     text-align: left;
+  }
+}
+
+button.close-window {
+  color: @black;
+  &:hover {
+    color: @dark-grey;
   }
 }
 
@@ -208,7 +226,7 @@ hr {
   }
 }
 
-.button--share {
+.button--red {
   // background-color: @red;
   background-color: #c1332f;
   border-radius: 10px;

@@ -2,24 +2,39 @@
 
 @blueish: #C6E5EE;
 
-.share-panel {
+.meme-panel__modal {
   position: fixed;
   z-index: 53;
   display: flex;
-  padding: 8px;
-  background-color: @blueish;
+  padding: 0;
+  background-color: @white;
   min-width: 80%;
-  max-width: 800px;
+  max-width: 100%;
   width: auto;
   left: 50%;
-  max-height: 100vh;
-  overflow-y: hidden;
   top: 50%;
   transform: translate(-50%, -50%);
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
   // align-items: center;
   align-content: center;
+  max-height: 80vh;
+  overflow: hidden;
+  border: @border;
+  border-radius: 2px;
+  @media screen and (max-width: 600px) {
+    width: 98%;
+
+  }
+}
+
+.meme-panel {
+  display: flex;
+  background-color: @blueish;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-content: center;
+  box-sizing: border-box;
   overflow: auto;
   border: @border;
   border-radius: 2px;
@@ -29,7 +44,7 @@
   }
 }
 
-.share-panel__social {
+.meme-panel__circles {
   width: 80px;
   display: flex;
   flex-direction: column;
@@ -43,8 +58,8 @@
   }
 }
 
-.share-panel__result {
-  padding: 10px 30px;
+.meme-panel__result {
+  padding: 0px 30px 10px;
   width: auto;
   display: block;
   // background: #fafafa;
@@ -54,7 +69,7 @@
   }
 }
 
-.share-panel_inputwrapper {
+.meme-panel_inputwrapper {
   padding: 0 30px;
   box-sizing: border-box;
   display: flex;
@@ -73,6 +88,7 @@
 .input_status {
   visibility: hidden;
   opacity: 0;
+  width: 200px;
   transition: visibility 150ms linear, opacity 150ms linear;
   letter-spacing: -0.2px;
   font-weight: 600;
@@ -87,17 +103,17 @@
   font-weight: 600;
 }
 
-.share-panel_picwrapper {
+.meme-panel_picwrapper {
   width: auto;
   height: auto;
-  margin: 10px 0;
-  padding: 30px;
+  margin: 0 0 10px;
+  padding: 5px 30px 30px;
   & img {
     box-shadow: 0 3px 12px rgba(17, 17, 17, 0.8);
   }
 }
 
-.btn-sns {
+.btn-circle {
   background: transparent;
   // min-width: 0;
   // max-width: 60px !important;
@@ -127,23 +143,23 @@
   }
 }
 
-.icon-twitter {
+.circle-bird {
   background-color: #00a3ea;
 }
 
-.icon-facebook {
+.circle-zucc {
    background-color: #334f8d;
 }
 
-.icon-gplus {
+.circle-gminus {
    background-color: #d84132;
 }
 
-.icon-vkontakte {
+.circle-vpashe {
    background-color: #3d5b83;
 }
 
-.icon-odnoklassniki {
+.circle-odnoglaziki {
    background-color: #f0660f;
 }
 
