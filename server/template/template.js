@@ -32,29 +32,23 @@ function getCounter(i18n, pop) {
   switch (i18n) {
     case 'ru': {
       const shift = every.toString().length * 30;
-      const position = 590 + shift;
+      const position = 770 - shift;
       console.log('RU', every, every.length, shift, position);
       return `
       <text
-        style="font-weight:500;font-size:64px;font-family:OpenSans-SemiBold, 'Open Sans';fill:#ffffff;stroke:#d94266;stroke-width:2"
-        font-weight="500"
-        font-size="64"
-        id="counter">
-        <tspan id="tspan28" y="105" x="535">
-          ${every}
-        </tspan>
-      </text>
-      <text
-        style="font-weight:bold;font-size:36px;font-family:OpenSans-Bold, 'Open Sans';fill:#013243"
-        font-weight="bold"
-        font-size="36"
-        id="человек-в-мире!">
-        <tspan
-          id="tspan16"
-          y="96"
-          x="${position}">человек в мире!
-        </tspan>
-    </text>`;
+       id="counter"
+       stroke="#D94266"
+       stroke-width="2"
+       fill="#FFFFFF"
+       font-family="OpenSans-SemiBold, Open Sans"
+       font-size="66"
+       font-weight="500">
+      <tspan
+         x="${position}"
+         y="160"
+         id="tspan25">${every}</tspan>
+    </text>
+      `;
     }
     case 'en': {
       return `
@@ -64,7 +58,7 @@ function getCounter(i18n, pop) {
           font-weight="500"
           style="font-weight:500;font-size:64px;font-family:OpenSans-SemiBold, 'Open Sans';fill:#ffffff;stroke:#d94266;stroke-width:2">
         <tspan
-            x="350"
+            x="510"
             y="90"
             id="tspan24">${percent}%</tspan>
         </text>
@@ -82,7 +76,7 @@ function compile(cloud, pop, i18n) {
     getRandomPlanet(),
     locales[i18n].text,
     counter,
-    '<g id="cloud" transform="translate(550, 180)">',
+    '<g id="cloud" transform="translate(530, 210)">',
     cloud,
     '</g>',
     locales[i18n].footer,

@@ -8,7 +8,7 @@ import compileTemplate from './template/template';
 
 
 // const angles = [-90, -45, 0, 45, 90];
-const angles = [45];
+const angles = [-45];
 const colors = ['FF6161', '263F66', 'F9AA54', '75D5EF', 'A55F94', '669966', '944564'];
 const fontFamily = 'Open Sans';
 const width = 1600;
@@ -62,7 +62,7 @@ function genSVG(cloudWords, size) {
   const viewBox = getSize(size);
 
   const cloudInBox = [
-    `<svg width="600" height="300" viewBox="${viewBox}">`,
+    `<svg width="640" height="320" viewBox="${viewBox}">`,
     `<g transform="translate(${width / 2}, ${height / 2})">`,
     ...svg,
     '</g>',

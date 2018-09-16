@@ -4,13 +4,13 @@
        font-weight="bold"
        style="font-weight:bold;font-size:36px;font-family:OpenSans-Bold, 'Open Sans';fill:#013243">
       <tspan
-         x="504"
+         x="660"
          y="60"
-         id="tspan12">of the world speaks the same</tspan>
+         id="tspan12">of the world speaks the</tspan>
       <tspan
-         x="504"
-         y="109"
-         id="tspan14">languages as me</tspan>
+         x="660"
+         y="100"
+         id="tspan14">same languages as me</tspan>
     </text>
     <text
        id="I-speak"
@@ -18,7 +18,7 @@
        font-weight="bold"
        style="font-weight:bold;font-size:36px;font-family:OpenSans-Bold, 'Open Sans';fill:#013243">
       <tspan
-         x="360"
+         x="600"
          y="145"
          id="tspan21">I speak</tspan>
     </text>
