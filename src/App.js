@@ -33,7 +33,7 @@ console.timeEnd('Calculating Locales');
 
 addLocaleData([...en, ...ru]);
 
-const linkTemplate = (process.env.WEBPACK === 'production') ? 'http://lh.chron.ist/' : 'http://localhost:8080/';
+const linkTemplate = window.location.href;
 
 const genResultLink = res => ({
   url: `${linkTemplate}result/${res}`,
