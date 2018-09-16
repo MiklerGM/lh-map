@@ -40,7 +40,7 @@ function getCounter(i18n, pop) {
        stroke="#D94266"
        stroke-width="2"
        fill="#FFFFFF"
-       font-family="OpenSans-SemiBold, Open Sans"
+       font-family="Open Sans"
        font-size="66"
        font-weight="500">
       <tspan
@@ -56,7 +56,7 @@ function getCounter(i18n, pop) {
           id="percent"
           font-size="64"
           font-weight="500"
-          style="font-weight:500;font-size:64px;font-family:OpenSans-SemiBold, 'Open Sans';fill:#ffffff;stroke:#d94266;stroke-width:2">
+          style="font-weight:500;font-size:64px;font-family:Open Sans;fill:#ffffff;stroke:#d94266;stroke-width:2">
         <tspan
             x="510"
             y="90"
@@ -76,7 +76,7 @@ function compile(cloud, pop, i18n) {
     getRandomPlanet(),
     locales[i18n].text,
     counter,
-    '<g id="cloud" transform="translate(530, 210)">',
+    '<g id="cloud" transform="translate(580, 210)">',
     cloud,
     '</g>',
     locales[i18n].footer,

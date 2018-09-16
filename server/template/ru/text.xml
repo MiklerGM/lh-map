@@ -1,8 +1,8 @@
 <text
        id="меня-понимает-каждый"
-       font-family="OpenSans-Bold, Open Sans"
+       font-family="Open Sans"
        font-size="36"
-       font-weight="bold"
+       font-weight="700"
        fill="#013243">
       <tspan
          x="600"
@@ -11,9 +11,9 @@
     </text>
     <text
        id="человек-в-мире"
-       font-family="OpenSans-Bold, Open Sans"
+       font-family="Open Sans"
        font-size="36"
-       font-weight="bold"
+       font-weight="700"
        fill="#013243">
       <tspan
          x="822"
@@ -26,9 +26,9 @@
     </text>
     <text
        id="Я-знаю"
-       font-family="OpenSans-Bold, Open Sans"
+       font-family="Open Sans"
        font-size="33"
-       font-weight="bold"
+       font-weight="700"
        fill="#013243">
       <tspan
          x="600"
