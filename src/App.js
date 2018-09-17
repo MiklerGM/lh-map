@@ -33,7 +33,7 @@ console.timeEnd('Calculating Locales');
 
 addLocaleData([...en, ...ru]);
 
-const linkTemplate = window.location.href;
+const linkTemplate = window.location.origin;
 
 const genResultLink = res => ({
   url: `${linkTemplate}result/${res}`,
