@@ -55,14 +55,20 @@ class App extends React.Component {
     }
   }
 
+  results = {
+    loading: genResultLink('loading'),
+    hello: genResultLink('hello'),
+  }
+
   state = {
     map: {},
     i18n: 'ru',
     shared: false,
+    clean: true, // zero selected languages
     tooltipActive: false,
     tooltipPosition: [0, 0],
     tooltipInfo: '',
-    result: genResultLink('hello'),
+    result: this.results.hello,
     population: window.store.population || 0,
     intl: this.locales.ru,
     selected: window.store.selected === null
@@ -74,12 +80,24 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    if (navigator.language === 'ru-RU') {
+    if (navigator.language.match(/ru/i)) {
       this.changeLocale('ru');
     } else {
       this.changeLocale('en');
     }
     this.loadData();
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if ((prevState.i18n !== this.state.i18n) && prevState.shared === true) {
+      this.share();
+    } else if (prevState.selected !== this.state.selected) {
+      if (this.state.clean === true) {
+        history.push('/');
+      } else {
+        this.share();
+      }
+    }
   }
 
   setTooltip(e) {
@@ -113,12 +131,15 @@ class App extends React.Component {
 
     window.store.population = population;
     window.store.selected = selected;
+    const dirty = Object.keys(selected).some(f => selected[f] === true);
+    const result = dirty ? this.results.loading : this.results.hello;
     this.setState({
+      clean: !dirty,
       population,
       selected,
-      result: genResultLink('hello'),
+      result,
       shared: false,
-    }, () => this.share());
+    });
   }
 
   share(check = false, tryCount = 0) {
@@ -197,6 +218,8 @@ class App extends React.Component {
   changeLocale(loc) {
     if (loc in this.locales) {
       this.setState({
+        result: genResultLink('loading'),
+        shared: false,
         i18n: loc,
         intl: this.locales[loc],
       });
