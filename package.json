@@ -15,6 +15,7 @@
     "clean": "rimraf node_modules dist"
   },
   "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-config-prettier": "^2.9.0",
@@ -37,7 +38,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.18.3",
-    "canvas": "^1.6.12",
+    "canvas": "^2.0.0-alpha.14",
     "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
     "d3-cloud": "^1.2.5",
@@ -51,7 +52,7 @@
     "luma.gl": "^6.0.0",
     "mini-css-extract-plugin": "^0.4.1",
     "nodemon": "^1.18.3",
-    "npm": "^6.3.0",
+    "npm": "^6.4.1",
     "prop-types": "^15.6.2",
     "rc-select": "^8.2.0",
     "react": "^16.2.0",
@@ -62,6 +63,7 @@
     "react-intl": "^2.4.0",
     "sharp": "^0.20.6",
     "style-loader": "^0.22.1",
+    "svg2img": "^0.5.0",
     "uglifyjs-webpack-plugin": "^1.3.0",
     "url-loader": "^1.0.1",
     "webpack": "^4.16.5",
