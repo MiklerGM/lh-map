@@ -1,10 +1,9 @@
 import Express from 'express';
 import fs from 'fs';
 import bodyParser from 'body-parser';
+import EventEmitter from 'events';
 
 import crypto from 'crypto';
-
-import sharp from 'sharp';
 
 import lang from '../data/lang.json';
 
@@ -14,11 +13,22 @@ const PORT = process.env.LH_API_PORT || 4000;
 
 const PREVIEW = 'preview';
 
-const earthPop = 7.6 * (10 ** 9);
-
 
 function getImgUrl(id) {
-  return `${PREVIEW}/${id}.png`;
+  return { png: `${PREVIEW}/${id}.png`, svg: `${PREVIEW}/${id}.svg` };
+}
+
+function parseBody(body) {
+  const { selected, i18n } = body;
+  const hash = crypto.createHash('md5')
+    .update(selected.sort().join('')).digest('hex');
+
+  const id = `${i18n}${hash}`;
+  const files = getImgUrl(id);
+  const valid = selected.every(s => s in lang);
+  return {
+    id, hash, valid, ...files
+  };
 }
 
 const content = {
@@ -35,9 +45,22 @@ const content = {
 const app = new Express();
 app.use(bodyParser.json());
 
+// const drawEmitter = new EventEmitter();
+// drawEmitter.on('share', (body) => {
+//   const hash = parseBody(body);
+//   console.log('Share Event:', body.selected.join(' '));
+//   console.log('Trying file', hash.png);
+//   // check if file already exists
+//   fs.access(hash.png, fs.constants.F_OK, (err) => {
+//     if (err) {
+//       generatePreviewImage(body, hash);
+//     }
+//   });
+// });
+
 app.use('/result/:url', (req, res) => {
   console.log('req.params.uid', req.params.url);
-  const img = `/${getImgUrl(req.params.url)}`;
+  const img = `/${getImgUrl(req.params.url).png}`;
   const html = `
 <!DOCTYPE html>
 <html>
@@ -67,61 +90,45 @@ app.use('/result/:url', (req, res) => {
 });
 
 app.post('/share', (req, res) => {
-  const { selected, pop, i18n } = req.body;
+  const { selected, check } = req.body;
 
-  const valid = selected.every(s => s in lang);
+  const {
+    id, png, valid
+  } = parseBody(req.body);
 
-  const hash = crypto.createHash('md5')
-    .update(selected.sort().join('')).digest('hex');
-
-  const id = `${i18n}${hash}`;
+  console.log('\n');
   console.time(id);
   console.log(
     `> New ReqID: ${id}, ${valid}\n`,
-    `> Total: ${earthPop}\n`,
-    `> Sharing: ${pop}\n`,
-    `> I can understand every ${Math.round(earthPop / Number(pop))} Earther\n`,
     `> Languages: ${selected.join(' ')}\n`,
   );
-
   try {
-    const file = getImgUrl(id);
-    // check if file already exists
-    fs.access(file, fs.constants.F_OK, (err) => {
+    fs.access(png, fs.constants.F_OK, async (err) => {
       if (err) {
-        const saveImg = (imgSvg) => {
-          fs.writeFile(`${PREVIEW}/${id}.svg`, imgSvg, (e) => {
-            if (e) throw e;
-          });
-          sharp(imgSvg)
-            .png()
-            .toFile(file)
-            .then(() => {
-              console.log('sharp is OK (new image ready)');
-              res.send({
-                success: true,
-                result: id,
-              });
-            })
-            .catch((e) => {
-              console.log('Sharp error', e);
-              res.send({
-                success: false,
-                result: null,
-              });
-            });
-        };
-        generatePreviewImage(i18n, pop, selected, saveImg);
-      } else {
+        if (check !== true) {
+          await generatePreviewImage(req.body, parseBody(req.body));
+          // drawEmitter.emit('share', req.body);
+        }
         res.send({
+          selected,
           success: true,
           result: id,
+          ready: false,
+        });
+      } else {
+        res.send({
+          selected,
+          success: true,
+          result: id,
+          ready: true,
         });
       }
     });
   } catch (e) {
     console.log('Share error', e);
     res.send({
+      selected,
+      ready: false,
       success: false,
       result: id,
     });

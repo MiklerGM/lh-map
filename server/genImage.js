@@ -1,6 +1,8 @@
 import cloud from 'd3-cloud';
 
-import Canvas from 'canvas';
+import fs from 'fs';
+import { createCanvas } from 'canvas';
+import svg2img from 'svg2img';
 
 import lang from '../data/lang.json';
 
@@ -75,8 +77,9 @@ function genSVG(cloudWords, size) {
 }
 
 function calcCloud(words, endCb) {
+  const c = createCanvas(1, 1);
   cloud().size([width, height])
-    .canvas(() => (new Canvas(1, 1)))
+    .canvas(c)
     .words(words)
     .padding(10)
     .rotate(d => d.rotate)
@@ -86,18 +89,40 @@ function calcCloud(words, endCb) {
     .start();
 }
 
-function generatePreviewImage(i18n, pop, selected, saveImg) {
+function saveImg(cloudWords, size, pop, i18n, svg, png) {
+  console.log('Size >', size);
+  const cloudSVG = genSVG(cloudWords, size);
+  const imgSvg = compileTemplate(cloudSVG, pop, i18n);
+
+  fs.writeFile(svg, imgSvg, (e) => { if (e) throw e; });
+
+  console.time('svg2img');
+
+  svg2img(imgSvg, (error, buffer) => {
+    if (error) throw (error);
+
+    // returns a Buffer
+    console.timeEnd('svg2img');
+    fs.writeFile(png, buffer, (e) => { if (e) throw e; });
+  });
+}
+
+function generatePreviewImage(body, hash) {
+  const { selected, pop, i18n } = body;
+  const {
+    svg, png
+  } = hash;
+
   console.time('genImg');
+
   const words = getWords(selected);
-  console.time('calCloud');
+
   const endCb = (cloudWords, size) => {
     console.timeEnd('calCloud');
-    console.log('Size >', size);
-    const cloudSVG = genSVG(cloudWords, size);
-    const template = compileTemplate(cloudSVG, pop, i18n);
-    const imgSvg = Buffer.from(template);
-    saveImg(imgSvg);
+    saveImg(cloudWords, size, pop, i18n, svg, png);
   };
+
+  console.time('calCloud');
   calcCloud(words, endCb);
   console.timeEnd('genImg');
 }

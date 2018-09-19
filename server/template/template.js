@@ -19,7 +19,7 @@ fs.readdirSync(`${template}/planets`).forEach((file) => {
 
 Object.keys(locales).map(i18n => (
   fs.readdirSync(`${template}/${i18n}`).forEach((file) => {
-    console.log(`locale ${i18n} >`, file);
+    // console.log(`locale ${i18n} >`, file);
     const svg = fs.readFileSync(`${template}/${i18n}/${file}`);
     const key = file.replace('.xml', '');
     locales[i18n][key] = svg;
@@ -33,7 +33,6 @@ function getCounter(i18n, pop) {
     case 'ru': {
       const shift = every.toString().length * 30;
       const position = 770 - shift;
-      console.log('RU', every, every.length, shift, position);
       return `
       <text
        id="counter"
