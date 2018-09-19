@@ -1,7 +1,7 @@
 import Express from 'express';
 import fs from 'fs';
 import bodyParser from 'body-parser';
-import EventEmitter from 'events';
+// import EventEmitter from 'events';
 
 import crypto from 'crypto';
 
@@ -31,15 +31,24 @@ function parseBody(body) {
   };
 }
 
-const content = {
-  ogTitle: 'test',
-  ogSiteName: 'test',
-  ogDescription: 'test',
-  ogImage: 'test',
-  twitterCard: 'test',
-  twitterTitle: 'test',
-  twitterImage: 'test',
-  twitterUrl: 'test'
+const contentRu = {
+  ogTitle: 'Атлас языков',
+  ogDescription: 'Интерактивный атлас популярных языков',
+  twitterTitle: 'Атлас языков',
+};
+
+const contentEn = {
+  ogTitle: 'Linguistic map',
+  ogDescription: 'Interactive map of popular languages',
+  twitterTitle: 'Linguistic map',
+};
+
+const contentBase = {
+  ogSiteName: 'lh.chron.ist',
+  // ogImage: 'test',
+  twitterCard: 'photo',
+  // twitterImage: 'test',
+  twitterUrl: ''
 };
 
 const app = new Express();
@@ -61,6 +70,10 @@ app.use(bodyParser.json());
 app.use('/result/:url', (req, res) => {
   console.log('req.params.uid', req.params.url);
   const img = `/${getImgUrl(req.params.url).png}`;
+  // russian locale for hello
+  const content = req.params.url.match(/^en/) !== null
+    ? { ...contentBase, ...contentEn }
+    : { ...contentBase, ...contentRu };
   const html = `
 <!DOCTYPE html>
 <html>
@@ -70,14 +83,14 @@ app.use('/result/:url', (req, res) => {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="${content.ogDescription}">
     <title>${content.ogTitle}</title>
-    <meta property="og:title" content=${content.ogTitle} />
-    <meta property="og:site_name" content=${content.ogSiteName}/>
-    <meta property="og:description" content=${content.ogDescription} />
-    <meta property="og:image" content=${img} />
-    <meta name="twitter:card" content=${content.twitterCard} />
-    <meta name="twitter:title" content=${content.twitterTitle} />
-    <meta name="twitter:image" content=${img} />
-    <meta name="twitter:url" content=${content.twitterUrl} />
+    <meta property="og:title" content="${content.ogTitle}" />
+    <meta property="og:site_name" content="${content.ogSiteName}" />
+    <meta property="og:description" content="${content.ogDescription}" />
+    <meta property="og:image" content="${img}" />
+    <meta name="twitter:card" content="${content.twitterCard}" />
+    <meta name="twitter:title" content="${content.twitterTitle}" />
+    <meta name="twitter:image" content="${img}" />
+    <meta name="twitter:url" content="${content.twitterUrl}" />
   </head>
   <body>
     <script type="text/javascript">

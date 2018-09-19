@@ -19,7 +19,6 @@ fs.readdirSync(`${template}/planets`).forEach((file) => {
 
 Object.keys(locales).map(i18n => (
   fs.readdirSync(`${template}/${i18n}`).forEach((file) => {
-    // console.log(`locale ${i18n} >`, file);
     const svg = fs.readFileSync(`${template}/${i18n}/${file}`);
     const key = file.replace('.xml', '');
     locales[i18n][key] = svg;
