@@ -233,6 +233,8 @@ class App extends React.Component {
             shared={shared}
             result={result}
             population={population}
+            locale={this.state.i18n}
+            changeLocale={v => this.changeLocale(v)}
           />
           {tooltipActive
             && <Tooltip position={tooltipPosition} info={tooltipInfo} />}

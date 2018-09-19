@@ -6,6 +6,7 @@ import TagsWrapper from '../containers/TagsWrapper';
 import SharePanel from '../containers/SharePanel';
 import NativeSpeakers from '../components/NativeSpeakers';
 import Watermarks from '../containers/Watermarks';
+import LocaleWidget from '../components/LocaleWidget';
 
 class Main extends React.Component {
   state = {
@@ -53,6 +54,10 @@ class Main extends React.Component {
         }
         <NativeSpeakers population={this.props.population} />
         <Watermarks />
+        <LocaleWidget
+          locale={this.props.locale}
+          onChangeLanguage={v => this.props.changeLocale(v)}
+        />
       </div>
     );
   }
