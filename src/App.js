@@ -68,6 +68,10 @@ class App extends React.Component {
     tooltipActive: false,
     tooltipPosition: [0, 0],
     tooltipInfo: '',
+    UI: {
+      langGrid: false,
+      sharePanel: false
+    },
     result: this.results.hello,
     population: window.store.population || 0,
     intl: this.locales.ru,
@@ -92,6 +96,10 @@ class App extends React.Component {
     if ((prevState.i18n !== this.state.i18n) && prevState.shared === true) {
       this.share();
     } else if (prevState.selected !== this.state.selected) {
+      // update (global) state for HMR
+      window.store.population = this.state.population;
+      window.store.selected = this.state.selected;
+
       if (this.state.clean === true) {
         history.push('/');
       } else {
@@ -117,7 +125,19 @@ class App extends React.Component {
     }
   }
 
-  select(lng) {
+  updateUI = (v) => {
+    this.setState(prevState => ({
+      UI: {
+        // close all windows
+        ...Object.keys(prevState)
+          .reduce((prev, cur) => ({ ...prev, [cur]: false }), {}),
+        // apply new changes
+        ...v
+      }
+    }));
+  }
+
+  select = (lng) => {
     console.log('> Selecting', lng, 'App.js>select');
     const { selected: oldSelected } = this.state;
     const selected = {
@@ -129,8 +149,6 @@ class App extends React.Component {
         ? prev + lang[cur].counter
         : prev), 0);
 
-    window.store.population = population;
-    window.store.selected = selected;
     const dirty = Object.keys(selected).some(f => selected[f] === true);
     const result = dirty ? this.results.loading : this.results.hello;
     this.setState({
@@ -142,7 +160,7 @@ class App extends React.Component {
     });
   }
 
-  share(check = false, tryCount = 0) {
+  share = (check = false, tryCount = 0) => {
     const { selected, population } = this.state;
     const body = {
       selected: Object.keys(selected).filter(f => selected[f]),
@@ -215,14 +233,14 @@ class App extends React.Component {
     return null;
   }
 
-  changeLocale(loc) {
+  changeLocale = (loc) => {
     if (loc in this.locales) {
-      this.setState({
-        result: genResultLink('loading'),
+      this.setState(prevState => ({
+        result: prevState.clean ? this.results.hello : this.results.loading,
         shared: false,
         i18n: loc,
         intl: this.locales[loc],
-      });
+      }));
     }
   }
 
@@ -234,6 +252,7 @@ class App extends React.Component {
 
   render() {
     const {
+      UI,
       map,
       intl,
       selected,
@@ -250,14 +269,16 @@ class App extends React.Component {
         <div>
           <Map map={map} lang={lang} selected={selected} setTooltip={e => this.setTooltip(e)} />
           <Main
+            UI={UI}
             lang={lang}
             selected={selected}
-            select={lng => this.select(lng)}
+            select={this.select}
             shared={shared}
             result={result}
             population={population}
             locale={this.state.i18n}
-            changeLocale={v => this.changeLocale(v)}
+            updateUI={this.updateUI}
+            changeLocale={this.changeLocale}
           />
           {tooltipActive
             && <Tooltip position={tooltipPosition} info={tooltipInfo} />}
