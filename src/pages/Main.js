@@ -39,7 +39,7 @@ class Main extends React.Component {
               selected={this.props.selected}
               uiState={langGrid}
               updateUI={v => this.updateUI(v)}
-              cb={this.props.select}
+              select={this.props.select}
             />)
         }
         {this.state.sharePanel

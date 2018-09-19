@@ -38,7 +38,7 @@ class LanguageSetup extends React.Component {
               key={`key_${lang}`}
               name={lang}
               checked={this.props.selected[lang]}
-              cb={e => this.props.cb(e)}
+              select={this.props.select}
             />
           ))}
         </div>
