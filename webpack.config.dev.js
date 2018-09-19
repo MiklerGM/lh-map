@@ -87,7 +87,7 @@ module.exports = {
       },
       {
         test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-        loader: 'url-loader?limit=10000&mimetype=image/svg+xml'
+        loader: 'url-loader?limit=40000&mimetype=image/svg+xml'
       },
       {
         test: /\.(woff|woff2|ttf|eot)$/,

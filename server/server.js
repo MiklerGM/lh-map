@@ -83,6 +83,7 @@ app.use('/result/:url', (req, res) => {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="${content.ogDescription}">
     <title>${content.ogTitle}</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <meta property="og:title" content="${content.ogTitle}" />
     <meta property="og:site_name" content="${content.ogSiteName}" />
     <meta property="og:description" content="${content.ogDescription}" />

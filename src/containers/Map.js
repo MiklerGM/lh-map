@@ -5,18 +5,15 @@ import DeckGL, {
   MapController
 } from 'deck.gl';
 
-
 const LIGHT_SETTINGS = {
-  lightsPosition: [0, 0, 4000],
-  ambientRatio: 1,
-  diffuseRatio: 0.8,
-  specularRatio: 0.9,
-  // ambientRatio: 0.3,
-  // diffuseRatio: 0.6,
-  // specularRatio: 0.4,
-  lightsStrength: [1, 0.0],
-  numberOfLights: 1
+  lightsPosition: [-90, 45, 2000, -90, -45, 2000, 90, 45, 2000, 90, -45, 2000], // xyz for all lights
+  ambientRatio: 0.62,
+  diffuseRatio: 0.01, // with value 1 - borders are not visible,
+  specularRatio: 1, // dunno what this thing do
+  lightsStrength: [0.4, 0, 0.4, 0, 0.4, 0, 0.4, 0],
+  numberOfLights: 4 // number of lights. max 5.
 };
+
 
 class Map extends React.Component {
   state = {
@@ -82,13 +79,14 @@ class Map extends React.Component {
             id: 'geojson-layer',
             data: map,
             pickable: true,
+            // fp64: true,
             stroked: true,
             filled: true,
             wireframe: true,
             extruded: true,
-            lineWidthMinPixels: 2,
-            getLineWidth: 1,
-            lineWidthScale: 20,
+            lineWidthMinPixels: 3,
+            getLineWidth: 3,
+            lineWidthScale: 5,
             lightSettings: LIGHT_SETTINGS,
             getElevation: (f) => {
               const { region, adm0_a3: key } = f.properties;
@@ -102,10 +100,12 @@ class Map extends React.Component {
               const { region, adm0_a3: key } = f.properties;
               const sel = adm[key] === true;
               const sub = (region !== '');
+              // console.log('getlinecolor', f.type, f.geometry.type);
               if (sub === true && sel === false) {
-                return [100, 100, 100, 0];
+                // return [100, 100, 100, 0];
+                return [50, 50, 50, 0];
               }
-              return [128, 206, 206];
+              return [128, 206, 206, 255];
             },
             getFillColor: (f) => {
               const { region, adm0_a3: key } = f.properties;

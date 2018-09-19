@@ -22,7 +22,8 @@ class LocaleWidget extends React.Component {
           position: 'fixed',
           bottom: '0',
           right: '0',
-          padding: '10px'
+          padding: '10px',
+          margin: '10px'
         }}
       >
         {this.props.locale === 'ru' ? 'EN' : 'RU'}
