@@ -89,7 +89,7 @@ class App extends React.Component {
     } else {
       this.changeLocale('en');
     }
-    this.loadData();
+    this.loadData(['map.json'], (s, m) => ({ map: m }));
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -108,10 +108,11 @@ class App extends React.Component {
     }
   }
 
-  setTooltip(e) {
+  setTooltip = (e, region) => {
     // e.color === null ? null : d.object.key;
     // this.props.store.pins.setActive(key, false);
     // this.props.store.pins.setPosition(d.x, d.y);
+    const field = region ? 'region' : 'admin';
     if (e.color === null) {
       this.setState({ tooltipActive: false });
     } else {
@@ -119,8 +120,8 @@ class App extends React.Component {
         tooltipActive: true,
         tooltipPosition: e.pixel,
         tooltipInfo: (prevState.i18n === 'ru')
-          ? e.object.properties.adminRu
-          : e.object.properties.admin,
+          ? e.object.properties[`${field}Ru`]
+          : e.object.properties[`${field}`],
       }));
     }
   }
@@ -244,10 +245,16 @@ class App extends React.Component {
     }
   }
 
-  loadData() {
-    fetch('./map.json')
-      .then(response => response.json())
-      .then(map => this.setState({ map }));
+  loadData(files, saveCb) {
+    if (files.length > 0) {
+      const file = files.shift();
+      fetch(`./${file}`)
+        .then(response => response.json())
+        .then(map => this.setState(
+          state => saveCb(state, map, file),
+          () => this.loadData(files, saveCb)
+        ));
+    }
   }
 
   render() {
@@ -267,7 +274,13 @@ class App extends React.Component {
     return (
       <IntlProvider {...intl}>
         <div>
-          <Map map={map} lang={lang} selected={selected} setTooltip={e => this.setTooltip(e)} />
+          <Map
+            map={map}
+            lang={lang}
+            selected={selected}
+            setTooltip={this.setTooltip}
+            updateUI={this.updateUI}
+          />
           <Main
             UI={UI}
             lang={lang}

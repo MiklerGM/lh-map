@@ -5,16 +5,6 @@ import DeckGL, {
   MapController
 } from 'deck.gl';
 
-const LIGHT_SETTINGS = {
-  lightsPosition: [-90, 45, 2000, -90, -45, 2000, 90, 45, 2000, 90, -45, 2000], // xyz for all lights
-  ambientRatio: 0.62,
-  diffuseRatio: 0.01, // with value 1 - borders are not visible,
-  specularRatio: 1, // dunno what this thing do
-  lightsStrength: [0.4, 0, 0.4, 0, 0.4, 0, 0.4, 0],
-  numberOfLights: 4 // number of lights. max 5.
-};
-
-
 class Map extends React.Component {
   state = {
     width: window.innerWidth,
@@ -69,6 +59,13 @@ class Map extends React.Component {
       .reduce((p, c) => ([...p, ...lang[c].countries]), []) // list of all countries
       .reduce((p, c) => ({ ...p, [c]: true }), {}); // uniq countries
 
+    const setTooltip = (e) => {
+      const { region, adm0_a3: key } = e.object.properties;
+      const sel = adm[key] === true;
+      const sub = (region !== '');
+      this.props.setTooltip(e, sel && sub);
+    };
+
     return (
       <DeckGL
         views={this.view}
@@ -79,28 +76,15 @@ class Map extends React.Component {
             id: 'geojson-layer',
             data: map,
             pickable: true,
-            // fp64: true,
             stroked: true,
             filled: true,
-            wireframe: true,
-            extruded: true,
-            lineWidthMinPixels: 3,
-            getLineWidth: 3,
+            lineWidthMinPixels: 1,
+            getLineWidth: 1,
             lineWidthScale: 5,
-            lightSettings: LIGHT_SETTINGS,
-            getElevation: (f) => {
-              const { region, adm0_a3: key } = f.properties;
-              if (region === '') { // Spain
-                return adm[key] === true ? 1000 : 10;
-              }
-              // region
-              return adm[key] === true ? 110 : 0;
-            },
             getLineColor: (f) => {
               const { region, adm0_a3: key } = f.properties;
               const sel = adm[key] === true;
               const sub = (region !== '');
-              // console.log('getlinecolor', f.type, f.geometry.type);
               if (sub === true && sel === false) {
                 // return [100, 100, 100, 0];
                 return [50, 50, 50, 0];
@@ -117,18 +101,23 @@ class Map extends React.Component {
               return sel ? [217, 66, 102, 255] : [240, 248, 250, 255];
             },
             updateTriggers: {
+              pickable: adm,
               getLineColor: adm,
               getFillColor: adm,
               getElevation: adm,
             },
             transitions: {
               getFillColor: 1000,
-              getElevation: 1000,
               geometry: 3000,
             },
-            onHover: e => this.props.setTooltip(e),
-            onClick: e => this.props.setTooltip(e)
-          })
+            onHover: setTooltip,
+            onClick: (e) => {
+              // close all windows
+              // sadly it works only when clicking on land
+              this.props.updateUI({});
+              setTooltip(e);
+            }
+          }),
         ]}
       />
     );
