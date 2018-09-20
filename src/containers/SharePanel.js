@@ -91,7 +91,7 @@ class ResultWrapper extends React.Component {
 class SharePanel extends React.Component {
   render() {
     return (
-      <div className='meme-panel__modal layer-4'>
+      <div className='meme-panel__modal layer-5'>
         <div className='modal_head' style={{ backgroundColor: '#C6E5EE' }}>
           <h3>
             {' '}

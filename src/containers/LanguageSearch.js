@@ -14,7 +14,7 @@ class LanguageSearch extends React.Component {
 
   render() {
     return (
-      <div className='language-search layer-4'>
+      <div className='language-search layer-5'>
         <span className='search-title'>
           <FormattedMessage id='search.title' />
         </span>

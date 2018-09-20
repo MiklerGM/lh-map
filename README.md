@@ -1,20 +1,15 @@
 #LH-Project
 
-У языков выбранных, для прямоугольников цвета
-geojson layer colors:
-line - #80CECE
-fill - #F0F8FA
-fill select
-В десктоп варианте у менюшек всех нет границ, только тени со всех сторон. Цвет кнопок #C1332F
 
-
+##Color for deck.gl geojson layer
+---
 
 |               | rgba            | rendered        |
 |---------------|-----------------|-----------------|
 | stroke        | (128, 206, 206) |                 |
 | fill          | (240, 248, 250) | (198, 203, 205) |
 | fill selected | (217,66, 102)   | (167, 64, 90)   |
-| fill white    |  (255,255,255)  | (204 204 204)   |
+| fill white    | (255,255,255)   | (204 204 204)   |
 
 
 
@@ -23,7 +18,7 @@ fill select
 # Установка зависимостей для node-canvas под Windows
 
 Информация из их вики
-https://github.com/Automattic/node-canvas/wiki/Installation:-Windows
+* https://github.com/Automattic/node-canvas/wiki/Installation:-Windows
 
 История похода по граблям
 

@@ -11,6 +11,10 @@
 @import './styles/slider.less';
 @import './styles/tooltip.less';
 
+body, * {
+  user-select: none;
+}
+
 .language-setup {
   position: fixed;
   z-index: 52;
@@ -46,6 +50,14 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-radius: 2px;
+  user-select: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   // border-bottom: 1px solid #fafafa;
   & h3 {
     text-align: left;
@@ -138,11 +150,20 @@ hr {
   align-content: center;
   height: 52px;
   padding: 8px;
-  border: 1px solid @border;
+  // border: 1px solid @border;
   border-radius: 2px;
   background-color: #fafafa;
   bottom: 10px;
   left: 20px;
+  & .search-title {
+    user-select: none;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
   // width: 50%;
   // height: 60px;
   & > * {
@@ -166,6 +187,7 @@ hr {
     & .rc-select,
     & .search-title {
       display: none;
+      user-select: none;
     }
   }
 }
@@ -195,6 +217,13 @@ hr {
   border-radius: 2px;
   margin-right: 5px;
   margin-bottom: 5px;
+  user-select: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
   &:hover {
     border: 1px solid @main-blue;
     color: @dark-grey;
@@ -268,10 +297,27 @@ strong {
   font-style: normal;
   z-index: 51;
   background-color: #fafafa;
-  box-shadow: 0 3px 12px rgba(17, 17, 17, 0.8);
+  // box-shadow: 0 3px 12px rgba(17, 17, 17, 0.8);
   // border: 1px solid @border;
   // border: 1px solid black;
   border-radius: 2px;
+  user-select: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  & * {
+    border-radius: 2px;
+    user-select: none;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+  }
   @media screen and (max-width: 600px) {
     width: 100%;
     top: 0;
@@ -287,6 +333,14 @@ strong {
   padding: 2px 2px;
   transform: translate(-10%, 20px);
   font-weight: 700;
+  border-radius: 2px;
+  user-select: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .tooltipTopLeft {transform: translate(-10%, 20px);}
@@ -321,5 +375,12 @@ strong {
 }
 
 .rare-wrapper {
-
+  border-radius: 2px;
+  user-select: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
