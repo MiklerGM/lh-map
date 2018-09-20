@@ -16,7 +16,7 @@ import localeDataRU from './locales/ru.json';
 import localeDataEN from './locales/en.json';
 import RareLanguages from './containers/RareLanguages';
 
-const history = createHistory()
+const history = createHistory();
 
 console.time('Calculating Locales');
 const localeLang = Object.keys(lang).reduce((p, c) => ({
@@ -33,11 +33,12 @@ console.timeEnd('Calculating Locales');
 
 addLocaleData([...en, ...ru]);
 
-const linkTemplate = (process.env.WEBPACK === 'production') ? 'http://lh.chron.ist/' : 'http://localhost:8080/';
+const linkTemplate = window.location.origin;
 
 const genResultLink = res => ({
-  url: `${linkTemplate}result/${res}`,
-  img: `${linkTemplate}preview/${res}.png`,
+  href: `/result/${res}`,
+  url: `${linkTemplate}/result/${res}`,
+  img: `${linkTemplate}/preview/${res}.png`,
 });
 
 class App extends React.Component {
@@ -54,15 +55,24 @@ class App extends React.Component {
     }
   }
 
+  results = {
+    loading: genResultLink('loading'),
+    hello: genResultLink('hello'),
+  }
+
   state = {
     map: {},
-    idx: 0,
     i18n: 'ru',
-    shared: null,
+    shared: false,
+    clean: true, // zero selected languages
     tooltipActive: false,
-    tooltipCoord: [0, 0],
+    tooltipPosition: [0, 0],
     tooltipInfo: '',
-    result: genResultLink('hello'),
+    UI: {
+      langGrid: false,
+      sharePanel: false
+    },
+    result: this.results.hello,
     population: window.store.population || 0,
     intl: this.locales.ru,
     selected: window.store.selected === null
@@ -74,37 +84,62 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    if (navigator.language === 'ru-RU') {
+    if (navigator.language.match(/ru/i)) {
       this.changeLocale('ru');
     } else {
       this.changeLocale('en');
     }
-    this.loadData();
+    this.loadData(['map.json'], (s, m) => ({ map: m }));
   }
 
-  setTooltip(e) {
-    // e.color === null ? null : d.object.key;
-    // this.props.store.pins.setActive(key, false);
-    // this.props.store.pins.setPosition(d.x, d.y);
-    if (e.color === null) {
-      this.setState({ tooltipActive: false });
-    } else {
-      (this.state.i18n === 'ru')
-        ? this.setState({
-          tooltipActive: true,
-          tooltipCoord: e.pixel,
-          tooltipInfo: e.object.properties.adminRu
-        })
-        : this.setState({
-          tooltipActive: true,
-          tooltipCoord: e.pixel,
-          tooltipInfo: e.object.properties.admin
-        });
+  componentDidUpdate(prevProps, prevState) {
+    if ((prevState.i18n !== this.state.i18n) && prevState.shared === true) {
+      this.share();
+    } else if (prevState.selected !== this.state.selected) {
+      // update (global) state for HMR
+      window.store.population = this.state.population;
+      window.store.selected = this.state.selected;
+
+      if (this.state.clean === true) {
+        history.push('/');
+      } else {
+        this.share();
+      }
     }
   }
 
-  select(lng) {
-    console.log('Selecting', lng);
+  setTooltip = (e, region) => {
+    // e.color === null ? null : d.object.key;
+    // this.props.store.pins.setActive(key, false);
+    // this.props.store.pins.setPosition(d.x, d.y);
+    const field = region ? 'region' : 'admin';
+    if (e.color === null) {
+      this.setState({ tooltipActive: false });
+    } else {
+      this.setState(prevState => ({
+        tooltipActive: true,
+        tooltipPosition: e.pixel,
+        tooltipInfo: (prevState.i18n === 'ru')
+          ? e.object.properties[`${field}Ru`]
+          : e.object.properties[`${field}`],
+      }));
+    }
+  }
+
+  updateUI = (v) => {
+    this.setState(prevState => ({
+      UI: {
+        // close all windows
+        ...Object.keys(prevState)
+          .reduce((prev, cur) => ({ ...prev, [cur]: false }), {}),
+        // apply new changes
+        ...v
+      }
+    }));
+  }
+
+  select = (lng) => {
+    console.log('> Selecting', lng, 'App.js>select');
     const { selected: oldSelected } = this.state;
     const selected = {
       ...oldSelected,
@@ -115,22 +150,24 @@ class App extends React.Component {
         ? prev + lang[cur].counter
         : prev), 0);
 
-    window.store.population = population;
-    window.store.selected = selected;
-    const idx = this.state.idx + 1;
+    const dirty = Object.keys(selected).some(f => selected[f] === true);
+    const result = dirty ? this.results.loading : this.results.hello;
     this.setState({
-      idx,
+      clean: !dirty,
       population,
       selected,
+      result,
+      shared: false,
     });
-    this.share(population, selected, idx);
   }
 
-  share(population, selected, idx) {
+  share = (check = false, tryCount = 0) => {
+    const { selected, population } = this.state;
     const body = {
       selected: Object.keys(selected).filter(f => selected[f]),
       pop: population,
       i18n: this.state.i18n,
+      check
     };
 
     const url = '/share';
@@ -141,55 +178,88 @@ class App extends React.Component {
       headers: { 'Content-Type': 'application/json' }
     };
     fetch(url, req).then((response) => {
-      const success = response.status === 200;
-      if (success) {
-        try {
-          response.json().then((j) => {
-            console.log('>>> Shared result');
-            console.log(j);
-            if (j.success) {
-              if (this.state.idx >= idx) {
-                this.setState({
-                  shared: j.result,
-                  result: genResultLink(j.result)
-                });
-                console.log('history', history);
-                history.push(`/result/${j.result}`);
-              } else {
-                console.error('Stalled data on sharing');
-                console.log(idx, this.state.idx);
-              }
-            } else {
-              console.error('Terrible error happened, but not handled correctly');
-            }
-          });
-        } catch (e) {
-          console.error('Something bad happened on server', e);
+      if (response.status !== 200) {
+        console.error('Sending was unsuccessful');
+        if (tryCount < 4) {
+          setTimeout(() => {
+            console.info('New try');
+            this.share(check, tryCount + 1);
+          }, 500);
+        } else {
+          console.error('Too many tries');
+          console.error('Response', response);
         }
-      } else {
-        console.error('Sending was unsuccesdcdcsdcsdc');
+        return;
+      }
+      try {
+        response.json().then((j) => {
+          console.log('>>> Shared result');
+          console.log(j);
+          if (j.success) {
+            this.setState((prevState) => {
+              const curSelected = Object.keys(prevState.selected)
+                .filter(f => prevState.selected[f])
+                .sort().join('');
+              const flatSelected = j.selected.sort().join('');
+              if (curSelected === flatSelected) {
+                if (j.ready === true) {
+                  const result = genResultLink(j.result);
+                  console.log('history', history);
+                  history.push(result.href);
+                  this.setState({
+                    shared: j.ready,
+                    result,
+                  });
+                } else {
+                  console.info('Image not ready');
+                  console.info(j.selected);
+                  setTimeout(() => {
+                    console.info('New check');
+                    this.share(true);
+                  }, 150);
+                }
+              } else {
+                console.error('Stalled data on sharing', prevState, j);
+                console.error(curSelected, flatSelected, curSelected === flatSelected);
+              }
+            });
+          } else {
+            console.error('Terrible error happened, but not handled correctly');
+          }
+        });
+      } catch (e) {
+        console.error('Something bad happened on server', e);
       }
     });
     return null;
   }
 
-  changeLocale(loc) {
+  changeLocale = (loc) => {
     if (loc in this.locales) {
-      this.setState({
+      this.setState(prevState => ({
+        result: prevState.clean ? this.results.hello : this.results.loading,
+        shared: false,
         i18n: loc,
         intl: this.locales[loc],
-      });
+      }));
     }
   }
 
-  loadData() {
-    fetch('./map.json')
-      .then(response => response.json())
-      .then(map => this.setState({ map }));
+  loadData(files, saveCb) {
+    if (files.length > 0) {
+      const file = files.shift();
+      fetch(`./${file}`)
+        .then(response => response.json())
+        .then(map => this.setState(
+          state => saveCb(state, map, file),
+          () => this.loadData(files, saveCb)
+        ));
+    }
   }
 
   render() {
     const {
+      UI,
       map,
       intl,
       selected,
@@ -197,23 +267,34 @@ class App extends React.Component {
       result,
       population,
       tooltipActive,
-      tooltipCoord,
+      tooltipPosition,
       tooltipInfo
     } = this.state;
 
     return (
       <IntlProvider {...intl}>
         <div>
-          <Map map={map} lang={lang} selected={selected} setTooltip={e => this.setTooltip(e)} />
-          <Main
+          <Map
+            map={map}
             lang={lang}
             selected={selected}
-            select={lng => this.select(lng)}
+            setTooltip={this.setTooltip}
+            updateUI={this.updateUI}
+          />
+          <Main
+            UI={UI}
+            lang={lang}
+            selected={selected}
+            select={this.select}
             shared={shared}
             result={result}
             population={population}
+            locale={this.state.i18n}
+            updateUI={this.updateUI}
+            changeLocale={this.changeLocale}
           />
-          {tooltipActive ? <Tooltip coord={tooltipCoord} info={tooltipInfo} /> : null}
+          {tooltipActive
+            && <Tooltip position={tooltipPosition} info={tooltipInfo} />}
           <RareLanguages selected={selected} />
         </div>
       </IntlProvider>

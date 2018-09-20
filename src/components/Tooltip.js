@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 class Tooltip extends React.Component {
   get classNames() {
     const classes = ['tooltip layer-3'];
-    if (this.props.coord[0] > 0.5 * window.innerWidth) {
-      if (this.props.coord[1] < 0.7 * window.innerHeight) {
+    if (this.props.position[0] > 0.5 * window.innerWidth) {
+      if (this.props.position[1] < 0.7 * window.innerHeight) {
         classes.push('tooltipTopRight');
       } else {
         classes.push('tooltipBottomRight');
       }
-    } else if (this.props.coord[1] < 0.7 * window.innerHeight) {
+    } else if (this.props.position[1] < 0.7 * window.innerHeight) {
       classes.push('tooltipTopLeft');
     } else {
       classes.push('tooltipBottomLeft');
@@ -25,8 +25,8 @@ class Tooltip extends React.Component {
         style={
           {
             position: 'fixed',
-            top: `${this.props.coord[1]}px`,
-            left: `${this.props.coord[0]}px`
+            top: `${this.props.position[1]}px`,
+            left: `${this.props.position[0]}px`
           }
         }
       >
@@ -37,7 +37,7 @@ class Tooltip extends React.Component {
 }
 
 Tooltip.propTypes = {
-  coord: PropTypes.array.isRequired,
+  position: PropTypes.array.isRequired,
   info: PropTypes.string.isRequired
 };
 

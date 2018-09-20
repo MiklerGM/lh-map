@@ -12,7 +12,7 @@ class LanguageSetup extends React.Component {
 
   render() {
     return (
-      <div className='language-setup layer-3'>
+      <div className='language-setup layer-5'>
         <div className='modal_head'>
           <h3>
             <img
@@ -38,7 +38,7 @@ class LanguageSetup extends React.Component {
               key={`key_${lang}`}
               name={lang}
               checked={this.props.selected[lang]}
-              cb={e => this.props.cb(e)}
+              select={this.props.select}
             />
           ))}
         </div>

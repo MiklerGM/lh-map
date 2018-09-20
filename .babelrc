@@ -1,8 +1,15 @@
 {
   "presets": [["env", {
     "targets": {
-      "browsers": ["last 2 versions", "Firefox ESR", "ie <= 11"]
+      "browsers": ["last 2 versions", "Firefox ESR", "ie <= 11"],
+      "node": "current"
     }
   }], "stage-2", "react"],
-  "plugins": ["transform-react-display-name"]
+  "plugins": [
+    "transform-react-display-name",
+    [
+      "transform-runtime",
+      { "polyfill": false, "regenerator": true }
+    ]
+  ]
 }

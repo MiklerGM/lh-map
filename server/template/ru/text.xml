@@ -1,24 +1,37 @@
-    <text
-       style="font-weight:bold;font-size:36px;font-family:OpenSans-Bold, 'Open Sans';fill:#013243"
-       font-weight="bold"
+<text
+       id="меня-понимает-каждый"
+       font-family="Open Sans"
        font-size="36"
-       id="Меня-понимает-каждый">
+       font-weight="700"
+       fill="#013243">
       <tspan
-         id="tspan11"
-         y="47"
-         x="360">Меня понимает</tspan>
-      <tspan
-         id="tspan13"
-         y="96"
-         x="360">каждый</tspan>
+         x="600"
+         y="82"
+         id="tspan11">МЕНЯ ПОНИМАЕТ КАЖДЫЙ</tspan>
     </text>
     <text
-       style="font-weight:bold;font-size:36px;font-family:OpenSans-Bold, 'Open Sans';fill:#013243"
-       font-weight="bold"
+       id="человек-в-мире"
+       font-family="Open Sans"
        font-size="36"
-       id="Я-знаю">
+       font-weight="700"
+       fill="#013243">
       <tspan
-         id="tspan25"
-         y="145"
-         x="360">Я знаю</tspan>
+         x="822"
+         y="130"
+         id="tspan14">ЧЕЛОВЕК </tspan>
+      <tspan
+         x="822"
+         y="170"
+         id="tspan16">В МИРЕ</tspan>
+    </text>
+    <text
+       id="Я-знаю"
+       font-family="Open Sans"
+       font-size="33"
+       font-weight="700"
+       fill="#013243">
+      <tspan
+         x="600"
+         y="200"
+         id="tspan41">Я ЗНАЮ</tspan>
     </text>

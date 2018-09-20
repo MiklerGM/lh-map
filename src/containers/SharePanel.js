@@ -16,7 +16,7 @@ class SocialButtonWrapper extends React.Component {
       case 'zucc': return `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
       case 'gminus': return `https://plus.google.com/share?url=${encodeURI(this.props.result.url)}`;
       case 'vpashe': return `https://vk.com/share.php?url=${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
-      case 'odnoglaziki': return '';
+      case 'odnoglaziki': return `https://connect.ok.ru/offer?url=${encodeURI(this.props.result.url)}&description=${desc}`;
       default: return 'error';
     }
   }
@@ -91,7 +91,7 @@ class ResultWrapper extends React.Component {
 class SharePanel extends React.Component {
   render() {
     return (
-      <div className='meme-panel__modal layer-4'>
+      <div className='meme-panel__modal layer-5'>
         <div className='modal_head' style={{ backgroundColor: '#C6E5EE' }}>
           <h3>
             {' '}

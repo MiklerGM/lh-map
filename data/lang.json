@@ -5,6 +5,7 @@
             "en": "English"
         },
         "display":"English",
+        "font": "Open Sans",
         "search": ["Fyukbqcrfz", "Английский", "Утпдшыр", "English"],
         "countries": ["ATG","BRB","BLZ","BWA","BDI","CMR","CAN","COK","DMA","FSM","FJI","GMB","GHA","GRD","GUY","IND","IRL","JAM","KEN","KIR","LSO","LBR","MWI","MLT","MHL","MUS","NAM","NRU","NPL","NGA","NIU","PAK","PLW","PNG","PHL","RWA","KNA","LCA","VCT","WSM","SYC","SLE","SGP","SLB","ZAF","SDS","SDN","SWZ","TON","TTO","UGA","VUT","ZMB","ZWE","GBR","USA","NZL","AUS"],
         "counter":510000000
@@ -15,6 +16,7 @@
             "en": "Albanian"
         },
         "display":"shqip",
+        "font": "Open Sans",
         "search": ["Albanian", "Fk,fycrbq", "Албанский", "Фдифтшфт", "shqip"],
         "countries": ["ALB","KOS"],
         "counter":7600000
@@ -25,6 +27,7 @@
             "en": "Arabic"
         },
         "display":"العربية",
+        "font": "Noto Sans Arabic",
         "search": ["Арабский", "Fhf,crbq", "Фкфишс", "Arabic", "العربية"],
         "countries": ["DZA","BHR","COM","TCD","EGY","ERI","IRQ","JOR","KWT","LBN","LBY","MRT","MAR","OMN","PSX","QAT","SAH","SAU","SDN","SYR","TZA","TUN","ARE","YEM"],
         "counter":313000000
@@ -35,6 +38,7 @@
             "en": "Armenian"
         },
         "display":"Հայերեն",
+        "font": "Noto Sans Armenian",
         "search": ["Armenian", "Fhvzycrbq", "Армянский", "Фкьутшфт", "Հայերեն"],
         "countries": ["ARM"],
         "counter":6700000
@@ -45,6 +49,7 @@
             "en": "Basque"
         },
         "display":"euskera",
+        "font": "Open Sans",
         "search": ["Баскский", "<fcrcrbq", "Basque", "Ифыйгу", "euskera", "euskara"],
         "countries": ["ES-PV","ES-NC"],
         "counter":1185500 
@@ -55,6 +60,7 @@
             "en": "Breton"
         },
         "display":"brezhoneg",
+        "font": "Open Sans",
         "search": ["Breton", "<htnjycrbq", "brezhoneg", "Бретонский", "Икуещт"],
         "countries": ["FR-E"],
         "counter":270000
@@ -65,6 +71,7 @@
             "en": "Catalan (Valencian)"
         },
         "display":"català (valencià)",
+        "font": "Open Sans",
         "search": ["Catalan", "Velencian", "català", "valencià", "Каталанский", "Каталонский", "Валенсийский"],
         "countries": ["ES-CT","ES-VC","AND"],
         "counter":11530160
@@ -75,6 +82,7 @@
             "en": "Welsh"
         },
         "display":"Cymraeg",
+        "font": "Open Sans",
         "search": ["Welsh", "Cymraeg", "Валлийсий", "Уэльский", "Цудыр", "Dfkkbqcrbq"],
         "countries": ["GB-WLS"],
         "counter":700000
@@ -85,6 +93,7 @@
             "en": "Hungarian"
         },
         "display":"Magyar",
+        "font": "Open Sans",
         "search": ["Hungarian", "Венгерский", "Dthutycrbq", "Ргтпфкшфт", "Magyar"],
         "countries": ["HUN"],
         "counter":13000000
@@ -95,6 +104,7 @@
             "en": "Greek"
         },
         "display":"ελληνικά",
+        "font": "Open Sans",
         "search": ["Greek", "Uhtxtcrbq", "Пкуул", "Греческий", "ελληνικά"],
         "countries": ["GRC","CYP"],
         "counter":13400000
@@ -105,6 +115,7 @@
             "en": "Georgian"
         },
         "display":"ქართული",
+        "font": "Noto Sans Georgian",
         "search": ["ქართული", "Georgian", "Uhepbycrbq", "Грузинский", "Пущкпшфт"],
         "countries": ["GEO"],
         "counter":3400000
@@ -115,6 +126,7 @@
             "en": "Scottish Gaelic"
         },
         "display":"Gàidhlig",
+        "font": "Open Sans",
         "search": ["Scottish", "Gaelic", " Scots Gaelic", "Celtic", "Шотландский", "Кельтский", "Гэльский","Gàidhlig"],
         "countries": ["GB-SCT","CA-NS"],
         "counter":57000
@@ -125,6 +137,7 @@
             "en": "Danish"
         },
         "display":"dansk",
+        "font": "Open Sans",
         "search": ["Danish", "Lfncrbq", "Датский", "Вфтшыр","dansk"],
         "countries": ["FRO","DNK","GRL"],
         "counter":5500000
@@ -135,6 +148,7 @@
             "en": "Russian Sign Language"
         },
         "display":"Русский жестовый",
+        "font": "Open Sans",
         "search": ["Russian Sign Language", "Sign Language", "Русский жестовый", "Жестовый", "Язык немых"],
         "countries": ["SIGN"],
         "counter":120000
@@ -145,6 +159,7 @@
             "en": "Hebrew"
         },
         "display":"עברית",
+        "font": "Noto Sans Hebrew",
         "search": ["עברית", "Hebrew", "Bdhbn", "Иврит", "Руикуц"],
         "countries": ["ISR"],
         "counter":9000000
@@ -155,6 +170,7 @@
             "en": "Indonesian"
         },
         "display":"bahasa Indonesia",
+        "font": "Open Sans",
         "search": ["Indonesian", "Byljytpbqcrbq", "Индонезийский", "Штвщтуышфт", "bahasa Indonesia"],
         "countries": ["IDN"],
         "counter":43000000
@@ -165,6 +181,7 @@
             "en": "Irish"
         },
         "display":"Gaeilge",
+        "font": "Open Sans",
         "search": ["Irish", "Bhkfylcrbq", "Ирландский", "Шкшыр", "Gaeilge"],
         "countries": ["IRL"],
         "counter":1761420
@@ -175,6 +192,7 @@
             "en": "Icelandic"
         },
         "display":"Íslenska",
+        "font": "Open Sans",
         "search": ["Icelandic", "Исландский", "Шсудфтвшс", "Bckflycrbq", "Íslenska"],
         "countries": ["ISL"],
         "counter":358000
@@ -185,6 +203,7 @@
             "en": "Spanish"
         },
         "display":"español",
+        "font": "Open Sans",
         "search": ["Spanish", "Bcgfycrbq", "Испанский", "Ызфтшыр", "Español", "Castilian"],
         "countries": ["ARG","BOL","VEN","GTM","HND","DOM","ESP","COL","CRI","CUB","MEX","NIC","PAN","PRY","PER","PRI","URY","CHL","ECU","GNQ","SLV"],
         "counter":437000000
@@ -195,6 +214,7 @@
             "en": "Italian"
         },
         "display":"italiano",
+        "font": "Open Sans",
         "search": ["Italian", "Bnfkmzycrbq", "Итальянский", "Шефдшфт"],
         "countries": ["ITA","VAT","CHE","SMR"],
         "counter":90000000
@@ -204,8 +224,9 @@
             "ru": "Клингонский",
             "en": "Klingon"
         },
-        "display":"tlhIngan Hol",
-        "search": ["tlhIngan Hol", "Klingon", "Клингонский"],
+        "display":" ",
+        "font": "Klingon pIqaD HaSta",
+        "search": [" ", "tlhIngan Hol", "Klingon", "Клингонский"],
         "countries": ["KLINGON"],
         "counter":9500
     },
@@ -215,6 +236,7 @@
             "en": "Komi"
         },
         "display":"коми кыв",
+        "font": "Open Sans",
         "search": ["Коми", "Komi", "коми кыв", "rjvb", "лщьш"],
         "countries": ["RU-CO"],
         "counter":219205
@@ -225,6 +247,7 @@
             "en": "Coptic"
         },
         "display":"ϯⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ",
+        "font": "Noto Sans Coptic",
         "search": ["Коптский","Coptic"],
         "countries": [],
         "counter":0
@@ -235,6 +258,7 @@
             "en": "Korean"
         },
         "display":"한국어",
+        "font": "Noto Sans CJK JP Regular",
         "search": ["Korean", "한국어", "Корейский", "Rjhtqcrbq"],
         "countries": ["CH-JL","PRK","KOR"],
         "counter":77200000
@@ -245,6 +269,7 @@
             "en": "Latin"
         },
         "display":"lingua latina",
+        "font": "Open Sans",
         "search": ["Latin", "Латинский", "Kfnbycrbq", "latine", "lingua latina"],
         "countries": ["LATIN"],
         "counter":0
@@ -255,6 +280,7 @@
             "en": "Latvian"
         },
         "display":"latviešu valoda",
+        "font": "Open Sans",
         "search": ["Latvian", "latviešu valoda", "Латвийский", "Kfndbqcrbq"],
         "countries": ["LVA"],
         "counter":1750000
@@ -265,6 +291,7 @@
             "en": "Lithuanian"
         },
         "display":"lietuvių kalbacc",
+        "font": "Open Sans",
         "search": ["Lithuanian", "Литовский", "Kbnjdcrbq", "lietuvių kalbacc"],
         "countries": ["LTU"],
         "counter":3100000
@@ -275,6 +302,7 @@
             "en": "Meltese"
         },
         "display":"Malti",
+        "font": "Open Sans",
         "search": ["Meltese", "Malti", "Мальтийский"],
         "countries": ["MLT"],
         "counter":520000
@@ -285,6 +313,7 @@
             "en": "Manx"
         },
         "display":"Gailck",
+        "font": "Open Sans",
         "search": ["Manx", "Мэнский", "Gailck", "Gaelg"],
         "countries": ["IMN"],
         "counter":1800
@@ -295,6 +324,7 @@
             "en": "German"
         },
         "display":"Deutsch",
+        "font": "Open Sans",
         "search": ["German", "Немецкий", "Ytvtwrbq", "Deutsch"],
         "countries": ["AUT","BEL","DEU","LIE","LUX","CHE"],
         "counter":95000000
@@ -305,6 +335,7 @@
             "en": "Nepali"
         },
         "display":"नेपाली",
+        "font": "Noto Sans Devanagari",
         "search": ["Nepali", "Nepalian", "Непальский", "Непали", "नेपाली"],
         "countries": ["NPL","IN-WB","IN-SK"],
         "counter":16000000
@@ -315,6 +346,7 @@
             "en": "Dutch"
         },
         "display":"Vlaams",
+        "font": "Open Sans",
         "search": ["Dutch", "Нидерландский", "Голандский", "Holand", "Flemish", "Фломанский", "Nederlands", "Vlaams"],
         "countries": ["NLD","BEL","ABW","CUW","SUR","SXM"],
         "counter":22000000
@@ -325,6 +357,7 @@
             "en": "Norwegian"
         },
         "display":"Norsk",
+        "font": "Open Sans",
         "search": ["Norwegian", "Norsk", "Норвежский"],
         "countries": ["NOR"],
         "counter":5200000
@@ -335,6 +368,7 @@
             "en": "Polish"
         },
         "display":"język polski",
+        "font": "Open Sans",
         "search": ["Polish", "Польский", "język polski", "polszczyzna"],
         "countries": ["POL"],
         "counter":55000000
@@ -345,6 +379,7 @@
             "en": "Portuguese"
         },
         "display":"português",
+        "font": "Open Sans",
         "search": ["Portuguese", "Португальский", "Gjhneufkmcrbq","português"],
         "countries": ["AGO","BRA","CPV","TLS","GNQ","GNB","MOZ","PRT","STP"],
         "counter":265000000
@@ -355,6 +390,7 @@
             "en": "Romanian"
         },
         "display":"română",
+        "font": "Open Sans",
         "search": ["Romanian", "Moldavian", "Moldovan", "Румынский", "Rumanian", "Молдовский", "română"],
         "countries": ["ROU","MDA"],
         "counter":26000000
@@ -365,6 +401,7 @@
             "en": "Russian"
         },
         "display":"Русский",
+        "font": "Open Sans",
         "search": ["Russian", "Русский", "Российский"],
         "countries": ["RUS","BLR","KAZ","KGZ","TJK"],
         "counter":260000000
@@ -375,6 +412,7 @@
             "en": "Serbian"
         },
         "display":"српски језик",
+        "font": "Open Sans",
         "search": ["српски језик", "Serbian", "Сербский"],
         "countries": ["SRB","KOS","BIH"],
         "counter":12000000
@@ -385,6 +423,7 @@
             "en": "Slovak"
         },
         "display":"Slovenčina",
+        "font": "Open Sans",
         "search": ["Slovenčina", "Slovak", "Словацкий"],
         "countries": ["SVK"],
         "counter":5200000
@@ -395,6 +434,7 @@
             "en": "Thai"
         },
         "display":"ไทย",
+        "font": "Noto Sans Thai",
         "search": ["ไทย", "Thai", "Тайский", "Siamese"],
         "countries": ["THA"],
         "counter":60000000
@@ -405,6 +445,7 @@
             "en": "Tatar"
         },
         "display":"татар теле",
+        "font": "Open Sans",
         "search": ["Tatar", "Tatar tele", "Татарский", "татар теле"],
         "countries": ["RU-TT"],
         "counter":5200000
@@ -415,6 +456,7 @@
             "en": "Turkish"
         },
         "display":"Türkçe",
+        "font": "Open Sans",
         "search": ["Turkish", "Турецкий", "Türkçe"],
         "countries": ["CYN","CYP","TUR"],
         "counter":88000000
@@ -425,6 +467,7 @@
             "en": "Ukranian"
         },
         "display":"Українська",
+        "font": "Open Sans",
         "search": ["Украинский", "Ukranian", "Українська"],
         "countries": ["UKR"],
         "counter":45000000
@@ -435,6 +478,7 @@
             "en": "Faroese"
         },
         "display":"føroyskt",
+        "font": "Open Sans",
         "search": ["føroyskt", "Faroese", "Фарерский"],
         "countries": ["FRO"],
         "counter":66000
@@ -445,6 +489,7 @@
             "en": "Farsi"
         },
         "display":"فارسی",
+        "font": "Noto Sans Arabic",
         "search": ["Persian", "Farsi", "Персидский", "Фарси", "فارسی"],
         "countries": ["IRN","AFG","TJK"],
         "counter":110000000
@@ -455,6 +500,7 @@
             "en": "French"
         },
         "display":"français",
+        "font": "Open Sans",
         "search": ["French", "Французский", "français"],
         "countries": ["BEL","BEN","BFA","BDI","CMR","CAN","CAF","TCD","COM","COG","COD","DJI","GNQ","FRA","GAB","GIN","HTI","CIV","LUX","MDG","MLI","MCO","NER","RWA","SEN","SYC","CHE","TGO","VUT"],
         "counter":274000000
@@ -465,6 +511,7 @@
             "en": "Finnish"
         },
         "display":"suomi",
+        "font": "Open Sans",
         "search": ["Finnish", "Финский", "suomi", "suomen kieli"],
         "countries": ["FIN"],
         "counter":5400000
@@ -475,6 +522,7 @@
             "en": "Hindi"
         },
         "display":"हिंदी",
+        "font": "Noto Sans Devanagari",
         "search": ["Hindi", "Хинди", "{bylb", "Рштвш", "हिंदी", "हिन्दी"],
         "countries": ["IND"],
         "counter":490000000
@@ -485,6 +533,7 @@
             "en": "Urdu"
         },
         "display":"اردو",
+        "font": "Noto Nastaliq Urdu",
         "search": ["Urdu", "اردو", "Урду", "Ehle"],
         "countries": ["IND","PAK"],
         "counter":104700000
@@ -495,6 +544,7 @@
             "en": "Croatian"
         },
         "display":"hrvatski jezik",
+        "font": "Open Sans",
         "search": ["hrvatski jezik", "Croatian", "Хорватский", "[jhdfncrbq"],
         "countries": ["HRV","BIH"],
         "counter":5600000
@@ -505,6 +555,7 @@
             "en": "Swedish"
         },
         "display":"Svenska",
+        "font": "Open Sans",
         "search": ["Swedish", "Svenska", "IDtlcrbq", "Шведский"],
         "countries": ["SWE","FIN"],
         "counter":9600000
@@ -515,6 +566,7 @@
             "en": "Czech"
         },
         "display":"český jazyk",
+        "font": "Open Sans",
         "search": ["čeština", "český jazyk", "Czech", "Чешский", "Xticrbq"],
         "countries": ["CZE"],
         "counter":10700000
@@ -525,6 +577,7 @@
             "en": "Cherokee"
         },
         "display":"ᎦᏬᏂᎯᏍᏗ",
+        "font": "Noto Sans Cherokee",
         "search": ["Cherokee", "ᏣᎳᎩ ᎦᏬᏂᎯᏍᏗ", "ᎦᏬᏂᎯᏍᏗ", "Чероки", "Tsalagi", "Тсалаги"],
         "countries": [],
         "counter":13501
@@ -535,6 +588,7 @@
             "en": "Chuvash"
         },
         "display":"чӑваш чӗлхи",
+        "font": "Open Sans",
         "search": ["Chuvash", "Чувашский", "чӑваш чӗлхи", "Xedficrbq"],
         "countries": ["RU-CU"],
         "counter":1042989
@@ -545,6 +599,7 @@
             "en": "Estonian"
         },
         "display":"eesti",
+        "font": "Open Sans",
         "search": ["Estonian", "cnjycrbq", "Эстонский", "eesti"],
         "countries": ["EST"],
         "counter":1100000
@@ -555,6 +610,7 @@
             "en": "Esperanto"
         },
         "display":"Esperanto",
+        "font": "Open Sans",
         "search": ["Esperanto", "Эсперанто"],
         "countries": ["ESPERANTO"],
         "counter":5000000
@@ -565,6 +621,7 @@
             "en": "Yukaghir"
         },
         "display":"Одун ажуу",
+        "font": "Open Sans",
         "search": ["Юкагирский", "Yukaghir", "тундровый", "вадульский", "Tundra Yukaghir", "Northern Yukaghir", "Одун ажуу", "одульский", "колы́мский"],
         "countries": ["RU-SA","RU-CHU"],
         "counter":604
@@ -575,6 +632,7 @@
             "en": "Japanese"
         },
         "display":"日本語",
+        "font": "Noto Sans CJK JP Regular",
         "search": ["Японский", "Japanese", "Zgjcyrbq", "日本語"],
         "countries": ["JPN"],
         "counter":125000000
@@ -584,8 +642,9 @@
             "ru": "Упрощенный китайский",
             "en": "Simplified chinese"
         },
-        "display":"汉语",
-        "search": ["китайский", "rbnfqcrbq", "chinese", "汉语", "hanyu", "Мандарин", "Путунхуа", "Putonghua"],
+        "display":"简体中文",
+        "font": "Noto Sans CJK SC Regular",
+        "search": ["китайский", "rbnfqcrbq", "chinese", "简体中文", "汉语", "hanyu", "Мандарин", "Путунхуа", "Putonghua"],
         "countries": ["CHN","SGP","TWN"],
         "counter":1375000000
     },
@@ -594,8 +653,9 @@
             "ru": "Традиционный китайский",
             "en": "Traditional chinese"
         },
-        "display":"漢語",
-        "search": ["китайский", "rbnfqcrbq", "chinese", "漢語", "Cantonese", "Кантонский", "Guǎngdōng huà"],
+        "display":"繁體中文",
+        "font": "Noto Sans CJK TC Regular",
+        "search": ["китайский", "rbnfqcrbq", "chinese", "繁體中文", "漢語", "Cantonese", "Кантонский", "Guǎngdōng huà"],
         "countries": ["HKG","MAC"],
         "counter":70000000
     }
