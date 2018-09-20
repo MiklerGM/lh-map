@@ -7,7 +7,7 @@
         "display":"English",
         "search": ["Fyukbqcrfz", "Английский", "Утпдшыр", "English"],
         "countries": ["ATG","BRB","BLZ","BWA","BDI","CMR","CAN","COK","DMA","FSM","FJI","GMB","GHA","GRD","GUY","IND","IRL","JAM","KEN","KIR","LSO","LBR","MWI","MLT","MHL","MUS","NAM","NRU","NPL","NGA","NIU","PAK","PLW","PNG","PHL","RWA","KNA","LCA","VCT","WSM","SYC","SLE","SGP","SLB","ZAF","SDS","SDN","SWZ","TON","TTO","UGA","VUT","ZMB","ZWE","GBR","USA","NZL","AUS"],
-        "counter":400000000
+        "counter":510000000
     },
     "ALB": {
         "i18n": {
@@ -477,7 +477,7 @@
         "display":"हिंदी",
         "search": ["Hindi", "Хинди", "{bylb", "Рштвш", "हिंदी", "हिन्दी"],
         "countries": ["IND"],
-        "counter":322000000
+        "counter":490000000
     },
     "URD": {
         "i18n": {
@@ -487,7 +487,7 @@
         "display":"اردو",
         "search": ["Urdu", "اردو", "Урду", "Ehle"],
         "countries": ["IND","PAK"],
-        "counter":66700000
+        "counter":104700000
     },
     "HRV": {
         "i18n": {
