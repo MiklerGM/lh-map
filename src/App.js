@@ -56,6 +56,7 @@ class App extends React.Component {
   }
 
   results = {
+    error: genResultLink('error'),
     loading: genResultLink('loading'),
     hello: genResultLink('hello'),
   }
@@ -139,7 +140,7 @@ class App extends React.Component {
   }
 
   select = (lng) => {
-    console.log('> Selecting', lng, 'App.js>select');
+    // console.log('> Selecting', lng, 'App.js>select');
     const { selected: oldSelected } = this.state;
     const selected = {
       ...oldSelected,
@@ -179,22 +180,21 @@ class App extends React.Component {
     };
     fetch(url, req).then((response) => {
       if (response.status !== 200) {
-        console.error('Sending was unsuccessful');
+        // console.error('Sending was unsuccessful');
         if (tryCount < 4) {
           setTimeout(() => {
-            console.info('New try');
+            // console.info('New try');
             this.share(check, tryCount + 1);
           }, 500);
         } else {
-          console.error('Too many tries');
-          console.error('Response', response);
+          throw Error(`Server response status not 200 (${response.status})`);
         }
         return;
       }
       try {
         response.json().then((j) => {
-          console.log('>>> Shared result');
-          console.log(j);
+          // console.log('>>> Shared result');
+          // console.log(j);
           if (j.success) {
             this.setState((prevState) => {
               const curSelected = Object.keys(prevState.selected)
@@ -204,33 +204,41 @@ class App extends React.Component {
               if (curSelected === flatSelected) {
                 if (j.ready === true) {
                   const result = genResultLink(j.result);
-                  console.log('history', history);
+                  // console.log('history', history);
                   history.push(result.href);
                   this.setState({
                     shared: j.ready,
                     result,
                   });
-                } else {
-                  console.info('Image not ready');
-                  console.info(j.selected);
+                } else if (tryCount < 10) {
+                  const nextTry = tryCount + 1;
+                  const nextTime = 150 * (nextTry);
                   setTimeout(() => {
-                    console.info('New check');
-                    this.share(true);
-                  }, 150);
+                    this.share(true, nextTry);
+                  }, nextTime);
+                } else {
+                  throw Error('Maximum waiting time exceeded');
                 }
-              } else {
-                console.error('Stalled data on sharing', prevState, j);
-                console.error(curSelected, flatSelected, curSelected === flatSelected);
+              // } else {
+              //   console.error('Stalled data on sharing', prevState, j);
+              //   console.error(curSelected, flatSelected, curSelected === flatSelected);
               }
             });
           } else {
-            console.error('Terrible error happened, but not handled correctly');
+            throw Error('Terrible error happened, but not handled correctly');
           }
         });
       } catch (e) {
-        console.error('Something bad happened on server', e);
+        throw Error(e);
       }
-    });
+    })
+      .catch((e) => {
+        this.setState({
+          result: this.results.error,
+          shared: false,
+        });
+        console.error('Something bad happened on server', e);
+      });
     return null;
   }
 
