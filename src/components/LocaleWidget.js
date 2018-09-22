@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 class LocaleWidget extends React.Component {
   toggleLocale() {
+    ym('reachGoal', 'localeChanged');
     if (this.props.locale === 'ru') {
       this.props.onChangeLanguage('en');
     } else {

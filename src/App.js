@@ -8,6 +8,9 @@ import createHistory from 'history/createBrowserHistory';
 
 import lang from '../data/lang.json';
 
+import { YMInitializer } from 'react-yandex-metrika';
+import ReactGA from 'react-ga';
+
 import Main from './pages/Main';
 import Map from './containers/Map';
 import Tooltip from './components/Tooltip';
@@ -17,6 +20,21 @@ import localeDataEN from './locales/en.json';
 import RareLanguages from './containers/RareLanguages';
 
 const history = createHistory();
+
+const YM_CONFIG = {
+  defer: true,
+  clickmap: false,
+  trackLinks: true,
+  // accurateTrackBounce: true,
+  // webvisor: true,
+  trackHash: true
+};
+
+const GA_CONFIG = {
+  debug: true,
+  titleCase: false
+};
+
 
 console.time('Calculating Locales');
 const localeLang = Object.keys(lang).reduce((p, c) => ({
@@ -85,12 +103,14 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    if (navigator.language.match(/ru/i)) {
-      this.changeLocale('ru');
-    } else {
-      this.changeLocale('en');
-    }
+    // Locale Detection magic
+    // if (navigator.language.match(/ru/i)) {
+    //   this.changeLocale('ru');
+    // } else {
+    //   this.changeLocale('en');
+    // }
     this.loadData(['map.json'], (s, m) => ({ map: m }));
+    ReactGA.initialize('UA-111740941-1', GA_CONFIG);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -286,6 +306,7 @@ class App extends React.Component {
     return (
       <IntlProvider {...intl}>
         <div>
+          <YMInitializer accounts={[42866674]} version='2' options={YM_CONFIG} />
           <Map
             map={map}
             lang={lang}
