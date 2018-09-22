@@ -3,6 +3,7 @@ import cloud from 'd3-cloud';
 import fs from 'fs';
 import { createCanvas } from 'canvas';
 import svg2img from 'svg2img';
+import EventEmitter from 'events';
 
 import lang from '../data/lang.json';
 
@@ -28,6 +29,8 @@ const getStyle = w => ([
 ].join('; '));
 
 const baseFontSize = [60, 55, 48, 38, 28, 20];
+
+const drawEmitter = new EventEmitter();
 
 function getWords(selected) {
   const base = baseFontSize[Math.round(selected.length * 0.1)];
@@ -77,54 +80,74 @@ function genSVG(cloudWords, size) {
 }
 
 function calcCloud(words, endCb) {
-  const c = createCanvas(1, 1);
-  cloud().size([width, height])
-    .canvas(c)
-    .words(words)
-    .padding(10)
-    .rotate(d => d.rotate)
-    .font(w => w.font)
-    .fontSize(d => d.size)
-    .on('end', endCb)
-    .start();
+  try {
+    const c = createCanvas(1, 1);
+    cloud().size([width, height])
+      .canvas(c)
+      .words(words)
+      .padding(10)
+      .rotate(d => d.rotate)
+      .font(w => w.font)
+      .fontSize(d => d.size)
+      .on('end', endCb)
+      .start();
+  } catch (e) {
+    throw Error('Cloud generation failed', e);
+  }
 }
 
-function saveImg(cloudWords, size, pop, i18n, svg, png) {
-  console.log('Size >', size);
+function saveImg(cloudWords, size, pop, i18n, svg, png, rc) {
+  console.log(rc, 'Size >', size);
   const cloudSVG = genSVG(cloudWords, size);
   const imgSvg = compileTemplate(cloudSVG, pop, i18n);
 
   fs.writeFile(svg, imgSvg, (e) => { if (e) throw e; });
 
-  console.time('svg2img');
+  console.time(`${rc}_svg2img`);
 
   svg2img(imgSvg, (error, buffer) => {
-    if (error) throw (error);
+    if (error) throw Error('PNG generation failed', error);
 
     // returns a Buffer
-    console.timeEnd('svg2img');
-    fs.writeFile(png, buffer, (e) => { if (e) throw e; });
+    console.timeEnd(`${rc}_svg2img`);
+    fs.writeFile(
+      png,
+      buffer,
+      (e) => { if (e) throw Error('PNG saving failed', e); }
+    );
   });
 }
 
-function generatePreviewImage(body, hash) {
+drawEmitter.on('share', (data) => {
+  const {
+    cloudWords, size, pop, i18n, svg, png, rc
+  } = data;
+  // check if file already exists
+  // fs.access(hash.png, fs.constants.F_OK, (err) => {
+  //   if (err) {
+  saveImg(cloudWords, size, pop, i18n, svg, png, rc);
+  // }
+});
+
+function generatePreviewImage(body, hash, rc) {
   const { selected, pop, i18n } = body;
   const {
     svg, png
   } = hash;
 
-  console.time('genImg');
-
+  console.time(`${rc}_genImg`);
   const words = getWords(selected);
 
   const endCb = (cloudWords, size) => {
-    console.timeEnd('calCloud');
-    saveImg(cloudWords, size, pop, i18n, svg, png);
+    console.timeEnd(`${rc}_calCloud`);
+    drawEmitter.emit('share', {
+      cloudWords, size, pop, i18n, svg, png, rc
+    });
   };
 
-  console.time('calCloud');
+  console.time(`${rc}_calCloud`);
   calcCloud(words, endCb);
-  console.timeEnd('genImg');
+  console.timeEnd(`${rc}_genImg`);
 }
 
 export default generatePreviewImage;
