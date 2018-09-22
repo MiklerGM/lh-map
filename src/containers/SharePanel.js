@@ -48,6 +48,19 @@ class SocialButtonWrapper extends React.Component {
 }
 
 class ResultWrapper extends React.Component {
+  render() {
+    const { img } = this.props.result;
+    return (
+      <div className='meme-panel__result'>
+        <div className='meme-panel_picwrapper'>
+          <img src={img} alt='Richpreview sharing' width='100%' />
+        </div>
+      </div>
+    );
+  }
+}
+
+class UrlCopy extends React.Component {
   state = {
     class: 'input_status'
   }
@@ -60,29 +73,23 @@ class ResultWrapper extends React.Component {
   }
 
   render() {
-    const { img, url } = this.props.result;
-
+    const { url } = this.props.result;
     return (
-      <div className='meme-panel__result'>
-        <div className='meme-panel_picwrapper'>
-          <img src={img} alt='Richpreview sharing' width='100%' />
-        </div>
-        <div className='meme-panel_inputwrapper'>
-          <CopyToClipboard
-            text={url}
-            onCopy={() => this.onCopy()}
-          >
-            <div style={{display: 'flex', flexDirection: 'row' }}>
-              <span style={{ display: 'inline-block', width: '40px' }}>
-                URL:
-              </span>
-              <input type='text' value={url} readOnly onFocus={e => e.target.select()} />
-            </div>
-          </CopyToClipboard>
-          <span className={this.state.class}>
-            <FormattedMessage id='share.linkcopy' />
-          </span>
-        </div>
+      <div className='meme-panel_inputwrapper'>
+        <CopyToClipboard
+          text={url}
+          onCopy={() => this.onCopy()}
+        >
+          <div style={{ display: 'flex', flexDirection: 'row' }}>
+            <span style={{ display: 'inline-block', width: '40px' }}>
+              URL:
+            </span>
+            <input type='text' value={url} readOnly onFocus={e => e.target.select()} />
+          </div>
+        </CopyToClipboard>
+        <span className={this.state.class}>
+          <FormattedMessage id='share.linkcopy' />
+        </span>
       </div>
     );
   }
@@ -91,20 +98,40 @@ class ResultWrapper extends React.Component {
 class SharePanel extends React.Component {
   render() {
     return (
-      <div className='meme-panel__modal layer-5'>
-        <div className='modal_head' style={{ backgroundColor: '#C6E5EE' }}>
-          <h3>
-            {' '}
-          </h3>
-          <h3>
-            <button onClick={() => this.props.updateUI({ sharePanel: false })} className='close-window' type='button'>
-              <span className="lnr lnr-cross" />
-            </button>
-          </h3>
+      <div className='meme-panel layer-5'>
+        <div className='meme-panel__head' style={{ backgroundColor: '#C6E5EE' }}>
+          <button
+            className='button-wide__red'
+            onClick={() => {
+              window.location.href = 'http://lh12.ru/';
+              return 0;
+            }}
+          >
+            <FormattedMessage id='share.button' />
+          </button>
+          <button
+            style={{ alignSelf: 'flex-end' }}
+            onClick={() => console.log('refresh click')}
+            className='close-window'
+            type='button'
+          >
+            <span className="lnr lnr-sync" />
+          </button>
+          <button
+            style={{ alignSelf: 'flex-end' }}
+            onClick={() => this.props.updateUI({ sharePanel: false })}
+            className='close-window'
+            type='button'
+          >
+            <span className='lnr lnr-cross' />
+          </button>
         </div>
-        <div className='meme-panel'>
+        <div className='meme-panel__main'>
           <SocialButtonWrapper result={this.props.result} />
           <ResultWrapper result={this.props.result} shared={this.props.shared} />
+        </div>
+        <div className='meme-panel__footer'>
+          <UrlCopy result={this.props.result} />
         </div>
       </div>
     );

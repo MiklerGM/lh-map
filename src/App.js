@@ -115,7 +115,7 @@ class App extends React.Component {
     // this.props.store.pins.setPosition(d.x, d.y);
     const field = region ? 'region' : 'admin';
     if (e.color === null) {
-      this.setState({ tooltipActive: false });
+      this.disableTooltip();
     } else {
       this.setState(prevState => ({
         tooltipActive: true,
@@ -125,6 +125,10 @@ class App extends React.Component {
           : e.object.properties[`${field}`],
       }));
     }
+  }
+
+  disableTooltip() {
+    this.setState({ tooltipActive: false });
   }
 
   updateUI = (v) => {
@@ -302,7 +306,12 @@ class App extends React.Component {
             changeLocale={this.changeLocale}
           />
           {tooltipActive
-            && <Tooltip position={tooltipPosition} info={tooltipInfo} />}
+            && <Tooltip
+              position={tooltipPosition}
+              info={tooltipInfo}
+              cb={() => this.disableTooltip()}
+            />
+          }
           <RareLanguages selected={selected} />
         </div>
       </IntlProvider>

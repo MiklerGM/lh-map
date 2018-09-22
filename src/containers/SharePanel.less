@@ -2,7 +2,7 @@
 
 @blueish: #C6E5EE;
 
-.meme-panel__modal {
+.meme-panel {
   position: fixed;
   z-index: 53;
   display: flex;
@@ -16,6 +16,7 @@
   transform: translate(-50%, -50%);
   flex-direction: column;
   justify-content: center;
+  background-color: @blueish;
   // align-items: center;
   align-content: center;
   max-height: 80vh;
@@ -30,7 +31,29 @@
   }
 }
 
-.meme-panel {
+.meme-panel__head {
+  box-sizing: border-box;
+  padding: 8px;
+  margin: 0;
+  color: @black;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  // border-radius: 2px;
+  user-select: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  // border-bottom: 1px solid #fafafa;
+  & h3 {
+    text-align: left;
+  }
+}
+
+.meme-panel__main {
   display: flex;
   background-color: @blueish;
   flex-direction: row;
@@ -46,12 +69,21 @@
   }
 }
 
+.meme-panel__footer {
+  display: flex;
+  margin-left: 80px;
+  padding: 8px;
+  @media screen and (max-width: 600px) {
+    margin-left: 0px;
+  }
+}
+
 .meme-panel__circles {
   width: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
+  // align-content: center;
   @media screen and (max-width: 600px) {
     flex-direction: row;
     justify-content: space-between;
@@ -61,7 +93,7 @@
 }
 
 .meme-panel__result {
-  padding: 0px 30px 10px;
+  padding: 0px 10px 5px;
   width: auto;
   display: block;
   // background: #fafafa;
@@ -75,17 +107,33 @@
   padding: 0 30px;
   box-sizing: border-box;
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: flex-start;
   // * {
     // margin-right: 5px;
   // }
-  input {
-    width: calc(~'100% - 40px');
+  & input {
+    // width: calc(~'100% - 40px');
+    min-width: 60%;
+    // width: 100%;
     display: inline-block;
+    // background-color: red;
   }
   & span { width: 200px; }
 }
+
+.button-wide__red {
+  // background-color: @red;
+  align-self: center;
+  background-color: #c1332f;
+  border-radius: 7px;
+  width: auto;
+  margin: auto;
+  min-width: 0;
+  max-width: none;
+}
+
 
 .input_status {
   visibility: hidden;
@@ -126,9 +174,10 @@
   border: none;
   outline: none;
   padding: 0;
+  margin: auto;
   // background-color: #2f2f2f;
   // border-radius: 50%;
-  margin: 2px;
+  // margin: 2px;
   text-align: center;
   & span {
     font-size: 1.5em;

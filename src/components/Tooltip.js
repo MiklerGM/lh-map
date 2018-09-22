@@ -22,6 +22,7 @@ class Tooltip extends React.Component {
     return (
       <div
         className={this.classNames.join(' ')}
+        onClick={() => this.props.cb()}
         style={
           {
             position: 'fixed',
