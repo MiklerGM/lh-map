@@ -6,10 +6,10 @@ import en from 'react-intl/locale-data/en';
 
 import createHistory from 'history/createBrowserHistory';
 
-import lang from '../data/lang.json';
-
 import { YMInitializer } from 'react-yandex-metrika';
 import ReactGA from 'react-ga';
+
+import lang from '../data/lang.json';
 
 import Main from './pages/Main';
 import Map from './containers/Map';
@@ -147,7 +147,7 @@ class App extends React.Component {
     }
   }
 
-  disableTooltip() {
+  disableTooltip = () => {
     this.setState({ tooltipActive: false });
   }
 
@@ -268,6 +268,7 @@ class App extends React.Component {
 
   changeLocale = (loc) => {
     if (loc in this.locales) {
+      // ym('reachGoal', 'localeChanged');
       this.setState(prevState => ({
         result: prevState.clean ? this.results.hello : this.results.loading,
         shared: false,
@@ -327,11 +328,12 @@ class App extends React.Component {
             changeLocale={this.changeLocale}
           />
           {tooltipActive
-            && <Tooltip
-              position={tooltipPosition}
-              info={tooltipInfo}
-              cb={() => this.disableTooltip()}
-            />
+            && (
+              <Tooltip
+                position={tooltipPosition}
+                info={tooltipInfo}
+                cb={this.disableTooltip}
+              />)
           }
           <RareLanguages selected={selected} />
         </div>
