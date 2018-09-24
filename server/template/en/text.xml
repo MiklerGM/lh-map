@@ -1,24 +1,33 @@
-    <text
-       id="of-the-world-speaks"
-       font-size="36"
-       font-weight="700"
-       style="font-weight:700;font-size:36px;font-family:Open Sans;fill:#013243">
+<text
+       letter-spacing="1.80000007"
+       line-spacing="40"
+       font-weight="bold"
+       font-size="24"
+       font-family="OpenSans-Bold, Open Sans"
+       id="Want-to-learn-new-la">
       <tspan
-         x="660"
-         y="60"
-         id="tspan12">of the world speaks the</tspan>
+         id="tspan32"
+         fill="#013243"
+         y="504"
+         x="468">Want to learn new languages? Join our Autumn </tspan>
       <tspan
-         x="660"
-         y="100"
-         id="tspan14">same languages as me</tspan>
-    </text>
-    <text
-       id="I-speak"
-       font-size="36"
-       font-weight="700"
-       style="font-weight:700;font-size:36px;font-family:Open Sans;fill:#013243">
+         id="tspan34"
+         fill="#013243"
+         y="544"
+         x="468">marathon in </tspan>
       <tspan
-         x="600"
-         y="145"
-         id="tspan21">I speak</tspan>
+         id="tspan36"
+         fill="#C1332F"
+         y="544"
+         x="644.967188">Language Heroes</tspan>
+      <tspan
+         style="fill:#013243"
+         id="tspan38"
+         y="544"
+         x="884">and learn any</tspan>
+      <tspan
+         id="tspan40"
+         fill="#013243"
+         y="584"
+         x="468">foreign language! We begin 1 october!</tspan>
     </text>

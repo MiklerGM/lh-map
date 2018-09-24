@@ -6,6 +6,8 @@ import svg2img from 'svg2img';
 import EventEmitter from 'events';
 
 import lang from '../data/lang.json';
+import regions from '../data/regions';
+
 
 import compileTemplate from './template/template';
 
@@ -14,11 +16,21 @@ import compileTemplate from './template/template';
 const angles = [0];
 const colors = ['FF6161', '263F66', 'F9AA54', '75D5EF', 'A55F94', '669966', '944564'];
 
-const targetWidth = 620;
-const targetHeight = 350;
-const mult = 2;
-const width = targetWidth * mult;
-const height = targetHeight * mult;
+const dimensions = {
+  ru: {
+    width: 720,
+    height: 340,
+    x: 470,
+    y: 100,
+  },
+  en: {
+    width: 720,
+    height: 330,
+    x: 470,
+    y: 160,
+  }
+};
+const sizeMultiplier = 2;
 
 const getStyle = w => ([
   `font-family:${w.font}`,
@@ -57,7 +69,7 @@ function getSize(size) {
   return `${top} ${left} ${xSize} ${ySize}`;
 }
 
-function genSVG(cloudWords, size) {
+function genSVG(cloudWords, size, i18n) {
   const svg = cloudWords.map(w => (
     `<text
       style="${getStyle(w)}"
@@ -69,20 +81,25 @@ function genSVG(cloudWords, size) {
 
   const viewBox = getSize(size);
 
+  const {
+    width: w, height: h, x, y
+  } = dimensions[i18n];
   const cloudInBox = [
-    `<svg width="620" height="364" viewBox="${viewBox}">`,
-    `<g transform="translate(${width / 2}, ${height / 2})">`,
+    `<g id="cloud" transform="translate(${x}, ${y})">`,
+    `<svg width="${w}" height="${h}" viewBox="${viewBox}">`,
+    `<g transform="translate(${w}, ${h})">`,
     ...svg,
     '</g>',
-    '</svg>'
+    '</svg>',
+    '</g>'
   ].join(' ');
   return cloudInBox;
 }
 
-function calcCloud(words, endCb) {
+function calcCloud(words, endCb, size) {
   try {
     const c = createCanvas(1, 1);
-    cloud().size([width, height])
+    cloud().size(size)
       .canvas(c)
       .words(words)
       .padding(10)
@@ -92,14 +109,15 @@ function calcCloud(words, endCb) {
       .on('end', endCb)
       .start();
   } catch (e) {
+    console.log(e);
     throw Error('Cloud generation failed', e);
   }
 }
 
-function saveImg(cloudWords, size, pop, i18n, svg, png, rc) {
+function saveImg(cloudWords, size, pop, i18n, svg, png, rc, cc) {
   console.log(rc, 'Size >', size);
-  const cloudSVG = genSVG(cloudWords, size);
-  const imgSvg = compileTemplate(cloudSVG, pop, i18n);
+  const cloudSVG = genSVG(cloudWords, size, i18n);
+  const imgSvg = compileTemplate(cloudSVG, pop, i18n, cc);
 
   fs.writeFile(svg, imgSvg, (e) => { if (e) throw e; });
 
@@ -120,12 +138,12 @@ function saveImg(cloudWords, size, pop, i18n, svg, png, rc) {
 
 drawEmitter.on('share', (data) => {
   const {
-    cloudWords, size, pop, i18n, svg, png, rc
+    cloudWords, size, pop, i18n, svg, png, rc, cc
   } = data;
   // check if file already exists
   // fs.access(hash.png, fs.constants.F_OK, (err) => {
   //   if (err) {
-  saveImg(cloudWords, size, pop, i18n, svg, png, rc);
+  saveImg(cloudWords, size, pop, i18n, svg, png, rc, cc);
   // }
 });
 
@@ -135,18 +153,41 @@ function generatePreviewImage(body, hash, rc) {
     svg, png
   } = hash;
 
+  console.time(`${rc}_countries`);
+  const countries = selected.reduce((prev, l) => ({
+    ...prev,
+    ...lang[l].countries.reduce((p, c) => {
+      if (typeof regions[c] === 'undefined') console.error('No valid region data for', c);
+      const owner = (c in regions) ? regions[c].owner : null;
+      return (
+        { ...p, [c]: owner }
+      );
+    }, {})
+  }), {});
+
+  const cc = Object.keys(countries).reduce((p, c) => {
+    const r = countries[c];
+    if ((r === null) // it's not a region
+    || (r !== null && !(r in countries))) { // it's a region
+      return p + 1;
+    }
+    return p;
+  }, 0);
+  console.timeEnd(`${rc}_countries`);
+
   console.time(`${rc}_genImg`);
   const words = getWords(selected);
 
   const endCb = (cloudWords, size) => {
     console.timeEnd(`${rc}_calCloud`);
     drawEmitter.emit('share', {
-      cloudWords, size, pop, i18n, svg, png, rc
+      cloudWords, size, pop, i18n, svg, png, rc, cc
     });
   };
 
   console.time(`${rc}_calCloud`);
-  calcCloud(words, endCb);
+  const { width: w, height: h } = dimensions[i18n];
+  calcCloud(words, endCb, [w * sizeMultiplier, h * sizeMultiplier]);
   console.timeEnd(`${rc}_genImg`);
 }
 
