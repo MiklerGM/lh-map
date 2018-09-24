@@ -18,9 +18,9 @@ const version = 'aa';
 
 function parseURL(url) {
   const arr = url.split('');
-  const i18n = [arr.shift(), arr.shift()].join('');
-  const v = [arr.shift(), arr.shift()].join('');
-  const text = arr.join('');
+  const i18n = arr.slice(0, 2).join('');
+  const v = arr.slice(2, 4).join('');
+  const text = arr.slice(4).join('');
   return {
     i18n, version: v, text
   };
