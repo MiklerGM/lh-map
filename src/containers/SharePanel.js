@@ -1,7 +1,7 @@
 import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { FormattedMessage } from 'react-intl';
-import { ym } from 'react-yandex-metrika';
+import ym from 'react-yandex-metrika';
 
 import SocialButton from '../components/SocialButton';
 import './SharePanel.less';
@@ -24,7 +24,7 @@ class SocialButtonWrapper extends React.Component {
 
   handleClick(s, t) {
     console.log('handleClick', s, t);
-    ym('reachGoal', 'resultSharedSNS');
+    ym('reachGoal', `resultShared-${s}`);
     const link = this.link(s, encodeURI(t.title), encodeURI(t.description));
     window.open(link, '', 'menubar=no, toolbar=no, resizable=yes,scrollbars=yes,height=400,width=400');
   }
