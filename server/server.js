@@ -124,7 +124,7 @@ app.use('/result/:url', (req, res) => {
 let reqCounter = 0;
 
 app.post('/share', (req, res) => {
-  const { selected, check } = req.body;
+  const { selected, check, force } = req.body;
 
   const rc = reqCounter;
   reqCounter += 1;
@@ -142,7 +142,7 @@ app.post('/share', (req, res) => {
   try {
     fs.access(png, fs.constants.F_OK, async (err) => {
       try {
-        if (err) {
+        if (err || force === true) {
           if (check !== true) {
             await generatePreviewImage(req.body, parseBody(req.body), rc);
           }

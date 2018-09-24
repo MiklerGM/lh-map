@@ -9,22 +9,23 @@ import './SharePanel.less';
 class SocialButtonWrapper extends React.Component {
   url = window.location.href;
 
-  social = ['bird', 'zucc', 'gminus', 'vpashe', 'odnoglaziki'];
+  social = ['twitter', 'facebook', 'gplus', 'vk', 'ok'];
 
   link = (s, title, desc) => {
     switch (s) {
-      case 'bird': return `https://twitter.com/intent/tweet?url=${encodeURI(this.props.result.url)}&text=${desc}&via=chronist`;
-      case 'zucc': return `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
-      case 'gminus': return `https://plus.google.com/share?url=${encodeURI(this.props.result.url)}`;
-      case 'vpashe': return `https://vk.com/share.php?url=${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
-      case 'odnoglaziki': return `https://connect.ok.ru/offer?url=${encodeURI(this.props.result.url)}&description=${desc}`;
+      case 'twitter': return `https://twitter.com/intent/tweet?url=${encodeURI(this.props.result.url)}&text=${desc}&via=chronist`;
+      case 'facebook': return `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
+      case 'gplus': return `https://plus.google.com/share?url=${encodeURI(this.props.result.url)}`;
+      case 'vk': return `https://vk.com/share.php?url=${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
+      case 'ok': return `https://connect.ok.ru/offer?url=${encodeURI(this.props.result.url)}&description=${desc}`;
       default: return 'error';
     }
   }
 
   handleClick(s, t) {
     console.log('handleClick', s, t);
-    ym('reachGoal', `resultShared-${s}`);
+    ym('reachGoal', 'resultSharedSNS');
+    ym('reachGoal', s);
     const link = this.link(s, encodeURI(t.title), encodeURI(t.description));
     window.open(link, '', 'menubar=no, toolbar=no, resizable=yes,scrollbars=yes,height=400,width=400');
   }
@@ -68,7 +69,7 @@ class UrlCopy extends React.Component {
   }
 
   onCopy() {
-    ym('reachGoal', 'linkCopyied');
+    ym('reachGoal', 'linkCopied');
     this.setState({ class: 'input_status_visible' });
     setTimeout(() => {
       this.setState({ class: 'input_status' });
@@ -85,7 +86,7 @@ class UrlCopy extends React.Component {
         >
           <div style={{ display: 'flex', flexDirection: 'row' }}>
             <span style={{ display: 'inline-block', width: '40px' }}>
-              URL:
+              {'URL:'}
             </span>
             <input type='text' value={url} readOnly onFocus={e => e.target.select()} />
           </div>
@@ -115,7 +116,7 @@ class SharePanel extends React.Component {
           </button>
           <button
             style={{ alignSelf: 'flex-end' }}
-            onClick={() => console.log('refresh click')}
+            onClick={this.props.refresh}
             className='close-window'
             type='button'
           >
