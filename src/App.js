@@ -128,7 +128,9 @@ class App extends React.Component {
         this.share();
       }
     }
-    if (prevState.UI.sharePanel === false && this.state.UI.sharePanel === true) {
+    if (prevState.UI.sharePanel === false
+      && this.state.UI.sharePanel === true
+      && this.state.clean !== true) {
       this.share();
     }
     if (prevState.refreshButton === false && this.state.refreshButton === true) {
