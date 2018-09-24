@@ -227,7 +227,7 @@
         "display":" ",
         "font": "Klingon pIqaD HaSta",
         "search": [" ", "tlhIngan Hol", "Klingon", "Клингонский"],
-        "countries": ["KLINGON"],
+        "countries": [],
         "counter":9500
     },
     "KOM": {
