@@ -41,6 +41,7 @@ class Main extends React.Component {
               shared={this.props.shared}
               updateUI={this.props.updateUI}
               uiState={this.props.UI}
+              refresh={this.props.refresh}
             />)
         }
         <NativeSpeakers population={this.props.population} />

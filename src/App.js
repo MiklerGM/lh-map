@@ -6,7 +6,7 @@ import en from 'react-intl/locale-data/en';
 
 import createHistory from 'history/createBrowserHistory';
 
-import { YMInitializer } from 'react-yandex-metrika';
+import { YMInitializer, ym } from 'react-yandex-metrika';
 import ReactGA from 'react-ga';
 
 import lang from '../data/lang.json';
@@ -87,9 +87,10 @@ class App extends React.Component {
     tooltipActive: false,
     tooltipPosition: [0, 0],
     tooltipInfo: '',
+    refreshButton: false,
     UI: {
       langGrid: false,
-      sharePanel: false
+      sharePanel: false,
     },
     result: this.results.hello,
     population: window.store.population || 0,
@@ -123,9 +124,15 @@ class App extends React.Component {
 
       if (this.state.clean === true) {
         history.push('/');
-      } else {
+      } if (this.state.UI.sharePanel === true) {
         this.share();
       }
+    }
+    if (prevState.UI.sharePanel === false && this.state.UI.sharePanel === true) {
+      this.share();
+    }
+    if (prevState.refreshButton === false && this.state.refreshButton === true) {
+      this.share(false, 0, true); // forcing share
     }
   }
 
@@ -155,7 +162,7 @@ class App extends React.Component {
     this.setState(prevState => ({
       UI: {
         // close all windows
-        ...Object.keys(prevState)
+        ...Object.keys(prevState.UI)
           .reduce((prev, cur) => ({ ...prev, [cur]: false }), {}),
         // apply new changes
         ...v
@@ -186,12 +193,13 @@ class App extends React.Component {
     });
   }
 
-  share = (check = false, tryCount = 0) => {
+  share = (check = false, tryCount = 0, force = false) => {
     const { selected, population } = this.state;
     const body = {
       selected: Object.keys(selected).filter(f => selected[f]),
       pop: population,
       i18n: this.state.i18n,
+      force,
       check
     };
 
@@ -231,6 +239,7 @@ class App extends React.Component {
                   // console.log('history', history);
                   history.push(result.href);
                   this.setState({
+                    refreshButton: false,
                     shared: j.ready,
                     result,
                   });
@@ -258,6 +267,7 @@ class App extends React.Component {
     })
       .catch((e) => {
         this.setState({
+          refreshButton: false,
           result: this.results.error,
           shared: false,
         });
@@ -268,7 +278,7 @@ class App extends React.Component {
 
   changeLocale = (loc) => {
     if (loc in this.locales) {
-      // ym('reachGoal', 'localeChanged');
+      ym('reachGoal', 'localeChanged');
       this.setState(prevState => ({
         result: prevState.clean ? this.results.hello : this.results.loading,
         shared: false,
@@ -322,6 +332,14 @@ class App extends React.Component {
             select={this.select}
             shared={shared}
             result={result}
+            refresh={() => {
+              if (this.state.refreshButton !== true && this.state.clean !== true) {
+                this.setState({
+                  refreshButton: true,
+                  result: this.results.loading
+                });
+              }
+            }}
             population={population}
             locale={this.state.i18n}
             updateUI={this.updateUI}

@@ -116,7 +116,7 @@ class SharePanel extends React.Component {
           </button>
           <button
             style={{ alignSelf: 'flex-end' }}
-            onClick={() => console.log('refresh click')}
+            onClick={this.props.refresh}
             className='close-window'
             type='button'
           >
