@@ -53,10 +53,10 @@ addLocaleData([...en, ...ru]);
 
 const linkTemplate = window.location.origin;
 
-const genResultLink = res => ({
+const genResultLink = (res, ts = new Date().getTime()) => ({
   href: `/result/${res}`,
   url: `${linkTemplate}/result/${res}`,
-  img: `${linkTemplate}/preview/${res}.png`,
+  img: `${linkTemplate}/preview/${res}.png?t=${ts}`,
 });
 
 class App extends React.Component {
@@ -74,9 +74,9 @@ class App extends React.Component {
   }
 
   results = {
-    error: genResultLink('error'),
-    loading: genResultLink('loading'),
-    hello: genResultLink('hello'),
+    error: genResultLink('error', '0'),
+    loading: genResultLink('loading', '0'),
+    hello: genResultLink('hello', '0'),
   }
 
   state = {
