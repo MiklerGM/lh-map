@@ -68,7 +68,7 @@ class UrlCopy extends React.Component {
   }
 
   onCopy() {
-    ym('reachGoal', 'linkCopyied');
+    ym('reachGoal', 'linkCopied');
     this.setState({ class: 'input_status_visible' });
     setTimeout(() => {
       this.setState({ class: 'input_status' });
