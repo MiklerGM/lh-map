@@ -319,7 +319,7 @@ class App extends React.Component {
     return (
       <IntlProvider {...intl}>
         <div>
-          <YMInitializer accounts={[42866674]} version='2' options={YM_CONFIG} />
+          <YMInitializer accounts={[50481805]} version='2' options={YM_CONFIG} />
           <Map
             map={map}
             lang={lang}
