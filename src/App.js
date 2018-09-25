@@ -115,26 +115,36 @@ class App extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    const { shared, clean } = this.state;
     if ((prevState.i18n !== this.state.i18n) && prevState.shared === true) {
       this.share();
     } else if (prevState.selected !== this.state.selected) {
-      // update (global) state for HMR
-      window.store.population = this.state.population;
-      window.store.selected = this.state.selected;
-
+      if (process.env !== 'production') {
+        // update (global) state for HMR
+        window.store.population = this.state.population;
+        window.store.selected = this.state.selected;
+      }
       if (this.state.clean === true) {
         history.push('/');
-      } if (this.state.UI.sharePanel === true) {
+      }
+      if (this.state.UI.sharePanel === true) {
         this.share();
       }
     }
-    if (prevState.UI.sharePanel === false
-      && this.state.UI.sharePanel === true
-      && this.state.clean !== true) {
+    const sharePanelOpened = prevState.UI.sharePanel === false
+      && this.state.UI.sharePanel === true;
+    if (sharePanelOpened && !clean && !shared) {
       this.share();
     }
-    if (prevState.refreshButton === false && this.state.refreshButton === true) {
-      this.share(false, 0, true); // forcing share
+    const refreshPressed = prevState.refreshButton === false
+      && this.state.refreshButton === true;
+    if (refreshPressed && !clean) {
+      if (shared) {
+        this.share(false, 0, true); // forcing share
+      } if (this.state.result.href === this.results.error.href) {
+        // request for same picture e.g. response was too long
+        this.share();
+      }
     }
   }
 
