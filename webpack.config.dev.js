@@ -1,9 +1,8 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   mode: 'development',
@@ -16,7 +15,7 @@ module.exports = {
     inline: true,
     hot: true,
     hotOnly: true,
-    compress: true,
+    compress: false,
     https: false,
     proxy: {
       '/preview': 'http://localhost:4000',
@@ -27,25 +26,22 @@ module.exports = {
   optimization: {
     noEmitOnErrors: false,
     nodeEnv: 'development',
-    // minimizer: [
-    //   new UglifyJsPlugin()
-    // ],
-    // splitChunks: {
-    //   chunks: 'async',
-    //   maxAsyncRequests: 3,
-    //   maxInitialRequests: 3,
-    //   name: true,
-    //   automaticNameDelimiter: '.',
-    //   cacheGroups: {
-    //     node_vendors: {
-    //       test: /[\\/]node_modules[\\/]/,
-    //       chunks: 'initial',
-    //       maxSize: 1000000,
-    //       minSize: 300000,
-    //       priority: 1
-    //     }
-    //   },
-    // }
+    splitChunks: {
+      chunks: 'async',
+      maxAsyncRequests: 3,
+      maxInitialRequests: 3,
+      name: true,
+      automaticNameDelimiter: '.',
+      cacheGroups: {
+        node_vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          chunks: 'initial',
+          maxSize: 1000000,
+          minSize: 300000,
+          priority: 1
+        }
+      },
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
