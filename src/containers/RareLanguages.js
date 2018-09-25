@@ -12,24 +12,34 @@ const decorations = {
   LAT,
 };
 
-const style = {
-  position: 'fixed',
-  bottom: 10,
-  right: 10,
-  pointerEvents: 'none',
-};
+class RareLanguages extends React.Component {
+  handleHover = (e, d) => {
+    e.preventDefault();
+    const position = [e.pageX, e.pageY];
+    const active = true;
+    // const info = formatMessage({ id: `${d}.full` });
+    const info = `${d}`;
+    // console.log(active, [e.clientX, e.clientY], info);
+    // this.props.enableTooltip(active, position, info);
+  }
 
-export default class RareLanguages extends React.Component {
   render() {
     const { selected } = this.props;
-    const defaultSize = 128;
-    const w = defaultSize / window.devicePixelRatio;
     return (
-      <div className='rare-wrapper' style={style}>
+      <div className='rare-wrapper'>
         {Object.keys(decorations).map(d => (
-          selected[d] && <img width={w} heigh={w} key={d} src={decorations[d]} alt={d} />
+          selected[d] &&
+          <img
+            key={d}
+            src={decorations[d]}
+            alt={d}
+            onMouseOver={e => this.handleHover(e, d)}
+            onFocus={e => this.handleHover(e, d)}
+          />
         ))}
       </div>
     );
   }
 }
+
+export default RareLanguages;

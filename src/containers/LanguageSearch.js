@@ -1,10 +1,12 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
+import ym from 'react-yandex-metrika';
 
 import SearchInput from '../components/SearchInput';
 
 class LanguageSearch extends React.Component {
   shareBtn = () => {
+    ym('reachGoal', 'resultShareButton');
     this.props.updateUI({ sharePanel: !this.props.uiState.sharePanel });
   }
 

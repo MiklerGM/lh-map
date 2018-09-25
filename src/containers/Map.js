@@ -60,10 +60,14 @@ class Map extends React.Component {
       .reduce((p, c) => ({ ...p, [c]: true }), {}); // uniq countries
 
     const setTooltip = (e) => {
-      const { region, adm0_a3: key } = e.object.properties;
-      const sel = adm[key] === true;
-      const sub = (region !== '');
-      this.props.setTooltip(e, sel && sub);
+      let condition = false;
+      if (e.object) {
+        const { region, adm0_a3: key } = e.object.properties;
+        const sel = adm[key] === true;
+        const sub = (region !== '');
+        condition = sel && region;
+      }
+      this.props.setTooltip(e, condition);
     };
 
     return (
@@ -110,7 +114,7 @@ class Map extends React.Component {
               getFillColor: 1000,
               geometry: 3000,
             },
-            onHover: setTooltip,
+            onHover: e => setTooltip(e),
             onClick: (e) => {
               // close all windows
               // sadly it works only when clicking on land

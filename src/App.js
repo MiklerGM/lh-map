@@ -138,22 +138,40 @@ class App extends React.Component {
     }
   }
 
+  get adm() {
+    return Object.keys(this.state.selected).filter(f => this.state.selected[f] === true)
+      .reduce((p, c) => ([...p, ...lang[c].countries]), []) // list of all countries
+      .reduce((p, c) => ({ ...p, [c]: true }), {}); // uniq countries
+  }
+
   setTooltip = (e, region) => {
-    // e.color === null ? null : d.object.key;
-    // this.props.store.pins.setActive(key, false);
-    // this.props.store.pins.setPosition(d.x, d.y);
-    const field = region ? 'region' : 'admin';
+    console.log('setTooltip');
+    const field = (region) ? 'region' : 'admin';
     if (e.color === null) {
       this.disableTooltip();
     } else {
-      this.setState(prevState => ({
-        tooltipActive: true,
-        tooltipPosition: e.pixel,
-        tooltipInfo: (prevState.i18n === 'ru')
-          ? e.object.properties[`${field}Ru`]
-          : e.object.properties[`${field}`],
-      }));
+      // this.setState(prevState => ({
+      //   tooltipActive: true,
+      //   tooltipPosition: e.pixel,
+      //   tooltipInfo: (prevState.i18n === 'ru')
+      //     ? e.object.properties[`${field}Ru`]
+      //     : e.object.properties[`${field}`],
+      // }));
+      const info = (this.state.i18n === 'ru')
+        ? e.object.properties[`${field}Ru`]
+        : e.object.properties[`${field}`];
+      this.enableTooltip(true, e.pixel, info);
     }
+  }
+
+  enableTooltip(active, position, info) {
+    console.log('enableTooltip');
+    console.log(active, position, info);
+    this.setState({
+      tooltipActive: active,
+      tooltipPosition: position,
+      tooltipInfo: info
+    });
   }
 
   disableTooltip = () => {
@@ -355,7 +373,7 @@ class App extends React.Component {
                   cb={this.disableTooltip}
                 />)
             }
-            <RareLanguages selected={selected} />
+            <RareLanguages selected={selected} enableTooltip={e => this.enableTooltip(e)} />
           </YMInitializer>
         </div>
       </IntlProvider>
