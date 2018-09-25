@@ -6,7 +6,7 @@ import en from 'react-intl/locale-data/en';
 
 import createHistory from 'history/createBrowserHistory';
 
-import { YMInitializer, ym } from 'react-yandex-metrika';
+import ym, { YMInitializer } from 'react-yandex-metrika';
 import ReactGA from 'react-ga';
 
 import lang from '../data/lang.json';
@@ -128,7 +128,9 @@ class App extends React.Component {
         this.share();
       }
     }
-    if (prevState.UI.sharePanel === false && this.state.UI.sharePanel === true) {
+    if (prevState.UI.sharePanel === false
+      && this.state.UI.sharePanel === true
+      && this.state.clean !== true) {
       this.share();
     }
     if (prevState.refreshButton === false && this.state.refreshButton === true) {
@@ -278,7 +280,7 @@ class App extends React.Component {
 
   changeLocale = (loc) => {
     if (loc in this.locales) {
-      ym('reachGoal', 'localeChanged');
+      ym('reachGoal', `localeChanged-${loc}`);
       this.setState(prevState => ({
         result: prevState.clean ? this.results.hello : this.results.loading,
         shared: false,
