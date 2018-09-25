@@ -1,1 +1,2050 @@
-{"ABW":{"admin":"Aruba","adm0_a3":"ABW","adminRu":"Аруба","region":"","regionRu":"","owner":null},"AFG":{"admin":"Afghanistan","adm0_a3":"AFG","adminRu":"Афганистан","region":"","regionRu":"","owner":null},"AGO":{"admin":"Angola","adm0_a3":"AGO","adminRu":"Ангола","region":"","regionRu":"","owner":null},"AIA":{"admin":"Anguilla","adm0_a3":"AIA","adminRu":"","region":"","regionRu":"","owner":null},"ALB":{"admin":"Albania","adm0_a3":"ALB","adminRu":"Албания","region":"","regionRu":"","owner":null},"ALD":{"admin":"Aland","adm0_a3":"ALD","adminRu":"","region":"","regionRu":"","owner":null},"AND":{"admin":"Andorra","adm0_a3":"AND","adminRu":"Андорра","region":"","regionRu":"","owner":null},"ARE":{"admin":"United Arab Emirates","adm0_a3":"ARE","adminRu":"Объединённые Арабские Эмираты","region":"","regionRu":"","owner":null},"ARG":{"admin":"Argentina","adm0_a3":"ARG","adminRu":"Аргентина","region":"","regionRu":"","owner":null},"ARM":{"admin":"Armenia","adm0_a3":"ARM","adminRu":"Армения","region":"","regionRu":"","owner":null},"ASM":{"admin":"American Samoa","adm0_a3":"ASM","adminRu":"","region":"","regionRu":"","owner":null},"ATC":{"admin":"Ashmore and Cartier Islands","adm0_a3":"ATC","adminRu":"","region":"","regionRu":"","owner":null},"ATF":{"admin":"French Southern and Antarctic Lands","adm0_a3":"ATF","adminRu":"","region":"","regionRu":"","owner":null},"ATG":{"admin":"Antigua and Barbuda","adm0_a3":"ATG","adminRu":"Антигуа и Барбуда","region":"","regionRu":"","owner":null},"AUS":{"admin":"Australia","adm0_a3":"AUS","adminRu":"","region":"","regionRu":"","owner":null},"AUT":{"admin":"Austria","adm0_a3":"AUT","adminRu":"Австрия","region":"","regionRu":"","owner":null},"AZE":{"admin":"Azerbaijan","adm0_a3":"AZE","adminRu":"","region":"","regionRu":"","owner":null},"BDI":{"admin":"Burundi","adm0_a3":"BDI","adminRu":"Бурунди","region":"","regionRu":"","owner":null},"BEL":{"admin":"Belgium","adm0_a3":"BEL","adminRu":"Бельгия","region":"","regionRu":"","owner":null},"BEN":{"admin":"Benin","adm0_a3":"BEN","adminRu":"Бенин","region":"","regionRu":"","owner":null},"BFA":{"admin":"Burkina Faso","adm0_a3":"BFA","adminRu":"Буркина-Фасо","region":"","regionRu":"","owner":null},"BGD":{"admin":"Bangladesh","adm0_a3":"BGD","adminRu":"","region":"","regionRu":"","owner":null},"BGR":{"admin":"Bulgaria","adm0_a3":"BGR","adminRu":"","region":"","regionRu":"","owner":null},"BHR":{"admin":"Bahrain","adm0_a3":"BHR","adminRu":"Бахрейн","region":"","regionRu":"","owner":null},"BHS":{"admin":"The Bahamas","adm0_a3":"BHS","adminRu":"","region":"","regionRu":"","owner":null},"BIH":{"admin":"Bosnia and Herzegovina","adm0_a3":"BIH","adminRu":"Босния и Герцеговина","region":"","regionRu":"","owner":null},"BLM":{"admin":"Saint Barthelemy","adm0_a3":"BLM","adminRu":"","region":"","regionRu":"","owner":null},"BLR":{"admin":"Belarus","adm0_a3":"BLR","adminRu":"Беларусь","region":"","regionRu":"","owner":null},"BLZ":{"admin":"Belize","adm0_a3":"BLZ","adminRu":"Белиз","region":"","regionRu":"","owner":null},"BMU":{"admin":"Bermuda","adm0_a3":"BMU","adminRu":"","region":"","regionRu":"","owner":null},"BOL":{"admin":"Bolivia","adm0_a3":"BOL","adminRu":"Боливия","region":"","regionRu":"","owner":null},"BRA":{"admin":"Brazil","adm0_a3":"BRA","adminRu":"Бразилия","region":"","regionRu":"","owner":null},"BRB":{"admin":"Barbados","adm0_a3":"BRB","adminRu":"Барбадос","region":"","regionRu":"","owner":null},"BRN":{"admin":"Brunei","adm0_a3":"BRN","adminRu":"","region":"","regionRu":"","owner":null},"BTN":{"admin":"Bhutan","adm0_a3":"BTN","adminRu":"","region":"","regionRu":"","owner":null},"BWA":{"admin":"Botswana","adm0_a3":"BWA","adminRu":"Ботсвана","region":"","regionRu":"","owner":null},"CAF":{"admin":"Central African Republic","adm0_a3":"CAF","adminRu":"Центральная Африканская Республика","region":"","regionRu":"","owner":null},"CAN":{"admin":"Canada","adm0_a3":"CAN","adminRu":"Канада","region":"","regionRu":"","owner":null},"CHE":{"admin":"Switzerland","adm0_a3":"CHE","adminRu":"Швейцария","region":"","regionRu":"","owner":null},"CHL":{"admin":"Chile","adm0_a3":"CHL","adminRu":"Чили","region":"","regionRu":"","owner":null},"CHN":{"admin":"China","adm0_a3":"CHN","adminRu":"Китай","region":"","regionRu":"","owner":null},"CIV":{"admin":"Ivory Coast","adm0_a3":"CIV","adminRu":"Кот-д’Ивуар","region":"","regionRu":"","owner":null},"CMR":{"admin":"Cameroon","adm0_a3":"CMR","adminRu":"Камерун","region":"","regionRu":"","owner":null},"COD":{"admin":"Democratic Republic of the Congo","adm0_a3":"COD","adminRu":"Демократическая Республика Конго","region":"","regionRu":"","owner":null},"COG":{"admin":"Republic of Congo","adm0_a3":"COG","adminRu":"Республика Конго","region":"","regionRu":"","owner":null},"COK":{"admin":"Cook Islands","adm0_a3":"COK","adminRu":"Острова Кука","region":"","regionRu":"","owner":null},"COL":{"admin":"Colombia","adm0_a3":"COL","adminRu":"Колумбия","region":"","regionRu":"","owner":null},"COM":{"admin":"Comoros","adm0_a3":"COM","adminRu":"Коморос","region":"","regionRu":"","owner":null},"CPV":{"admin":"Cape Verde","adm0_a3":"CPV","adminRu":"Кабо-Верде","region":"","regionRu":"","owner":null},"CRI":{"admin":"Costa Rica","adm0_a3":"CRI","adminRu":"Коста-Рика","region":"","regionRu":"","owner":null},"CUB":{"admin":"Cuba","adm0_a3":"CUB","adminRu":"Куба","region":"","regionRu":"","owner":null},"CUW":{"admin":"Curaсao","adm0_a3":"CUW","adminRu":"Курасао","region":"","regionRu":"","owner":null},"CYM":{"admin":"Cayman Islands","adm0_a3":"CYM","adminRu":"","region":"","regionRu":"","owner":null},"CYN":{"admin":"Northern Cyprus","adm0_a3":"CYN","adminRu":"Северный Кипр","region":"","regionRu":"","owner":null},"CYP":{"admin":"Cyprus","adm0_a3":"CYP","adminRu":"Кипр","region":"","regionRu":"","owner":null},"CZE":{"admin":"Czech Republic","adm0_a3":"CZE","adminRu":"Чехия","region":"","regionRu":"","owner":null},"DEU":{"admin":"Germany","adm0_a3":"DEU","adminRu":"Германия","region":"","regionRu":"","owner":null},"DJI":{"admin":"Djibouti","adm0_a3":"DJI","adminRu":"Джибути","region":"","regionRu":"","owner":null},"DMA":{"admin":"Dominica","adm0_a3":"DMA","adminRu":"Доминика","region":"","regionRu":"","owner":null},"DNK":{"admin":"Denmark","adm0_a3":"DNK","adminRu":"Дания","region":"","regionRu":"","owner":null},"DOM":{"admin":"Dominican Republic","adm0_a3":"DOM","adminRu":"Доминиканская республика","region":"","regionRu":"","owner":null},"DZA":{"admin":"Algeria","adm0_a3":"DZA","adminRu":"Алжир","region":"","regionRu":"","owner":null},"ECU":{"admin":"Ecuador","adm0_a3":"ECU","adminRu":"Эквадор","region":"","regionRu":"","owner":null},"EGY":{"admin":"Egypt","adm0_a3":"EGY","adminRu":"Египет","region":"","regionRu":"","owner":null},"ERI":{"admin":"Eritrea","adm0_a3":"ERI","adminRu":"Эритрея","region":"","regionRu":"","owner":null},"ESP":{"admin":"Spain","adm0_a3":"ESP","adminRu":"Испания","region":"","regionRu":"","owner":null},"EST":{"admin":"Estonia","adm0_a3":"EST","adminRu":"","region":"","regionRu":"","owner":null},"ETH":{"admin":"Ethiopia","adm0_a3":"ETH","adminRu":"","region":"","regionRu":"","owner":null},"FIN":{"admin":"Finland","adm0_a3":"FIN","adminRu":"Финляндия","region":"","regionRu":"","owner":null},"FJI":{"admin":"Fiji","adm0_a3":"FJI","adminRu":"Фиджи","region":"","regionRu":"","owner":null},"FLK":{"admin":"Falkland Islands","adm0_a3":"FLK","adminRu":"","region":"","regionRu":"","owner":null},"FRA":{"admin":"France","adm0_a3":"FRA","adminRu":"Франция","region":"","regionRu":"","owner":null},"FRO":{"admin":"Faroe Islands","adm0_a3":"FRO","adminRu":"Фарерские острова","region":"","regionRu":"","owner":null},"FSM":{"admin":"Federated States of Micronesia","adm0_a3":"FSM","adminRu":"Федеративные Штаты Микронезии","region":"","regionRu":"","owner":null},"GAB":{"admin":"Gabon","adm0_a3":"GAB","adminRu":"Габон","region":"","regionRu":"","owner":null},"GBR":{"admin":"United Kingdom","adm0_a3":"GBR","adminRu":"Великобритания","region":"","regionRu":"","owner":null},"GEO":{"admin":"Georgia","adm0_a3":"GEO","adminRu":"Грузия","region":"","regionRu":"","owner":null},"GGY":{"admin":"Guernsey","adm0_a3":"GGY","adminRu":"","region":"","regionRu":"","owner":null},"GHA":{"admin":"Ghana","adm0_a3":"GHA","adminRu":"Гана","region":"","regionRu":"","owner":null},"GIN":{"admin":"Guinea","adm0_a3":"GIN","adminRu":"Гвинея","region":"","regionRu":"","owner":null},"GMB":{"admin":"Gambia","adm0_a3":"GMB","adminRu":"Гамбия","region":"","regionRu":"","owner":null},"GNB":{"admin":"Guinea-Bissau","adm0_a3":"GNB","adminRu":"Гвинея-Бисау","region":"","regionRu":"","owner":null},"GNQ":{"admin":"Equatorial Guinea","adm0_a3":"GNQ","adminRu":"Экваториальная Гвинея","region":"","regionRu":"","owner":null},"GRC":{"admin":"Greece","adm0_a3":"GRC","adminRu":"Греция","region":"","regionRu":"","owner":null},"GRD":{"admin":"Grenada","adm0_a3":"GRD","adminRu":"Гренада","region":"","regionRu":"","owner":null},"GRL":{"admin":"Greenland","adm0_a3":"GRL","adminRu":"Гренландия","region":"","regionRu":"","owner":null},"GTM":{"admin":"Guatemala","adm0_a3":"GTM","adminRu":"Гватемала","region":"","regionRu":"","owner":null},"GUM":{"admin":"Guam","adm0_a3":"GUM","adminRu":"","region":"","regionRu":"","owner":null},"GUY":{"admin":"Guyana","adm0_a3":"GUY","adminRu":"Гайана","region":"","regionRu":"","owner":null},"HKG":{"admin":"Hong Kong S.A.R.","adm0_a3":"HKG","adminRu":"Гонг-Конг","region":"","regionRu":"","owner":null},"HMD":{"admin":"Heard Island and McDonald Islands","adm0_a3":"HMD","adminRu":"","region":"","regionRu":"","owner":null},"HND":{"admin":"Honduras","adm0_a3":"HND","adminRu":"Гондурас","region":"","regionRu":"","owner":null},"HRV":{"admin":"Croatia","adm0_a3":"HRV","adminRu":"Хорватия","region":"","regionRu":"","owner":null},"HTI":{"admin":"Haiti","adm0_a3":"HTI","adminRu":"Гаити","region":"","regionRu":"","owner":null},"HUN":{"admin":"Hungary","adm0_a3":"HUN","adminRu":"Венгрия","region":"","regionRu":"","owner":null},"IDN":{"admin":"Indonesia","adm0_a3":"IDN","adminRu":"Индонезия","region":"","regionRu":"","owner":null},"IMN":{"admin":"Great Britain","adm0_a3":"IMN","adminRu":"Великобритания","region":"Isle of Man","regionRu":"Остров Мэн","owner":"IMN"},"IND":{"admin":"India","adm0_a3":"IND","adminRu":"Индия","region":"","regionRu":"","owner":null},"IOA":{"admin":"Indian Ocean Territories","adm0_a3":"IOA","adminRu":"","region":"","regionRu":"","owner":null},"IOT":{"admin":"British Indian Ocean Territory","adm0_a3":"IOT","adminRu":"","region":"","regionRu":"","owner":null},"IRL":{"admin":"Ireland","adm0_a3":"IRL","adminRu":"Ирландия","region":"","regionRu":"","owner":null},"IRN":{"admin":"Iran","adm0_a3":"IRN","adminRu":"Иран","region":"","regionRu":"","owner":null},"IRQ":{"admin":"Iraq","adm0_a3":"IRQ","adminRu":"Ирак","region":"","regionRu":"","owner":null},"ISL":{"admin":"Iceland","adm0_a3":"ISL","adminRu":"Исландия","region":"","regionRu":"","owner":null},"ISR":{"admin":"Israel","adm0_a3":"ISR","adminRu":"Израиль","region":"","regionRu":"","owner":null},"ITA":{"admin":"Italy","adm0_a3":"ITA","adminRu":"Италия","region":"","regionRu":"","owner":null},"JAM":{"admin":"Jamaica","adm0_a3":"JAM","adminRu":"Ямайка","region":"","regionRu":"","owner":null},"JEY":{"admin":"Jersey","adm0_a3":"JEY","adminRu":"","region":"","regionRu":"","owner":null},"JOR":{"admin":"Jordan","adm0_a3":"JOR","adminRu":"Иордания","region":"","regionRu":"","owner":null},"JPN":{"admin":"Japan","adm0_a3":"JPN","adminRu":"Япония","region":"","regionRu":"","owner":null},"KAS":{"admin":"Siachen Glacier","adm0_a3":"KAS","adminRu":"","region":"","regionRu":"","owner":null},"KAZ":{"admin":"Kazakhstan","adm0_a3":"KAZ","adminRu":"Казахстан","region":"","regionRu":"","owner":null},"KEN":{"admin":"Kenya","adm0_a3":"KEN","adminRu":"Кения","region":"","regionRu":"","owner":null},"KGZ":{"admin":"Kyrgyzstan","adm0_a3":"KGZ","adminRu":"Киргизия","region":"","regionRu":"","owner":null},"KHM":{"admin":"Cambodia","adm0_a3":"KHM","adminRu":"","region":"","regionRu":"","owner":null},"KIR":{"admin":"Kiribati","adm0_a3":"KIR","adminRu":"Кирибати","region":"","regionRu":"","owner":null},"KNA":{"admin":"Saint Kitts and Nevis","adm0_a3":"KNA","adminRu":"Сент-Китс и Невис","region":"","regionRu":"","owner":null},"KOR":{"admin":"South Korea","adm0_a3":"KOR","adminRu":"Южная Корея","region":"","regionRu":"","owner":null},"KOS":{"admin":"Kosovo","adm0_a3":"KOS","adminRu":"Косово","region":"","regionRu":"","owner":null},"KWT":{"admin":"Kuwait","adm0_a3":"KWT","adminRu":"Кувейт","region":"","regionRu":"","owner":null},"LAO":{"admin":"Laos","adm0_a3":"LAO","adminRu":"","region":"","regionRu":"","owner":null},"LBN":{"admin":"Lebanon","adm0_a3":"LBN","adminRu":"Ливан","region":"","regionRu":"","owner":null},"LBR":{"admin":"Liberia","adm0_a3":"LBR","adminRu":"Либерия","region":"","regionRu":"","owner":null},"LBY":{"admin":"Libya","adm0_a3":"LBY","adminRu":"Ливия","region":"","regionRu":"","owner":null},"LCA":{"admin":"Saint Lucia","adm0_a3":"LCA","adminRu":"Сент-Люсия","region":"","regionRu":"","owner":null},"LIE":{"admin":"Liechtenstein","adm0_a3":"LIE","adminRu":"Лихтенштейн","region":"","regionRu":"","owner":null},"LKA":{"admin":"Sri Lanka","adm0_a3":"LKA","adminRu":"","region":"","regionRu":"","owner":null},"LSO":{"admin":"Lesotho","adm0_a3":"LSO","adminRu":"Лесото","region":"","regionRu":"","owner":null},"LTU":{"admin":"Lithuania","adm0_a3":"LTU","adminRu":"Литва","region":"","regionRu":"","owner":null},"LUX":{"admin":"Luxembourg","adm0_a3":"LUX","adminRu":"Люксембург","region":"","regionRu":"","owner":null},"LVA":{"admin":"Latvia","adm0_a3":"LVA","adminRu":"Латвия","region":"","regionRu":"","owner":null},"MAC":{"admin":"Macao S.A.R","adm0_a3":"MAC","adminRu":"Макао","region":"","regionRu":"","owner":null},"MAF":{"admin":"Saint Martin","adm0_a3":"MAF","adminRu":"","region":"","regionRu":"","owner":null},"MAR":{"admin":"Morocco","adm0_a3":"MAR","adminRu":"Марокко","region":"","regionRu":"","owner":null},"MCO":{"admin":"Monaco","adm0_a3":"MCO","adminRu":"Монако","region":"","regionRu":"","owner":null},"MDA":{"admin":"Moldova","adm0_a3":"MDA","adminRu":"Молдова","region":"","regionRu":"","owner":null},"MDG":{"admin":"Madagascar","adm0_a3":"MDG","adminRu":"Мадагаскар","region":"","regionRu":"","owner":null},"MDV":{"admin":"Maldives","adm0_a3":"MDV","adminRu":"","region":"","regionRu":"","owner":null},"MEX":{"admin":"Mexico","adm0_a3":"MEX","adminRu":"Мексика","region":"","regionRu":"","owner":null},"MHL":{"admin":"Marshall Islands","adm0_a3":"MHL","adminRu":"Маршаловы Острова","region":"","regionRu":"","owner":null},"MKD":{"admin":"Macedonia","adm0_a3":"MKD","adminRu":"","region":"","regionRu":"","owner":null},"MLI":{"admin":"Mali","adm0_a3":"MLI","adminRu":"Мали","region":"","regionRu":"","owner":null},"MLT":{"admin":"Malta","adm0_a3":"MLT","adminRu":"Мальта","region":"","regionRu":"","owner":null},"MMR":{"admin":"Myanmar","adm0_a3":"MMR","adminRu":"","region":"","regionRu":"","owner":null},"MNE":{"admin":"Montenegro","adm0_a3":"MNE","adminRu":"","region":"","regionRu":"","owner":null},"MNG":{"admin":"Mongolia","adm0_a3":"MNG","adminRu":"","region":"","regionRu":"","owner":null},"MNP":{"admin":"Northern Mariana Islands","adm0_a3":"MNP","adminRu":"","region":"","regionRu":"","owner":null},"MOZ":{"admin":"Mozambique","adm0_a3":"MOZ","adminRu":"Мозамбик","region":"","regionRu":"","owner":null},"MRT":{"admin":"Mauritania","adm0_a3":"MRT","adminRu":"Мавритания","region":"","regionRu":"","owner":null},"MSR":{"admin":"Montserrat","adm0_a3":"MSR","adminRu":"","region":"","regionRu":"","owner":null},"MUS":{"admin":"Mauritius","adm0_a3":"MUS","adminRu":"Маврикий","region":"","regionRu":"","owner":null},"MWI":{"admin":"Malawi","adm0_a3":"MWI","adminRu":"Малави","region":"","regionRu":"","owner":null},"MYS":{"admin":"Malaysia","adm0_a3":"MYS","adminRu":"","region":"","regionRu":"","owner":null},"NAM":{"admin":"Namibia","adm0_a3":"NAM","adminRu":"Намибия","region":"","regionRu":"","owner":null},"NCL":{"admin":"New Caledonia","adm0_a3":"NCL","adminRu":"","region":"","regionRu":"","owner":null},"NER":{"admin":"Niger","adm0_a3":"NER","adminRu":"Нигер","region":"","regionRu":"","owner":null},"NFK":{"admin":"Norfolk Island","adm0_a3":"NFK","adminRu":"","region":"","regionRu":"","owner":null},"NGA":{"admin":"Nigeria","adm0_a3":"NGA","adminRu":"Нигерия","region":"","regionRu":"","owner":null},"NIC":{"admin":"Nicaragua","adm0_a3":"NIC","adminRu":"Никарагуа","region":"","regionRu":"","owner":null},"NIU":{"admin":"Niue","adm0_a3":"NIU","adminRu":"Ниуэ","region":"","regionRu":"","owner":null},"NLD":{"admin":"Netherlands","adm0_a3":"NLD","adminRu":"Нидерланды","region":"","regionRu":"","owner":null},"NOR":{"admin":"Norway","adm0_a3":"NOR","adminRu":"Норвегия","region":"","regionRu":"","owner":null},"NPL":{"admin":"Nepal","adm0_a3":"NPL","adminRu":"Непал","region":"","regionRu":"","owner":null},"NRU":{"admin":"Nauru","adm0_a3":"NRU","adminRu":"Науру","region":"","regionRu":"","owner":null},"NZL":{"admin":"New Zealand","adm0_a3":"NZL","adminRu":"Новая Зеландия","region":"","regionRu":"","owner":null},"OMN":{"admin":"Oman","adm0_a3":"OMN","adminRu":"Оман","region":"","regionRu":"","owner":null},"PAK":{"admin":"Pakistan","adm0_a3":"PAK","adminRu":"Пакистан","region":"","regionRu":"","owner":null},"PAN":{"admin":"Panama","adm0_a3":"PAN","adminRu":"Панама","region":"","regionRu":"","owner":null},"PCN":{"admin":"Pitcairn Islands","adm0_a3":"PCN","adminRu":"","region":"","regionRu":"","owner":null},"PER":{"admin":"Peru","adm0_a3":"PER","adminRu":"Перу","region":"","regionRu":"","owner":null},"PHL":{"admin":"Philippines","adm0_a3":"PHL","adminRu":"Филиппины","region":"","regionRu":"","owner":null},"PLW":{"admin":"Palau","adm0_a3":"PLW","adminRu":"Палау","region":"","regionRu":"","owner":null},"PNG":{"admin":"Papua New Guinea","adm0_a3":"PNG","adminRu":"Папуа - Новая Гвинея","region":"","regionRu":"","owner":null},"POL":{"admin":"Poland","adm0_a3":"POL","adminRu":"Польша","region":"","regionRu":"","owner":null},"PRI":{"admin":"Puerto Rico","adm0_a3":"PRI","adminRu":"Пуэрто-Рико","region":"","regionRu":"","owner":null},"PRK":{"admin":"North Korea","adm0_a3":"PRK","adminRu":"Северная Корея","region":"","regionRu":"","owner":null},"PRT":{"admin":"Portugal","adm0_a3":"PRT","adminRu":"Португалия","region":"","regionRu":"","owner":null},"PRY":{"admin":"Paraguay","adm0_a3":"PRY","adminRu":"Парагвай","region":"","regionRu":"","owner":null},"PSX":{"admin":"Palestine","adm0_a3":"PSX","adminRu":"Палестина","region":"","regionRu":"","owner":null},"PYF":{"admin":"French Polynesia","adm0_a3":"PYF","adminRu":"","region":"","regionRu":"","owner":null},"QAT":{"admin":"Qatar","adm0_a3":"QAT","adminRu":"Катар","region":"","regionRu":"","owner":null},"ROU":{"admin":"Romania","adm0_a3":"ROU","adminRu":"Румыния","region":"","regionRu":"","owner":null},"RUS":{"admin":"Russia","adm0_a3":"RUS","adminRu":"Российская Федерация","region":"","regionRu":"","owner":null},"RWA":{"admin":"Rwanda","adm0_a3":"RWA","adminRu":"Руанда","region":"","regionRu":"","owner":null},"SAH":{"admin":"SADR","adm0_a3":"SAH","adminRu":"САДР","region":"","regionRu":"","owner":null},"SAU":{"admin":"Saudi Arabia","adm0_a3":"SAU","adminRu":"Саудовская Аравия","region":"","regionRu":"","owner":null},"SDN":{"admin":"Sudan","adm0_a3":"SDN","adminRu":"Судан","region":"","regionRu":"","owner":null},"SDS":{"admin":"South Sudan","adm0_a3":"SDS","adminRu":"Южный Судан","region":"","regionRu":"","owner":null},"SEN":{"admin":"Senegal","adm0_a3":"SEN","adminRu":"Сенегал","region":"","regionRu":"","owner":null},"SGP":{"admin":"Singapore","adm0_a3":"SGP","adminRu":"Сингапур","region":"","regionRu":"","owner":null},"SGS":{"admin":"South Georgia and South Sandwich Islands","adm0_a3":"SGS","adminRu":"","region":"","regionRu":"","owner":null},"SHN":{"admin":"Saint Helena","adm0_a3":"SHN","adminRu":"","region":"","regionRu":"","owner":null},"SLB":{"admin":"Solomon Islands","adm0_a3":"SLB","adminRu":"Соломоновы Острова","region":"","regionRu":"","owner":null},"SLE":{"admin":"Sierra Leone","adm0_a3":"SLE","adminRu":"Сиерра-Леоне","region":"","regionRu":"","owner":null},"SLV":{"admin":"El Salvador","adm0_a3":"SLV","adminRu":"Эль-Сальвадор","region":"","regionRu":"","owner":null},"SMR":{"admin":"San Marino","adm0_a3":"SMR","adminRu":"Сан-Марино","region":"","regionRu":"","owner":null},"SOL":{"admin":"Somaliland","adm0_a3":"SOL","adminRu":"","region":"","regionRu":"","owner":null},"SOM":{"admin":"Somalia","adm0_a3":"SOM","adminRu":"","region":"","regionRu":"","owner":null},"SPM":{"admin":"Saint Pierre and Miquelon","adm0_a3":"SPM","adminRu":"","region":"","regionRu":"","owner":null},"SRB":{"admin":"Republic of Serbia","adm0_a3":"SRB","adminRu":"Сербия","region":"","regionRu":"","owner":null},"STP":{"admin":"Sao Tome and Principe","adm0_a3":"STP","adminRu":"Сан-Томе и Принсипи","region":"","regionRu":"","owner":null},"SUR":{"admin":"Suriname","adm0_a3":"SUR","adminRu":"Суринам","region":"","regionRu":"","owner":null},"SVK":{"admin":"Slovakia","adm0_a3":"SVK","adminRu":"","region":"","regionRu":"","owner":null},"SVN":{"admin":"Slovenia","adm0_a3":"SVN","adminRu":"","region":"","regionRu":"","owner":null},"SWE":{"admin":"Sweden","adm0_a3":"SWE","adminRu":"Швеция","region":"","regionRu":"","owner":null},"SWZ":{"admin":"Swaziland","adm0_a3":"SWZ","adminRu":"Свазиленд","region":"","regionRu":"","owner":null},"SXM":{"admin":"Sint Maarten","adm0_a3":"SXM","adminRu":"Синт-Мартен","region":"","regionRu":"","owner":null},"SYC":{"admin":"Seychelles","adm0_a3":"SYC","adminRu":"Сейшеллы","region":"","regionRu":"","owner":null},"SYR":{"admin":"Syria","adm0_a3":"SYR","adminRu":"Сирия","region":"","regionRu":"","owner":null},"TCA":{"admin":"Turks and Caicos Islands","adm0_a3":"TCA","adminRu":"","region":"","regionRu":"","owner":null},"TCD":{"admin":"Chad","adm0_a3":"TCD","adminRu":"Чад","region":"","regionRu":"","owner":null},"TGO":{"admin":"Togo","adm0_a3":"TGO","adminRu":"Того","region":"","regionRu":"","owner":null},"THA":{"admin":"Thailand","adm0_a3":"THA","adminRu":"Тайланд","region":"","regionRu":"","owner":null},"TJK":{"admin":"Tajikistan","adm0_a3":"TJK","adminRu":"Таджикистан","region":"","regionRu":"","owner":null},"TKM":{"admin":"Turkmenistan","adm0_a3":"TKM","adminRu":"","region":"","regionRu":"","owner":null},"TLS":{"admin":"East Timor","adm0_a3":"TLS","adminRu":"Восточный Тимор","region":"","regionRu":"","owner":null},"TON":{"admin":"Tonga","adm0_a3":"TON","adminRu":"Тонга","region":"","regionRu":"","owner":null},"TTO":{"admin":"Trinidad and Tobago","adm0_a3":"TTO","adminRu":"Тринидад и Тобаго","region":"","regionRu":"","owner":null},"TUN":{"admin":"Tunisia","adm0_a3":"TUN","adminRu":"Тунис","region":"","regionRu":"","owner":null},"TUR":{"admin":"Turkey","adm0_a3":"TUR","adminRu":"","region":"","regionRu":"","owner":null},"TWN":{"admin":"Taiwan","adm0_a3":"TWN","adminRu":"Тайвань","region":"","regionRu":"","owner":null},"TZA":{"admin":"United Republic of Tanzania","adm0_a3":"TZA","adminRu":"Танзания","region":"","regionRu":"","owner":null},"UGA":{"admin":"Uganda","adm0_a3":"UGA","adminRu":"Уганда","region":"","regionRu":"","owner":null},"URY":{"admin":"Uruguay","adm0_a3":"URY","adminRu":"Угурвай","region":"","regionRu":"","owner":null},"USA":{"admin":"United States of America","adm0_a3":"USA","adminRu":"Соединённые Штаты Америки","region":"","regionRu":"","owner":null},"UZB":{"admin":"Uzbekistan","adm0_a3":"UZB","adminRu":"","region":"","regionRu":"","owner":null},"VAT":{"admin":"Vatican","adm0_a3":"VAT","adminRu":"Ватикан","region":"","regionRu":"","owner":null},"VCT":{"admin":"Saint Vincent and the Grenadines","adm0_a3":"VCT","adminRu":"Сент-Винсент и Гренадины","region":"","regionRu":"","owner":null},"VEN":{"admin":"Venezuela","adm0_a3":"VEN","adminRu":"Венесуэла","region":"","regionRu":"","owner":null},"VGB":{"admin":"British Virgin Islands","adm0_a3":"VGB","adminRu":"","region":"","regionRu":"","owner":null},"VIR":{"admin":"United States Virgin Islands","adm0_a3":"VIR","adminRu":"","region":"","regionRu":"","owner":null},"VNM":{"admin":"Vietnam","adm0_a3":"VNM","adminRu":"","region":"","regionRu":"","owner":null},"VUT":{"admin":"Vanuatu","adm0_a3":"VUT","adminRu":"Вануату","region":"","regionRu":"","owner":null},"WLF":{"admin":"Wallis and Futuna","adm0_a3":"WLF","adminRu":"","region":"","regionRu":"","owner":null},"WSM":{"admin":"Samoa","adm0_a3":"WSM","adminRu":"Самоа","region":"","regionRu":"","owner":null},"YEM":{"admin":"Yemen","adm0_a3":"YEM","adminRu":"Йемен","region":"","regionRu":"","owner":null},"ZAF":{"admin":"South Africa","adm0_a3":"ZAF","adminRu":"Южно-Африканская Республика","region":"","regionRu":"","owner":null},"ZMB":{"admin":"Zambia","adm0_a3":"ZMB","adminRu":"Замбия","region":"","regionRu":"","owner":null},"ZWE":{"admin":"Zimbabwe","adm0_a3":"ZWE","adminRu":"Зимбабве","region":"","regionRu":"","owner":null},"ES-PV":{"admin":"Spain","adm0_a3":"ES-PV","adminRu":"Испания","region":"Basque Contry","regionRu":"Страна Басков","owner":"ESP"},"ES-CT":{"admin":"Spain","adm0_a3":"ES-CT","adminRu":"Испания","region":"Valencia","regionRu":"Валенсия","owner":"ESP"},"ES-NC":{"admin":"Spain","adm0_a3":"ES-NC","adminRu":"Испания","region":"Navarre","regionRu":"Навара","owner":"ESP"},"GB-WLS":{"admin":"United Kingdom","adm0_a3":"GB-WLS","adminRu":"Великобритания","region":"Wales","regionRu":"Уэльс","owner":"GBR"},"RU-CO":{"admin":"Russia","adm0_a3":"RU-CO","adminRu":"Российская Федерация","region":"Komi Republic","regionRu":"Республика Коми","owner":"RUS"},"CH-JL":{"admin":"China","adm0_a3":"CH-JL","adminRu":"Китай","region":"Jilin Province","regionRu":"Провинция Гирин","owner":"CHN"},"IN-SK":{"admin":"India","adm0_a3":"IN-SK","adminRu":"Индия","region":"Sikkim","regionRu":"Сикким","owner":"IND"},"IN-WB":{"admin":"India","adm0_a3":"IN-WB","adminRu":"Индия","region":"West Bengal","regionRu":"Западная Бенгалия","owner":"IND"},"RU-TT":{"admin":"Russia","adm0_a3":"RU-TT","adminRu":"Российская Федерация","region":"Tatarstan Republic","regionRu":"Республика Татарстан","owner":"RUS"},"UKR":{"admin":"Ukraine","adm0_a3":"UKR","adminRu":"Украина","region":"","regionRu":"","owner":null},"RU-CU":{"admin":"Russia","adm0_a3":"RU-CU","adminRu":"Российская Федерация","region":"Chuvash Republic","regionRu":"Республика Чувашия","owner":"RUS"},"RU-SA":{"admin":"Russia","adm0_a3":"RU-SA","adminRu":"Российская Федерация","region":"Sakha Republic","regionRu":"Республика Саха (Якутия)","owner":"RUS"},"RU-CHU":{"admin":"Russia","adm0_a3":"RU-CHU","adminRu":"Российская Федерация","region":"Chukotka Autonomous Okrug","regionRu":"Чукотский автономный округ","owner":"RUS"},"FR-E":{"admin":"France","adm0_a3":"FR-E","adminRu":"Франция","region":"Bretagne","regionRu":"","owner":"FRA"},"GB-SCT":{"admin":"United Kingdom","adm0_a3":"GB-SCT","adminRu":"Великобритания","region":"Scotland","regionRu":"Шотландия","owner":"GBR"},"CA-NS":{"admin":"Canada","adm0_a3":"CA-NS","adminRu":"Канада","region":"Nova Scotia","regionRu":"Новая Шотландия","owner":"CAN"}}
+{
+    "ABW": {
+        "admin": "Aruba",
+        "adm0_a3": "ABW",
+        "adminRu": "Аруба",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "AFG": {
+        "admin": "Afghanistan",
+        "adm0_a3": "AFG",
+        "adminRu": "Афганистан",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "AGO": {
+        "admin": "Angola",
+        "adm0_a3": "AGO",
+        "adminRu": "Ангола",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "AIA": {
+        "admin": "Anguilla",
+        "adm0_a3": "AIA",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ALB": {
+        "admin": "Albania",
+        "adm0_a3": "ALB",
+        "adminRu": "Албания",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ALD": {
+        "admin": "Aland",
+        "adm0_a3": "ALD",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "AND": {
+        "admin": "Andorra",
+        "adm0_a3": "AND",
+        "adminRu": "Андорра",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ARE": {
+        "admin": "United Arab Emirates",
+        "adm0_a3": "ARE",
+        "adminRu": "Объединённые Арабские Эмираты",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ARG": {
+        "admin": "Argentina",
+        "adm0_a3": "ARG",
+        "adminRu": "Аргентина",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ARM": {
+        "admin": "Armenia",
+        "adm0_a3": "ARM",
+        "adminRu": "Армения",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ASM": {
+        "admin": "American Samoa",
+        "adm0_a3": "ASM",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ATC": {
+        "admin": "Ashmore and Cartier Islands",
+        "adm0_a3": "ATC",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ATF": {
+        "admin": "French Southern and Antarctic Lands",
+        "adm0_a3": "ATF",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ATG": {
+        "admin": "Antigua and Barbuda",
+        "adm0_a3": "ATG",
+        "adminRu": "Антигуа и Барбуда",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "AUS": {
+        "admin": "Australia",
+        "adm0_a3": "AUS",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "AUT": {
+        "admin": "Austria",
+        "adm0_a3": "AUT",
+        "adminRu": "Австрия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "AZE": {
+        "admin": "Azerbaijan",
+        "adm0_a3": "AZE",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BDI": {
+        "admin": "Burundi",
+        "adm0_a3": "BDI",
+        "adminRu": "Бурунди",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BEL": {
+        "admin": "Belgium",
+        "adm0_a3": "BEL",
+        "adminRu": "Бельгия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BEN": {
+        "admin": "Benin",
+        "adm0_a3": "BEN",
+        "adminRu": "Бенин",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BFA": {
+        "admin": "Burkina Faso",
+        "adm0_a3": "BFA",
+        "adminRu": "Буркина-Фасо",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BGD": {
+        "admin": "Bangladesh",
+        "adm0_a3": "BGD",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BGR": {
+        "admin": "Bulgaria",
+        "adm0_a3": "BGR",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BHR": {
+        "admin": "Bahrain",
+        "adm0_a3": "BHR",
+        "adminRu": "Бахрейн",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BHS": {
+        "admin": "The Bahamas",
+        "adm0_a3": "BHS",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BIH": {
+        "admin": "Bosnia and Herzegovina",
+        "adm0_a3": "BIH",
+        "adminRu": "Босния и Герцеговина",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BLM": {
+        "admin": "Saint Barthelemy",
+        "adm0_a3": "BLM",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BLR": {
+        "admin": "Belarus",
+        "adm0_a3": "BLR",
+        "adminRu": "Беларусь",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BLZ": {
+        "admin": "Belize",
+        "adm0_a3": "BLZ",
+        "adminRu": "Белиз",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BMU": {
+        "admin": "Bermuda",
+        "adm0_a3": "BMU",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BOL": {
+        "admin": "Bolivia",
+        "adm0_a3": "BOL",
+        "adminRu": "Боливия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BRA": {
+        "admin": "Brazil",
+        "adm0_a3": "BRA",
+        "adminRu": "Бразилия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BRB": {
+        "admin": "Barbados",
+        "adm0_a3": "BRB",
+        "adminRu": "Барбадос",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BRN": {
+        "admin": "Brunei",
+        "adm0_a3": "BRN",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BTN": {
+        "admin": "Bhutan",
+        "adm0_a3": "BTN",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "BWA": {
+        "admin": "Botswana",
+        "adm0_a3": "BWA",
+        "adminRu": "Ботсвана",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "CAF": {
+        "admin": "Central African Republic",
+        "adm0_a3": "CAF",
+        "adminRu": "Центральная Африканская Республика",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "CAN": {
+        "admin": "Canada",
+        "adm0_a3": "CAN",
+        "adminRu": "Канада",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "CHE": {
+        "admin": "Switzerland",
+        "adm0_a3": "CHE",
+        "adminRu": "Швейцария",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "CHL": {
+        "admin": "Chile",
+        "adm0_a3": "CHL",
+        "adminRu": "Чили",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "CHN": {
+        "admin": "China",
+        "adm0_a3": "CHN",
+        "adminRu": "Китай",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "CIV": {
+        "admin": "Ivory Coast",
+        "adm0_a3": "CIV",
+        "adminRu": "Кот-д’Ивуар",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "CMR": {
+        "admin": "Cameroon",
+        "adm0_a3": "CMR",
+        "adminRu": "Камерун",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "COD": {
+        "admin": "Democratic Republic of the Congo",
+        "adm0_a3": "COD",
+        "adminRu": "Демократическая Республика Конго",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "COG": {
+        "admin": "Republic of Congo",
+        "adm0_a3": "COG",
+        "adminRu": "Республика Конго",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "COK": {
+        "admin": "Cook Islands",
+        "adm0_a3": "COK",
+        "adminRu": "Острова Кука",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "COL": {
+        "admin": "Colombia",
+        "adm0_a3": "COL",
+        "adminRu": "Колумбия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "COM": {
+        "admin": "Comoros",
+        "adm0_a3": "COM",
+        "adminRu": "Коморос",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "CPV": {
+        "admin": "Cape Verde",
+        "adm0_a3": "CPV",
+        "adminRu": "Кабо-Верде",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "CRI": {
+        "admin": "Costa Rica",
+        "adm0_a3": "CRI",
+        "adminRu": "Коста-Рика",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "CUB": {
+        "admin": "Cuba",
+        "adm0_a3": "CUB",
+        "adminRu": "Куба",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "CUW": {
+        "admin": "Curaсao",
+        "adm0_a3": "CUW",
+        "adminRu": "Курасао",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "CYM": {
+        "admin": "Cayman Islands",
+        "adm0_a3": "CYM",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "CYN": {
+        "admin": "Northern Cyprus",
+        "adm0_a3": "CYN",
+        "adminRu": "Северный Кипр",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "CYP": {
+        "admin": "Cyprus",
+        "adm0_a3": "CYP",
+        "adminRu": "Кипр",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "CZE": {
+        "admin": "Czech Republic",
+        "adm0_a3": "CZE",
+        "adminRu": "Чехия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "DEU": {
+        "admin": "Germany",
+        "adm0_a3": "DEU",
+        "adminRu": "Германия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "DJI": {
+        "admin": "Djibouti",
+        "adm0_a3": "DJI",
+        "adminRu": "Джибути",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "DMA": {
+        "admin": "Dominica",
+        "adm0_a3": "DMA",
+        "adminRu": "Доминика",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "DNK": {
+        "admin": "Denmark",
+        "adm0_a3": "DNK",
+        "adminRu": "Дания",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "DOM": {
+        "admin": "Dominican Republic",
+        "adm0_a3": "DOM",
+        "adminRu": "Доминиканская республика",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "DZA": {
+        "admin": "Algeria",
+        "adm0_a3": "DZA",
+        "adminRu": "Алжир",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ECU": {
+        "admin": "Ecuador",
+        "adm0_a3": "ECU",
+        "adminRu": "Эквадор",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "EGY": {
+        "admin": "Egypt",
+        "adm0_a3": "EGY",
+        "adminRu": "Египет",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ERI": {
+        "admin": "Eritrea",
+        "adm0_a3": "ERI",
+        "adminRu": "Эритрея",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ESP": {
+        "admin": "Spain",
+        "adm0_a3": "ESP",
+        "adminRu": "Испания",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "EST": {
+        "admin": "Estonia",
+        "adm0_a3": "EST",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ETH": {
+        "admin": "Ethiopia",
+        "adm0_a3": "ETH",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "FIN": {
+        "admin": "Finland",
+        "adm0_a3": "FIN",
+        "adminRu": "Финляндия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "FJI": {
+        "admin": "Fiji",
+        "adm0_a3": "FJI",
+        "adminRu": "Фиджи",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "FLK": {
+        "admin": "Falkland Islands",
+        "adm0_a3": "FLK",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "FRA": {
+        "admin": "France",
+        "adm0_a3": "FRA",
+        "adminRu": "Франция",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "FRO": {
+        "admin": "Faroe Islands",
+        "adm0_a3": "FRO",
+        "adminRu": "Фарерские острова",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "FSM": {
+        "admin": "Federated States of Micronesia",
+        "adm0_a3": "FSM",
+        "adminRu": "Федеративные Штаты Микронезии",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "GAB": {
+        "admin": "Gabon",
+        "adm0_a3": "GAB",
+        "adminRu": "Габон",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "GBR": {
+        "admin": "United Kingdom",
+        "adm0_a3": "GBR",
+        "adminRu": "Великобритания",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "GEO": {
+        "admin": "Georgia",
+        "adm0_a3": "GEO",
+        "adminRu": "Грузия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "GGY": {
+        "admin": "Guernsey",
+        "adm0_a3": "GGY",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "GHA": {
+        "admin": "Ghana",
+        "adm0_a3": "GHA",
+        "adminRu": "Гана",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "GIN": {
+        "admin": "Guinea",
+        "adm0_a3": "GIN",
+        "adminRu": "Гвинея",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "GMB": {
+        "admin": "Gambia",
+        "adm0_a3": "GMB",
+        "adminRu": "Гамбия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "GNB": {
+        "admin": "Guinea-Bissau",
+        "adm0_a3": "GNB",
+        "adminRu": "Гвинея-Бисау",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "GNQ": {
+        "admin": "Equatorial Guinea",
+        "adm0_a3": "GNQ",
+        "adminRu": "Экваториальная Гвинея",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "GRC": {
+        "admin": "Greece",
+        "adm0_a3": "GRC",
+        "adminRu": "Греция",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "GRD": {
+        "admin": "Grenada",
+        "adm0_a3": "GRD",
+        "adminRu": "Гренада",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "GRL": {
+        "admin": "Greenland",
+        "adm0_a3": "GRL",
+        "adminRu": "Гренландия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "GTM": {
+        "admin": "Guatemala",
+        "adm0_a3": "GTM",
+        "adminRu": "Гватемала",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "GUM": {
+        "admin": "Guam",
+        "adm0_a3": "GUM",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "GUY": {
+        "admin": "Guyana",
+        "adm0_a3": "GUY",
+        "adminRu": "Гайана",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "HKG": {
+        "admin": "Hong Kong S.A.R.",
+        "adm0_a3": "HKG",
+        "adminRu": "Гонг-Конг",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "HMD": {
+        "admin": "Heard Island and McDonald Islands",
+        "adm0_a3": "HMD",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "HND": {
+        "admin": "Honduras",
+        "adm0_a3": "HND",
+        "adminRu": "Гондурас",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "HRV": {
+        "admin": "Croatia",
+        "adm0_a3": "HRV",
+        "adminRu": "Хорватия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "HTI": {
+        "admin": "Haiti",
+        "adm0_a3": "HTI",
+        "adminRu": "Гаити",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "HUN": {
+        "admin": "Hungary",
+        "adm0_a3": "HUN",
+        "adminRu": "Венгрия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "IDN": {
+        "admin": "Indonesia",
+        "adm0_a3": "IDN",
+        "adminRu": "Индонезия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "IMN": {
+        "admin": "Great Britain",
+        "adm0_a3": "IMN",
+        "adminRu": "Великобритания",
+        "region": "Isle of Man",
+        "regionRu": "Остров Мэн",
+        "owner": "IMN"
+    },
+    "IND": {
+        "admin": "India",
+        "adm0_a3": "IND",
+        "adminRu": "Индия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "IOA": {
+        "admin": "Indian Ocean Territories",
+        "adm0_a3": "IOA",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "IOT": {
+        "admin": "British Indian Ocean Territory",
+        "adm0_a3": "IOT",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "IRL": {
+        "admin": "Ireland",
+        "adm0_a3": "IRL",
+        "adminRu": "Ирландия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "IRN": {
+        "admin": "Iran",
+        "adm0_a3": "IRN",
+        "adminRu": "Иран",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "IRQ": {
+        "admin": "Iraq",
+        "adm0_a3": "IRQ",
+        "adminRu": "Ирак",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ISL": {
+        "admin": "Iceland",
+        "adm0_a3": "ISL",
+        "adminRu": "Исландия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ISR": {
+        "admin": "Israel",
+        "adm0_a3": "ISR",
+        "adminRu": "Израиль",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ITA": {
+        "admin": "Italy",
+        "adm0_a3": "ITA",
+        "adminRu": "Италия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "JAM": {
+        "admin": "Jamaica",
+        "adm0_a3": "JAM",
+        "adminRu": "Ямайка",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "JEY": {
+        "admin": "Jersey",
+        "adm0_a3": "JEY",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "JOR": {
+        "admin": "Jordan",
+        "adm0_a3": "JOR",
+        "adminRu": "Иордания",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "JPN": {
+        "admin": "Japan",
+        "adm0_a3": "JPN",
+        "adminRu": "Япония",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "KAS": {
+        "admin": "Siachen Glacier",
+        "adm0_a3": "KAS",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "KAZ": {
+        "admin": "Kazakhstan",
+        "adm0_a3": "KAZ",
+        "adminRu": "Казахстан",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "KEN": {
+        "admin": "Kenya",
+        "adm0_a3": "KEN",
+        "adminRu": "Кения",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "KGZ": {
+        "admin": "Kyrgyzstan",
+        "adm0_a3": "KGZ",
+        "adminRu": "Киргизия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "KHM": {
+        "admin": "Cambodia",
+        "adm0_a3": "KHM",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "KIR": {
+        "admin": "Kiribati",
+        "adm0_a3": "KIR",
+        "adminRu": "Кирибати",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "KNA": {
+        "admin": "Saint Kitts and Nevis",
+        "adm0_a3": "KNA",
+        "adminRu": "Сент-Китс и Невис",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "KOR": {
+        "admin": "South Korea",
+        "adm0_a3": "KOR",
+        "adminRu": "Южная Корея",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "KOS": {
+        "admin": "Kosovo",
+        "adm0_a3": "KOS",
+        "adminRu": "Косово",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "KWT": {
+        "admin": "Kuwait",
+        "adm0_a3": "KWT",
+        "adminRu": "Кувейт",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "LAO": {
+        "admin": "Laos",
+        "adm0_a3": "LAO",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "LBN": {
+        "admin": "Lebanon",
+        "adm0_a3": "LBN",
+        "adminRu": "Ливан",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "LBR": {
+        "admin": "Liberia",
+        "adm0_a3": "LBR",
+        "adminRu": "Либерия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "LBY": {
+        "admin": "Libya",
+        "adm0_a3": "LBY",
+        "adminRu": "Ливия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "LCA": {
+        "admin": "Saint Lucia",
+        "adm0_a3": "LCA",
+        "adminRu": "Сент-Люсия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "LIE": {
+        "admin": "Liechtenstein",
+        "adm0_a3": "LIE",
+        "adminRu": "Лихтенштейн",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "LKA": {
+        "admin": "Sri Lanka",
+        "adm0_a3": "LKA",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "LSO": {
+        "admin": "Lesotho",
+        "adm0_a3": "LSO",
+        "adminRu": "Лесото",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "LTU": {
+        "admin": "Lithuania",
+        "adm0_a3": "LTU",
+        "adminRu": "Литва",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "LUX": {
+        "admin": "Luxembourg",
+        "adm0_a3": "LUX",
+        "adminRu": "Люксембург",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "LVA": {
+        "admin": "Latvia",
+        "adm0_a3": "LVA",
+        "adminRu": "Латвия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MAC": {
+        "admin": "Macao S.A.R",
+        "adm0_a3": "MAC",
+        "adminRu": "Макао",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MAF": {
+        "admin": "Saint Martin",
+        "adm0_a3": "MAF",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MAR": {
+        "admin": "Morocco",
+        "adm0_a3": "MAR",
+        "adminRu": "Марокко",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MCO": {
+        "admin": "Monaco",
+        "adm0_a3": "MCO",
+        "adminRu": "Монако",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MDA": {
+        "admin": "Moldova",
+        "adm0_a3": "MDA",
+        "adminRu": "Молдова",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MDG": {
+        "admin": "Madagascar",
+        "adm0_a3": "MDG",
+        "adminRu": "Мадагаскар",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MDV": {
+        "admin": "Maldives",
+        "adm0_a3": "MDV",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MEX": {
+        "admin": "Mexico",
+        "adm0_a3": "MEX",
+        "adminRu": "Мексика",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MHL": {
+        "admin": "Marshall Islands",
+        "adm0_a3": "MHL",
+        "adminRu": "Маршаловы Острова",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MKD": {
+        "admin": "Macedonia",
+        "adm0_a3": "MKD",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MLI": {
+        "admin": "Mali",
+        "adm0_a3": "MLI",
+        "adminRu": "Мали",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MLT": {
+        "admin": "Malta",
+        "adm0_a3": "MLT",
+        "adminRu": "Мальта",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MMR": {
+        "admin": "Myanmar",
+        "adm0_a3": "MMR",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MNE": {
+        "admin": "Montenegro",
+        "adm0_a3": "MNE",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MNG": {
+        "admin": "Mongolia",
+        "adm0_a3": "MNG",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MNP": {
+        "admin": "Northern Mariana Islands",
+        "adm0_a3": "MNP",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MOZ": {
+        "admin": "Mozambique",
+        "adm0_a3": "MOZ",
+        "adminRu": "Мозамбик",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MRT": {
+        "admin": "Mauritania",
+        "adm0_a3": "MRT",
+        "adminRu": "Мавритания",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MSR": {
+        "admin": "Montserrat",
+        "adm0_a3": "MSR",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MUS": {
+        "admin": "Mauritius",
+        "adm0_a3": "MUS",
+        "adminRu": "Маврикий",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MWI": {
+        "admin": "Malawi",
+        "adm0_a3": "MWI",
+        "adminRu": "Малави",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "MYS": {
+        "admin": "Malaysia",
+        "adm0_a3": "MYS",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "NAM": {
+        "admin": "Namibia",
+        "adm0_a3": "NAM",
+        "adminRu": "Намибия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "NCL": {
+        "admin": "New Caledonia",
+        "adm0_a3": "NCL",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "NER": {
+        "admin": "Niger",
+        "adm0_a3": "NER",
+        "adminRu": "Нигер",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "NFK": {
+        "admin": "Norfolk Island",
+        "adm0_a3": "NFK",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "NGA": {
+        "admin": "Nigeria",
+        "adm0_a3": "NGA",
+        "adminRu": "Нигерия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "NIC": {
+        "admin": "Nicaragua",
+        "adm0_a3": "NIC",
+        "adminRu": "Никарагуа",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "NIU": {
+        "admin": "Niue",
+        "adm0_a3": "NIU",
+        "adminRu": "Ниуэ",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "NLD": {
+        "admin": "Netherlands",
+        "adm0_a3": "NLD",
+        "adminRu": "Нидерланды",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "NOR": {
+        "admin": "Norway",
+        "adm0_a3": "NOR",
+        "adminRu": "Норвегия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "NPL": {
+        "admin": "Nepal",
+        "adm0_a3": "NPL",
+        "adminRu": "Непал",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "NRU": {
+        "admin": "Nauru",
+        "adm0_a3": "NRU",
+        "adminRu": "Науру",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "NZL": {
+        "admin": "New Zealand",
+        "adm0_a3": "NZL",
+        "adminRu": "Новая Зеландия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "OMN": {
+        "admin": "Oman",
+        "adm0_a3": "OMN",
+        "adminRu": "Оман",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "PAK": {
+        "admin": "Pakistan",
+        "adm0_a3": "PAK",
+        "adminRu": "Пакистан",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "PAN": {
+        "admin": "Panama",
+        "adm0_a3": "PAN",
+        "adminRu": "Панама",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "PCN": {
+        "admin": "Pitcairn Islands",
+        "adm0_a3": "PCN",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "PER": {
+        "admin": "Peru",
+        "adm0_a3": "PER",
+        "adminRu": "Перу",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "PHL": {
+        "admin": "Philippines",
+        "adm0_a3": "PHL",
+        "adminRu": "Филиппины",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "PLW": {
+        "admin": "Palau",
+        "adm0_a3": "PLW",
+        "adminRu": "Палау",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "PNG": {
+        "admin": "Papua New Guinea",
+        "adm0_a3": "PNG",
+        "adminRu": "Папуа - Новая Гвинея",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "POL": {
+        "admin": "Poland",
+        "adm0_a3": "POL",
+        "adminRu": "Польша",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "PRI": {
+        "admin": "Puerto Rico",
+        "adm0_a3": "PRI",
+        "adminRu": "Пуэрто-Рико",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "PRK": {
+        "admin": "North Korea",
+        "adm0_a3": "PRK",
+        "adminRu": "Северная Корея",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "PRT": {
+        "admin": "Portugal",
+        "adm0_a3": "PRT",
+        "adminRu": "Португалия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "PRY": {
+        "admin": "Paraguay",
+        "adm0_a3": "PRY",
+        "adminRu": "Парагвай",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "PSX": {
+        "admin": "Palestine",
+        "adm0_a3": "PSX",
+        "adminRu": "Палестина",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "PYF": {
+        "admin": "French Polynesia",
+        "adm0_a3": "PYF",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "QAT": {
+        "admin": "Qatar",
+        "adm0_a3": "QAT",
+        "adminRu": "Катар",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ROU": {
+        "admin": "Romania",
+        "adm0_a3": "ROU",
+        "adminRu": "Румыния",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "RUS": {
+        "admin": "Russia",
+        "adm0_a3": "RUS",
+        "adminRu": "Российская Федерация",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "RWA": {
+        "admin": "Rwanda",
+        "adm0_a3": "RWA",
+        "adminRu": "Руанда",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SAH": {
+        "admin": "SADR",
+        "adm0_a3": "SAH",
+        "adminRu": "САДР",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SAU": {
+        "admin": "Saudi Arabia",
+        "adm0_a3": "SAU",
+        "adminRu": "Саудовская Аравия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SDN": {
+        "admin": "Sudan",
+        "adm0_a3": "SDN",
+        "adminRu": "Судан",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SDS": {
+        "admin": "South Sudan",
+        "adm0_a3": "SDS",
+        "adminRu": "Южный Судан",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SEN": {
+        "admin": "Senegal",
+        "adm0_a3": "SEN",
+        "adminRu": "Сенегал",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SGP": {
+        "admin": "Singapore",
+        "adm0_a3": "SGP",
+        "adminRu": "Сингапур",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SGS": {
+        "admin": "South Georgia and South Sandwich Islands",
+        "adm0_a3": "SGS",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SHN": {
+        "admin": "Saint Helena",
+        "adm0_a3": "SHN",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SLB": {
+        "admin": "Solomon Islands",
+        "adm0_a3": "SLB",
+        "adminRu": "Соломоновы Острова",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SLE": {
+        "admin": "Sierra Leone",
+        "adm0_a3": "SLE",
+        "adminRu": "Сиерра-Леоне",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SLV": {
+        "admin": "El Salvador",
+        "adm0_a3": "SLV",
+        "adminRu": "Эль-Сальвадор",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SMR": {
+        "admin": "San Marino",
+        "adm0_a3": "SMR",
+        "adminRu": "Сан-Марино",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SOL": {
+        "admin": "Somaliland",
+        "adm0_a3": "SOL",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SOM": {
+        "admin": "Somalia",
+        "adm0_a3": "SOM",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SPM": {
+        "admin": "Saint Pierre and Miquelon",
+        "adm0_a3": "SPM",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SRB": {
+        "admin": "Republic of Serbia",
+        "adm0_a3": "SRB",
+        "adminRu": "Сербия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "STP": {
+        "admin": "Sao Tome and Principe",
+        "adm0_a3": "STP",
+        "adminRu": "Сан-Томе и Принсипи",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SUR": {
+        "admin": "Suriname",
+        "adm0_a3": "SUR",
+        "adminRu": "Суринам",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SVK": {
+        "admin": "Slovakia",
+        "adm0_a3": "SVK",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SVN": {
+        "admin": "Slovenia",
+        "adm0_a3": "SVN",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SWE": {
+        "admin": "Sweden",
+        "adm0_a3": "SWE",
+        "adminRu": "Швеция",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SWZ": {
+        "admin": "Swaziland",
+        "adm0_a3": "SWZ",
+        "adminRu": "Свазиленд",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SXM": {
+        "admin": "Sint Maarten",
+        "adm0_a3": "SXM",
+        "adminRu": "Синт-Мартен",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SYC": {
+        "admin": "Seychelles",
+        "adm0_a3": "SYC",
+        "adminRu": "Сейшеллы",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "SYR": {
+        "admin": "Syria",
+        "adm0_a3": "SYR",
+        "adminRu": "Сирия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "TCA": {
+        "admin": "Turks and Caicos Islands",
+        "adm0_a3": "TCA",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "TCD": {
+        "admin": "Chad",
+        "adm0_a3": "TCD",
+        "adminRu": "Чад",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "TGO": {
+        "admin": "Togo",
+        "adm0_a3": "TGO",
+        "adminRu": "Того",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "THA": {
+        "admin": "Thailand",
+        "adm0_a3": "THA",
+        "adminRu": "Тайланд",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "TJK": {
+        "admin": "Tajikistan",
+        "adm0_a3": "TJK",
+        "adminRu": "Таджикистан",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "TKM": {
+        "admin": "Turkmenistan",
+        "adm0_a3": "TKM",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "TLS": {
+        "admin": "East Timor",
+        "adm0_a3": "TLS",
+        "adminRu": "Восточный Тимор",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "TON": {
+        "admin": "Tonga",
+        "adm0_a3": "TON",
+        "adminRu": "Тонга",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "TTO": {
+        "admin": "Trinidad and Tobago",
+        "adm0_a3": "TTO",
+        "adminRu": "Тринидад и Тобаго",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "TUN": {
+        "admin": "Tunisia",
+        "adm0_a3": "TUN",
+        "adminRu": "Тунис",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "TUR": {
+        "admin": "Turkey",
+        "adm0_a3": "TUR",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "TWN": {
+        "admin": "Taiwan",
+        "adm0_a3": "TWN",
+        "adminRu": "Тайвань",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "TZA": {
+        "admin": "United Republic of Tanzania",
+        "adm0_a3": "TZA",
+        "adminRu": "Танзания",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "UGA": {
+        "admin": "Uganda",
+        "adm0_a3": "UGA",
+        "adminRu": "Уганда",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "URY": {
+        "admin": "Uruguay",
+        "adm0_a3": "URY",
+        "adminRu": "Угурвай",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "USA": {
+        "admin": "United States of America",
+        "adm0_a3": "USA",
+        "adminRu": "Соединённые Штаты Америки",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "UZB": {
+        "admin": "Uzbekistan",
+        "adm0_a3": "UZB",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "VAT": {
+        "admin": "Vatican",
+        "adm0_a3": "VAT",
+        "adminRu": "Ватикан",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "VCT": {
+        "admin": "Saint Vincent and the Grenadines",
+        "adm0_a3": "VCT",
+        "adminRu": "Сент-Винсент и Гренадины",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "VEN": {
+        "admin": "Venezuela",
+        "adm0_a3": "VEN",
+        "adminRu": "Венесуэла",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "VGB": {
+        "admin": "British Virgin Islands",
+        "adm0_a3": "VGB",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "VIR": {
+        "admin": "United States Virgin Islands",
+        "adm0_a3": "VIR",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "VNM": {
+        "admin": "Vietnam",
+        "adm0_a3": "VNM",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "VUT": {
+        "admin": "Vanuatu",
+        "adm0_a3": "VUT",
+        "adminRu": "Вануату",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "WLF": {
+        "admin": "Wallis and Futuna",
+        "adm0_a3": "WLF",
+        "adminRu": "",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "WSM": {
+        "admin": "Samoa",
+        "adm0_a3": "WSM",
+        "adminRu": "Самоа",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "YEM": {
+        "admin": "Yemen",
+        "adm0_a3": "YEM",
+        "adminRu": "Йемен",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ZAF": {
+        "admin": "South Africa",
+        "adm0_a3": "ZAF",
+        "adminRu": "Южно-Африканская Республика",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ZMB": {
+        "admin": "Zambia",
+        "adm0_a3": "ZMB",
+        "adminRu": "Замбия",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ZWE": {
+        "admin": "Zimbabwe",
+        "adm0_a3": "ZWE",
+        "adminRu": "Зимбабве",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "ES-PV": {
+        "admin": "Spain",
+        "adm0_a3": "ES-PV",
+        "adminRu": "Испания",
+        "region": "Basque Contry",
+        "regionRu": "Страна Басков",
+        "owner": "ESP"
+    },
+    "ES-VC": {
+        "admin": "Spain",
+        "adm0_a3": "ES-VC",
+        "adminRu": "Испания",
+        "region": "Valencia",
+        "regionRu": "Валенсия",
+        "owner": "ESP"
+    },
+    "ES-CT": {
+        "admin": "Spain",
+        "adm0_a3": "ES-CT",
+        "adminRu": "Испания",
+        "region": "Catalonia",
+        "regionRu": "Каталония",
+        "owner": "ESP"
+    },
+    "ES-NC": {
+        "admin": "Spain",
+        "adm0_a3": "ES-NC",
+        "adminRu": "Испания",
+        "region": "Navarre",
+        "regionRu": "Навара",
+        "owner": "ESP"
+    },
+    "GB-WLS": {
+        "admin": "United Kingdom",
+        "adm0_a3": "GB-WLS",
+        "adminRu": "Великобритания",
+        "region": "Wales",
+        "regionRu": "Уэльс",
+        "owner": "GBR"
+    },
+    "RU-CO": {
+        "admin": "Russia",
+        "adm0_a3": "RU-CO",
+        "adminRu": "Российская Федерация",
+        "region": "Komi Republic",
+        "regionRu": "Республика Коми",
+        "owner": "RUS"
+    },
+    "CH-JL": {
+        "admin": "China",
+        "adm0_a3": "CH-JL",
+        "adminRu": "Китай",
+        "region": "Jilin Province",
+        "regionRu": "Провинция Гирин",
+        "owner": "CHN"
+    },
+    "IN-SK": {
+        "admin": "India",
+        "adm0_a3": "IN-SK",
+        "adminRu": "Индия",
+        "region": "Sikkim",
+        "regionRu": "Сикким",
+        "owner": "IND"
+    },
+    "IN-WB": {
+        "admin": "India",
+        "adm0_a3": "IN-WB",
+        "adminRu": "Индия",
+        "region": "West Bengal",
+        "regionRu": "Западная Бенгалия",
+        "owner": "IND"
+    },
+    "RU-TT": {
+        "admin": "Russia",
+        "adm0_a3": "RU-TT",
+        "adminRu": "Российская Федерация",
+        "region": "Tatarstan Republic",
+        "regionRu": "Республика Татарстан",
+        "owner": "RUS"
+    },
+    "UKR": {
+        "admin": "Ukraine",
+        "adm0_a3": "UKR",
+        "adminRu": "Украина",
+        "region": "",
+        "regionRu": "",
+        "owner": null
+    },
+    "RU-CU": {
+        "admin": "Russia",
+        "adm0_a3": "RU-CU",
+        "adminRu": "Российская Федерация",
+        "region": "Chuvash Republic",
+        "regionRu": "Республика Чувашия",
+        "owner": "RUS"
+    },
+    "RU-SA": {
+        "admin": "Russia",
+        "adm0_a3": "RU-SA",
+        "adminRu": "Российская Федерация",
+        "region": "Sakha Republic",
+        "regionRu": "Республика Саха (Якутия)",
+        "owner": "RUS"
+    },
+    "RU-CHU": {
+        "admin": "Russia",
+        "adm0_a3": "RU-CHU",
+        "adminRu": "Российская Федерация",
+        "region": "Chukotka Autonomous Okrug",
+        "regionRu": "Чукотский автономный округ",
+        "owner": "RUS"
+    },
+    "FR-E": {
+        "admin": "France",
+        "adm0_a3": "FR-E",
+        "adminRu": "Франция",
+        "region": "Bretagne",
+        "regionRu": "",
+        "owner": "FRA"
+    },
+    "GB-SCT": {
+        "admin": "United Kingdom",
+        "adm0_a3": "GB-SCT",
+        "adminRu": "Великобритания",
+        "region": "Scotland",
+        "regionRu": "Шотландия",
+        "owner": "GBR"
+    },
+    "CA-NS": {
+        "admin": "Canada",
+        "adm0_a3": "CA-NS",
+        "adminRu": "Канада",
+        "region": "Nova Scotia",
+        "regionRu": "Новая Шотландия",
+        "owner": "CAN"
+    }
+}
