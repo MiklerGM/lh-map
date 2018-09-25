@@ -14,7 +14,7 @@ const bin2text = mask => parseInt(mask, 2).toString(36);
 const text2bin = text => parseInt(text, 36).toString(2);
 
 const langList = Object.keys(lang).sort();
-const version = 'aa';
+const version = 'ab';
 
 function parseURL(url) {
   const arr = url.split('');
@@ -81,11 +81,13 @@ const app = new Express();
 app.use(bodyParser.json());
 
 app.use('/result/:url', (req, res) => {
-  console.log('req.params.uid', req.params.url);
+  // console.log('req.params.uid', req.params.url);
   const parsed = parseURL(req.params.url);
-  const selected = getLanguages(parsed.text);
-  console.log('Parsed params', parsed);
-  console.log('Selected languages', selected);
+  if (process.env !== 'production') {
+    const selected = getLanguages(parsed.text);
+    console.log('Parsed params', parsed);
+    console.log('Selected languages', selected);
+  }
 
   const img = `/${getImgUrl(req.params.url).png}`;
   // russian locale for hello
