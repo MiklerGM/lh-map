@@ -35,6 +35,11 @@ const GA_CONFIG = {
   titleCase: false
 };
 
+ReactGA.initialize({
+  trackingId: 'UA-111740941-2',
+  gaOptions: { name: 'tracker1' }
+}, GA_CONFIG);
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 console.time('Calculating Locales');
 const localeLang = Object.keys(lang).reduce((p, c) => ({
@@ -111,7 +116,6 @@ class App extends React.Component {
     //   this.changeLocale('en');
     // }
     this.loadData(['map.json'], (s, m) => ({ map: m }));
-    ReactGA.initialize('UA-111740941-1', GA_CONFIG);
   }
 
   componentDidUpdate(prevProps, prevState) {

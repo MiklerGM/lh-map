@@ -1,12 +1,17 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import ym from 'react-yandex-metrika';
+import ReactGA from 'react-ga';
 
 import SearchInput from '../components/SearchInput';
 
 class LanguageSearch extends React.Component {
   shareBtn = () => {
     ym('reachGoal', 'resultShareButton');
+    ReactGA.event({
+      category: 'Share',
+      action: 'Share Button Clicked'
+    });
     this.props.updateUI({ sharePanel: !this.props.uiState.sharePanel });
   }
 

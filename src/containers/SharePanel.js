@@ -2,6 +2,7 @@ import React from 'react';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { FormattedMessage } from 'react-intl';
 import ym from 'react-yandex-metrika';
+import ReactGA from 'react-ga';
 
 import SocialButton from '../components/SocialButton';
 import './SharePanel.less';
@@ -26,6 +27,10 @@ class SocialButtonWrapper extends React.Component {
     console.log('handleClick', s, t);
     ym('reachGoal', 'resultSharedSNS');
     ym('reachGoal', s);
+    ReactGA.event({
+      category: 'Share',
+      action: `Used ${s}`
+    });
     const link = this.link(s, encodeURI(t.title), encodeURI(t.description));
     window.open(link, '', 'menubar=no, toolbar=no, resizable=yes,scrollbars=yes,height=400,width=400');
   }
@@ -70,6 +75,10 @@ class UrlCopy extends React.Component {
 
   onCopy() {
     ym('reachGoal', 'linkCopied');
+    ReactGA.event({
+      category: 'Share',
+      action: 'Link copied'
+    });
     this.setState({ class: 'input_status_visible' });
     setTimeout(() => {
       this.setState({ class: 'input_status' });
@@ -108,6 +117,10 @@ class SharePanel extends React.Component {
             className='button-wide__red'
             onClick={() => {
               ym('reachGoal', 'joinLinkClicked');
+              ReactGA.event({
+                category: 'Share',
+                action: 'Join Link Clicked'
+              });
               window.location.href = 'http://lh12.ru/';
               return 0;
             }}
