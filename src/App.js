@@ -345,48 +345,46 @@ class App extends React.Component {
     } = this.state;
 
     return (
-      <IntlProvider {...intl}>
-        <div>
-          <YMInitializer accounts={[50481805]} version='2' options={YM_CONFIG}>
-            <Map
-              map={map}
-              lang={lang}
-              selected={selected}
-              setTooltip={this.setTooltip}
-              updateUI={this.updateUI}
-            />
-            <Main
-              UI={UI}
-              lang={lang}
-              selected={selected}
-              select={this.select}
-              shared={shared}
-              result={result}
-              refresh={() => {
-                if (this.state.refreshButton !== true && this.state.clean !== true) {
-                  this.setState({
-                    refreshButton: true,
-                    result: this.results.loading
-                  });
-                }
-              }}
-              population={population}
-              locale={this.state.i18n}
-              updateUI={this.updateUI}
-              changeLocale={this.changeLocale}
-            />
-            {tooltipActive
-              && (
-                <Tooltip
-                  position={tooltipPosition}
-                  info={tooltipInfo}
-                  cb={this.disableTooltip}
-                />)
-            }
-            <RareLanguages selected={selected} enableTooltip={e => this.enableTooltip(e)} />
-          </YMInitializer>
-        </div>
-      </IntlProvider>
+      <YMInitializer accounts={[50481805]} options={YM_CONFIG}>
+        <IntlProvider {...intl}>
+          <Map
+            map={map}
+            lang={lang}
+            selected={selected}
+            setTooltip={this.setTooltip}
+            updateUI={this.updateUI}
+          />
+          <Main
+            UI={UI}
+            lang={lang}
+            selected={selected}
+            select={this.select}
+            shared={shared}
+            result={result}
+            refresh={() => {
+              if (this.state.refreshButton !== true && this.state.clean !== true) {
+                this.setState({
+                  refreshButton: true,
+                  result: this.results.loading
+                });
+              }
+            }}
+            population={population}
+            locale={this.state.i18n}
+            updateUI={this.updateUI}
+            changeLocale={this.changeLocale}
+          />
+          {tooltipActive
+            && (
+              <Tooltip
+                position={tooltipPosition}
+                info={tooltipInfo}
+                cb={this.disableTooltip}
+              />)
+          }
+          <RareLanguages selected={selected} enableTooltip={e => this.enableTooltip(e)} />
+        </IntlProvider>
+      </YMInitializer>
     );
   }
 }
