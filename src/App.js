@@ -22,12 +22,12 @@ import RareLanguages from './containers/RareLanguages';
 const history = createHistory();
 
 const YM_CONFIG = {
-  defer: true,
-  clickmap: false,
+  defer: false,
+  clickmap: true,
   trackLinks: true,
   // accurateTrackBounce: true,
   // webvisor: true,
-  trackHash: true
+  trackHash: false
 };
 
 const GA_CONFIG = {
