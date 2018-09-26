@@ -25,6 +25,16 @@ class Map extends React.Component {
     this.resize();
   }
 
+  componentWillReceiveProps(props) {
+    const { selected, lang } = props;
+    // convert selected languages to countries
+    const adm = Object.keys(selected).filter(f => selected[f] === true)
+      .reduce((p, c) => ([...p, ...lang[c].countries]), []) // list of all countries
+      .reduce((p, c) => ({ ...p, [c]: true }), {}); // uniq countries
+    this.setState({ adm });
+  }
+
+
   componentWillUnmount() {
     window.removeEventListener('resize', () => this.resize(), false);
   }
@@ -37,6 +47,17 @@ class Map extends React.Component {
       height,
       controller: { type: MapController, dragRotate: false }
     });
+  }
+
+  setTooltip = (e) => {
+    let condition = false;
+    if (e.object) {
+      const { region, adm0_a3: key } = e.object.properties;
+      const sel = this.state.adm[key] === true;
+      // const sub = (region !== '');
+      condition = sel && region;
+    }
+    this.props.setTooltip(e, condition);
   }
 
   resize() {
@@ -52,23 +73,8 @@ class Map extends React.Component {
   }
 
   render() {
-    const { map, selected, lang } = this.props;
+    const { map } = this.props;
     const { viewState } = this.state;
-    // convert selected languages to countries
-    const adm = Object.keys(selected).filter(f => selected[f] === true)
-      .reduce((p, c) => ([...p, ...lang[c].countries]), []) // list of all countries
-      .reduce((p, c) => ({ ...p, [c]: true }), {}); // uniq countries
-
-    const setTooltip = (e) => {
-      let condition = false;
-      if (e.object) {
-        const { region, adm0_a3: key } = e.object.properties;
-        const sel = adm[key] === true;
-        const sub = (region !== '');
-        condition = sel && region;
-      }
-      this.props.setTooltip(e, condition);
-    };
 
     return (
       <DeckGL
@@ -87,7 +93,7 @@ class Map extends React.Component {
             lineWidthScale: 5,
             getLineColor: (f) => {
               const { region, adm0_a3: key } = f.properties;
-              const sel = adm[key] === true;
+              const sel = this.state.adm[key] === true;
               const sub = (region !== '');
               if (sub === true && sel === false) {
                 // return [100, 100, 100, 0];
@@ -97,7 +103,7 @@ class Map extends React.Component {
             },
             getFillColor: (f) => {
               const { region, adm0_a3: key } = f.properties;
-              const sel = adm[key] === true;
+              const sel = this.state.adm[key] === true;
               const sub = (region !== '');
               if (sub === true && sel === false) {
                 return [200, 200, 200, 0]; // transparent
@@ -105,21 +111,21 @@ class Map extends React.Component {
               return sel ? [217, 66, 102, 255] : [240, 248, 250, 255];
             },
             updateTriggers: {
-              pickable: adm,
-              getLineColor: adm,
-              getFillColor: adm,
-              getElevation: adm,
+              pickable: this.state.adm,
+              getLineColor: this.state.adm,
+              getFillColor: this.state.adm,
+              getElevation: this.state.adm,
             },
             transitions: {
               getFillColor: 1000,
               geometry: 3000,
             },
-            onHover: e => setTooltip(e),
+            onHover: this.setTooltip,
             onClick: (e) => {
               // close all windows
               // sadly it works only when clicking on land
               this.props.updateUI({});
-              setTooltip(e);
+              this.setTooltip(e);
             }
           }),
         ]}

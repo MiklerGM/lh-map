@@ -155,7 +155,7 @@ class App extends React.Component {
   }
 
   setTooltip = (e, region) => {
-    console.log('setTooltip');
+    // console.log('setTooltip');
     const field = (region) ? 'region' : 'admin';
     if (e.color === null) {
       this.disableTooltip();
@@ -174,9 +174,11 @@ class App extends React.Component {
     }
   }
 
-  enableTooltip(active, position, info) {
-    console.log('enableTooltip');
-    console.log(active, position, info);
+  enableTooltip = (active, position, info) => {
+    // if (process.env !== 'production') {
+    //   console.log('enableTooltip');
+    //   console.log(active, position, info);
+    // }
     this.setState({
       tooltipActive: active,
       tooltipPosition: position,
@@ -345,16 +347,16 @@ class App extends React.Component {
     } = this.state;
 
     return (
-      <IntlProvider {...intl}>
-        <div>
+      <div>
+        <Map
+          map={map}
+          lang={lang}
+          selected={selected}
+          setTooltip={this.setTooltip}
+          updateUI={this.updateUI}
+        />
+        <IntlProvider {...intl}>
           <YMInitializer accounts={[50481805]} version='2' options={YM_CONFIG}>
-            <Map
-              map={map}
-              lang={lang}
-              selected={selected}
-              setTooltip={this.setTooltip}
-              updateUI={this.updateUI}
-            />
             <Main
               UI={UI}
               lang={lang}
@@ -383,10 +385,10 @@ class App extends React.Component {
                   cb={this.disableTooltip}
                 />)
             }
-            <RareLanguages selected={selected} enableTooltip={e => this.enableTooltip(e)} />
+            <RareLanguages selected={selected} enableTooltip={this.enableTooltip} />
           </YMInitializer>
-        </div>
-      </IntlProvider>
+        </IntlProvider>
+      </div>
     );
   }
 }
