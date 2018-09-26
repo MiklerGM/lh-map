@@ -14,7 +14,7 @@ const bin2text = mask => parseInt(mask, 2).toString(36);
 const text2bin = text => parseInt(text, 36).toString(2);
 
 const langList = Object.keys(lang).sort();
-const version = 'ab';
+const version = 'ac';
 
 function parseURL(url) {
   const arr = url.split('');
