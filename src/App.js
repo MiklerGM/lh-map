@@ -357,35 +357,37 @@ class App extends React.Component {
         />
         <YMInitializer accounts={[50481805]} options={YM_CONFIG}>
           <IntlProvider {...intl}>
-            <Main
-              UI={UI}
-              lang={lang}
-              selected={selected}
-              select={this.select}
-              shared={shared}
-              result={result}
-              refresh={() => {
-                if (this.state.refreshButton !== true && this.state.clean !== true) {
-                  this.setState({
-                    refreshButton: true,
-                    result: this.results.loading
-                  });
-                }
-              }}
-              population={population}
-              locale={this.state.i18n}
-              updateUI={this.updateUI}
-              changeLocale={this.changeLocale}
-            />
-            {tooltipActive
-              && (
-                <Tooltip
-                  position={tooltipPosition}
-                  info={tooltipInfo}
-                  cb={this.disableTooltip}
-                />)
-            }
-            <RareLanguages selected={selected} enableTooltip={this.enableTooltip} />
+            <div>
+              <Main
+                UI={UI}
+                lang={lang}
+                selected={selected}
+                select={this.select}
+                shared={shared}
+                result={result}
+                refresh={() => {
+                  if (this.state.refreshButton !== true && this.state.clean !== true) {
+                    this.setState({
+                      refreshButton: true,
+                      result: this.results.loading
+                    });
+                  }
+                }}
+                population={population}
+                locale={this.state.i18n}
+                updateUI={this.updateUI}
+                changeLocale={this.changeLocale}
+              />
+              {tooltipActive
+                && (
+                  <Tooltip
+                    position={tooltipPosition}
+                    info={tooltipInfo}
+                    cb={this.disableTooltip}
+                  />)
+              }
+              <RareLanguages selected={selected} enableTooltip={this.enableTooltip} />
+            </div>
           </IntlProvider>
         </YMInitializer>
       </div>
