@@ -155,7 +155,7 @@ class App extends React.Component {
   }
 
   setTooltip = (e, region) => {
-    console.log('setTooltip');
+    // console.log('setTooltip');
     const field = (region) ? 'region' : 'admin';
     if (e.color === null) {
       this.disableTooltip();
@@ -174,9 +174,11 @@ class App extends React.Component {
     }
   }
 
-  enableTooltip(active, position, info) {
-    console.log('enableTooltip');
-    console.log(active, position, info);
+  enableTooltip = (active, position, info) => {
+    // if (process.env !== 'production') {
+    //   console.log('enableTooltip');
+    //   console.log(active, position, info);
+    // }
     this.setState({
       tooltipActive: active,
       tooltipPosition: position,
@@ -345,46 +347,48 @@ class App extends React.Component {
     } = this.state;
 
     return (
-      <YMInitializer accounts={[50481805]} options={YM_CONFIG}>
-        <IntlProvider {...intl}>
-          <Map
-            map={map}
-            lang={lang}
-            selected={selected}
-            setTooltip={this.setTooltip}
-            updateUI={this.updateUI}
-          />
-          <Main
-            UI={UI}
-            lang={lang}
-            selected={selected}
-            select={this.select}
-            shared={shared}
-            result={result}
-            refresh={() => {
-              if (this.state.refreshButton !== true && this.state.clean !== true) {
-                this.setState({
-                  refreshButton: true,
-                  result: this.results.loading
-                });
-              }
-            }}
-            population={population}
-            locale={this.state.i18n}
-            updateUI={this.updateUI}
-            changeLocale={this.changeLocale}
-          />
-          {tooltipActive
-            && (
-              <Tooltip
-                position={tooltipPosition}
-                info={tooltipInfo}
-                cb={this.disableTooltip}
-              />)
-          }
-          <RareLanguages selected={selected} enableTooltip={e => this.enableTooltip(e)} />
-        </IntlProvider>
-      </YMInitializer>
+      <div>
+        <Map
+          map={map}
+          lang={lang}
+          selected={selected}
+          setTooltip={this.setTooltip}
+          updateUI={this.updateUI}
+        />
+        <YMInitializer accounts={[50481805]} options={YM_CONFIG}>
+          <IntlProvider {...intl}>
+            <Main
+              UI={UI}
+              lang={lang}
+              selected={selected}
+              select={this.select}
+              shared={shared}
+              result={result}
+              refresh={() => {
+                if (this.state.refreshButton !== true && this.state.clean !== true) {
+                  this.setState({
+                    refreshButton: true,
+                    result: this.results.loading
+                  });
+                }
+              }}
+              population={population}
+              locale={this.state.i18n}
+              updateUI={this.updateUI}
+              changeLocale={this.changeLocale}
+            />
+            {tooltipActive
+              && (
+                <Tooltip
+                  position={tooltipPosition}
+                  info={tooltipInfo}
+                  cb={this.disableTooltip}
+                />)
+            }
+            <RareLanguages selected={selected} enableTooltip={this.enableTooltip} />
+          </IntlProvider>
+        </YMInitializer>
+      </div>
     );
   }
 }
