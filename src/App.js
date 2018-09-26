@@ -315,6 +315,10 @@ class App extends React.Component {
   changeLocale = (loc) => {
     if (loc in this.locales) {
       ym('reachGoal', `localeChanged-${loc}`);
+      ReactGA.event({
+        category: 'UI',
+        action: `Language Change on ${loc}`
+      });
       this.setState(prevState => ({
         result: prevState.clean ? this.results.hello : this.results.loading,
         shared: false,
