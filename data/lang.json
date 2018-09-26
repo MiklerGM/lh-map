@@ -658,5 +658,16 @@
         "search": ["китайский", "rbnfqcrbq", "chinese", "繁體中文", "漢語", "Cantonese", "Кантонский", "Guǎngdōng huà"],
         "countries": ["HKG","MAC"],
         "counter":70000000
+    },
+    "LIJ": {
+        "i18n": {
+            "ru": "Лигурский",
+            "en": "Ligurian"
+        },
+        "display": "Zeneize",
+        "font":"Open Sans",
+        "search":["Ligurian", "Genoese","Лигурский","Генуэзский","Zeneize","Дшпгкшфт","Kbuehcrbq","Utye'pcrbq"],
+        "countries": ["IT-LG","IT-PM"],
+        "counter":350000
     }
 }
