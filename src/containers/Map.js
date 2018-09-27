@@ -120,13 +120,8 @@ class Map extends React.Component {
               getFillColor: 1000,
               geometry: 3000,
             },
-            onHover: this.setTooltip,
-            onClick: (e) => {
-              // close all windows
-              // sadly it works only when clicking on land
-              this.props.updateUI({});
-              this.setTooltip(e);
-            }
+            onHover: e => this.setTooltip(e),
+            onClick: e => this.setTooltip(e)
           }),
         ]}
       />
