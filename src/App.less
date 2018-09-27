@@ -80,7 +80,7 @@ hr {
   // padding: 8px;
   display: grid;
   padding: 8px 4px;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-flow: column;
   max-height: 80vh;
   grid-column-gap: 10px;
@@ -328,6 +328,7 @@ strong {
 }
 
 .tooltip {
+  z-index: 100;
   background-color: #fafafa;
   border-radius: 2px;
   padding: 2px 2px;
@@ -448,4 +449,21 @@ strong {
   &:hover::after {
     transform: translateX(10px);
   }
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 51;
+  top: 0;
+  left: 0;
+  user-select: none;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from 'react-intl';
 
 import TLH from '../assets/TLH.svg';
 import RSL from '../assets/RSL.svg';
@@ -13,14 +14,12 @@ const decorations = {
 };
 
 class RareLanguages extends React.Component {
-  handleHover = (e, d) => {
+  handleHover = (e, lang) => {
     e.preventDefault();
     const position = [e.pageX, e.pageY];
     const active = true;
-    // const info = formatMessage({ id: `${d}.full` });
-    const info = `${d}`;
-    // console.log(active, [e.clientX, e.clientY], info);
-    // this.props.enableTooltip(active, position, info);
+    const info = `${lang}`;
+    this.props.enableTooltip(active, position, info);
   }
 
   render() {
@@ -29,13 +28,19 @@ class RareLanguages extends React.Component {
       <div className='rare-wrapper'>
         {Object.keys(decorations).map(d => (
           selected[d] &&
-          <img
-            key={d}
-            src={decorations[d]}
-            alt={d}
-            onMouseOver={e => this.handleHover(e, d)}
-            onFocus={e => this.handleHover(e, d)}
-          />
+          <FormattedMessage id={`${d}.full`}>
+            {lang => (
+              <img
+                key={d}
+                src={decorations[d]}
+                alt={d}
+                onMouseOver={e => this.handleHover(e, lang)}
+                onFocus={e => this.handleHover(e, lang)}
+                onMouseOut={() => this.props.disableTooltip()}
+                onBlur={() => this.props.disableTooltip()}
+              />
+            )}
+          </FormattedMessage>
         ))}
       </div>
     );

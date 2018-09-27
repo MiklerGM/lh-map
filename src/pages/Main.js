@@ -50,6 +50,13 @@ class Main extends React.Component {
           locale={this.props.locale}
           onChangeLanguage={this.props.changeLocale}
         />
+        {(langGrid || sharePanel) &&
+          <div
+            className='overlay'
+            role='button'
+            onClick={() => this.props.updateUI({})}
+          />
+        }
       </div>
     );
   }
