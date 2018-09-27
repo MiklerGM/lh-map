@@ -30,16 +30,24 @@ const YM_CONFIG = {
   trackHash: false
 };
 
+// const GA_CONFIG = {
+//   debug: true,
+//   titleCase: false
+// };
+
 const GA_CONFIG = {
+  trackingId: 'UA-111740941-2',
   debug: true,
-  titleCase: false
+  gaOptions: {
+    cookieDomain: 'none'
+  }
 };
 
-ReactGA.initialize({
-  trackingId: 'UA-111740941-2',
-  gaOptions: { name: 'tracker1' }
-}, GA_CONFIG);
-ReactGA.pageview(window.location.pathname + window.location.search);
+// ReactGA.initialize({
+//   trackingId: 'UA-111740941-2',
+//   gaOptions: { name: 'tracker1' }
+// }, GA_CONFIG);
+// ReactGA.pageview(window.location.pathname + window.location.search);
 
 console.time('Calculating Locales');
 const localeLang = Object.keys(lang).reduce((p, c) => ({
@@ -115,6 +123,7 @@ class App extends React.Component {
     // } else {
     //   this.changeLocale('en');
     // }
+    ReactGA.initialize([GA_CONFIG]);
     this.loadData(['map.json'], (s, m) => ({ map: m }));
   }
 
@@ -314,10 +323,11 @@ class App extends React.Component {
 
   changeLocale = (loc) => {
     if (loc in this.locales) {
-      ym('reachGoal', `localeChanged-${loc}`);
+      ym('reachGoal', 'localeChanged', loc);
       ReactGA.event({
         category: 'UI',
-        action: `Language Change on ${loc}`
+        action: 'Language Change',
+        value: loc
       });
       this.setState(prevState => ({
         result: prevState.clean ? this.results.hello : this.results.loading,

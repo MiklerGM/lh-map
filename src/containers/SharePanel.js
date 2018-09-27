@@ -29,7 +29,8 @@ class SocialButtonWrapper extends React.Component {
     ym('reachGoal', s);
     ReactGA.event({
       category: 'Share',
-      action: `Used ${s}`
+      action: 'Used circle button',
+      value: s
     });
     const link = this.link(s, encodeURI(t.title), encodeURI(t.description));
     window.open(link, '', 'menubar=no, toolbar=no, resizable=yes,scrollbars=yes,height=400,width=400');
