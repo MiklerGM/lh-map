@@ -276,12 +276,12 @@
     },
     "LAV": {
         "i18n": {
-            "ru": "Латвийский",
+            "ru": "Латышский",
             "en": "Latvian"
         },
         "display":"latviešu valoda",
         "font": "Open Sans",
-        "search": ["Latvian", "latviešu valoda", "Латвийский", "Kfndbqcrbq"],
+        "search": ["Latvian", "latviešu valoda", "Латышский", "Kfnsicrbq"],
         "countries": ["LVA"],
         "counter":1750000
     },
@@ -639,7 +639,7 @@
     },
     "CHN": {
         "i18n": {
-            "ru": "Упрощенный китайский",
+            "ru": "Китайский упрощенный",
             "en": "Simplified chinese"
         },
         "display":"简体中文",
@@ -650,7 +650,7 @@
     },
     "SCH": {
         "i18n": {
-            "ru": "Традиционный китайский",
+            "ru": "Китайский традиционный",
             "en": "Traditional chinese"
         },
         "display":"繁體中文",
@@ -664,9 +664,9 @@
             "ru": "Лигурский",
             "en": "Ligurian"
         },
-        "display": "Zeneize",
+        "display": "Ligure",
         "font":"Open Sans",
-        "search":["Ligurian", "Genoese","Лигурский","Генуэзский","Zeneize","Дшпгкшфт","Kbuehcrbq","Utye'pcrbq"],
+        "search":["Ligurian","Лигурский","Ligure","Дшпгкшфт","Kbuehcrbq"],
         "countries": ["IT-LG","IT-PM"],
         "counter":350000
     }
