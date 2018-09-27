@@ -404,7 +404,11 @@ class App extends React.Component {
                     cb={this.disableTooltip}
                   />)
               }
-              <RareLanguages selected={selected} enableTooltip={this.enableTooltip} />
+              <RareLanguages
+                selected={selected}
+                enableTooltip={this.enableTooltip}
+                disableTooltip={this.disableTooltip}
+              />
             </div>
           </IntlProvider>
         </YMInitializer>
