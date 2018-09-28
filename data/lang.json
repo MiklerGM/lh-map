@@ -89,13 +89,13 @@
     },
     "HUN": {
         "i18n": {
-            "ru": "Венгенский",
+            "ru": "Венгерский",
             "en": "Hungarian"
         },
         "display":"Magyar",
         "font": "Open Sans",
         "search": ["Hungarian", "Венгерский", "Dthutycrbq", "Ргтпфкшфт", "Magyar"],
-        "countries": ["HUN"],
+        "countries": ["HUN","SR-VO"],
         "counter":13000000
     },
     "GRE": {
@@ -392,7 +392,7 @@
         "display":"română",
         "font": "Open Sans",
         "search": ["Romanian", "Moldavian", "Moldovan", "Румынский", "Rumanian", "Молдовский", "română"],
-        "countries": ["ROU","MDA"],
+        "countries": ["ROU","MDA","SR-VO"],
         "counter":26000000
     },
     "RUS": {
@@ -425,7 +425,7 @@
         "display":"Slovenčina",
         "font": "Open Sans",
         "search": ["Slovenčina", "Slovak", "Словацкий"],
-        "countries": ["SVK"],
+        "countries": ["SVK","SR-VO"],
         "counter":5200000
     },
     "TAI": {
@@ -546,7 +546,7 @@
         "display":"hrvatski jezik",
         "font": "Open Sans",
         "search": ["hrvatski jezik", "Croatian", "Хорватский", "[jhdfncrbq"],
-        "countries": ["HRV","BIH"],
+        "countries": ["HRV","BIH","SR-VO"],
         "counter":5600000
     },
     "SWE": {
@@ -669,5 +669,49 @@
         "search":["Ligurian","Лигурский","Ligure","Дшпгкшфт","Kbuehcrbq"],
         "countries": ["IT-LG","IT-PM"],
         "counter":350000
+    },
+    "KAZ" : {
+        "i18n": {
+            "ru": "Казахский",
+            "en": "Kazakh"
+        },
+        "display":"қазақ тілі",
+        "font": "Open Sans",
+        "search": ["казахский","қазақ тілі","kazakh","лфяфлр","Rfpf[crbq"],
+        "countries":["KAZ"],
+        "counter":12753100 
+    },
+    "KHM": {
+        "i18n": {
+            "ru":"Кхмерский",
+            "en":"Khmer"
+        },
+        "display":"ភាសាខ្មែរ",
+        "font":"Noto Sans Khmer",
+        "search":["Кхмерский","Khmer","R[vthcbrq","лрьук","ភាសាខ្មែរ"],
+        "countries":["KHM"],
+        "counter":21900000
+    },
+    "BUL":{
+        "i18n": {
+            "ru":"Болгарский",
+            "en":"Bulgarian"
+        },
+        "display":"български език",
+        "font":"Open Sans",
+        "search":["български език","Болгарский","Bulgarian","<jkufhcrbq","игдпфкшфт"],
+        "countries":["BGR"],
+        "counter":9000000
+    },
+    "SMO":{
+        "i18n": {
+            "ru":"Самоанский",
+            "en":"Samoan"
+        },
+        "display":"Gagana Sāmoa",
+        "font":"Open Sans",
+        "search":["Samoan","Самоанский","Ыфьщфт","Cfvjfycrbq"],
+        "countries":["WSM","ASM"],
+        "counter":510000
     }
 }
