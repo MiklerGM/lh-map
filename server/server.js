@@ -83,7 +83,7 @@ app.use(bodyParser.json());
 app.use('/result/:url', (req, res) => {
   // console.log('req.params.uid', req.params.url);
   const parsed = parseURL(req.params.url);
-  if (process.env !== 'production') {
+  if (process.env.NODE_ENV !== 'production') {
     const selected = getLanguages(parsed.text);
     console.log('Parsed params', parsed);
     console.log('Selected languages', selected);

@@ -118,7 +118,7 @@ function saveImg(cloudWords, size, pop, i18n, svg, png, rc, cc) {
   console.log(rc, 'Size >', size);
   const cloudSVG = genSVG(cloudWords, size, i18n);
   const imgSvg = compileTemplate(cloudSVG, pop, i18n, cc);
-  if (process.env !== 'production') {
+  if (process.env.NODE_ENV !== 'production') {
     fs.writeFile(svg, imgSvg, (e) => { if (e) throw e; });
   }
 
