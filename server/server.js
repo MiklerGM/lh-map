@@ -2,60 +2,17 @@ import Express from 'express';
 import fs from 'fs';
 import bodyParser from 'body-parser';
 
-import lang from '../data/lang.json';
+import {
+  PREVIEW,
+  getImgUrl,
+  parseBody,
+  getLanguages,
+  parseURL,
+} from './analyzeRequest';
 
 import generatePreviewImage from './genImage';
 
 const PORT = process.env.LH_API_PORT || 4000;
-
-const PREVIEW = 'preview';
-
-const bin2text = mask => parseInt(mask, 2).toString(36);
-const text2bin = text => parseInt(text, 36).toString(2);
-
-const langList = Object.keys(lang).sort();
-const version = 'ac';
-
-function parseURL(url) {
-  const arr = url.split('');
-  const i18n = arr.slice(0, 2).join('');
-  const v = arr.slice(2, 4).join('');
-  const text = arr.slice(4).join('');
-  return {
-    i18n, version: v, text
-  };
-}
-
-function getMask(selected) {
-  const selectedAsMap = selected
-    .reduce((prev, cur) => ({ ...prev, [cur]: true }), {});
-  const mask = langList.map(c => (c in selectedAsMap ? 1 : 0));
-  const text = bin2text(mask.join(''));
-  return text;
-}
-
-function getLanguages(text) {
-  const mask = text2bin(text).split('').reverse();
-  const answer = langList.reverse()
-    .reduce((prev, cur, idx) => (
-      mask[idx] === '1' ? [...prev, cur] : prev), []);
-  return answer;
-}
-
-function getImgUrl(id) {
-  return { png: `${PREVIEW}/${id}.png`, svg: `${PREVIEW}/${id}.svg` };
-}
-
-function parseBody(body) {
-  const { selected, i18n } = body;
-  const hash = getMask(selected);
-  const id = `${i18n}${version}${hash}`;
-  const files = getImgUrl(id);
-  const valid = selected.every(s => s in lang);
-  return {
-    id, hash, valid, ...files
-  };
-}
 
 const contentRu = {
   ogTitle: 'Атлас языков',
@@ -83,11 +40,11 @@ app.use(bodyParser.json());
 app.use('/result/:url', (req, res) => {
   // console.log('req.params.uid', req.params.url);
   const parsed = parseURL(req.params.url);
-  if (process.env.NODE_ENV !== 'production') {
-    const selected = getLanguages(parsed.text);
-    console.log('Parsed params', parsed);
-    console.log('Selected languages', selected);
-  }
+  const selected = getLanguages(parsed.text, parsed.version);
+  console.log('Parsed params', parsed);
+  console.log('Selected languages', selected);
+  // if (process.env.NODE_ENV !== 'production') {
+  // }
 
   const img = `/${getImgUrl(req.params.url).png}`;
   // russian locale for hello
