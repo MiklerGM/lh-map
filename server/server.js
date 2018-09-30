@@ -51,6 +51,8 @@ app.use('/result/:url', (req, res) => {
   const content = parsed.i18n === 'en'
     ? { ...contentBase, ...contentEn }
     : { ...contentBase, ...contentRu };
+  const ref = req.headers.referrer || req.headers.referer;
+  const referer = typeof ref === 'undefined' ? '' : `&from=${encodeURIComponent(ref)}`;
   const html = `
 <!DOCTYPE html>
 <html>
@@ -72,7 +74,7 @@ app.use('/result/:url', (req, res) => {
   </head>
   <body>
     <script type="text/javascript">
-      window.location.href = '/';
+      window.location.href = '/?r=${parsed.text}&v=${parsed.version}${referer}';
     </script>
   </body>
 </html>

@@ -117,12 +117,12 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    // Locale Detection magic
-    // if (navigator.language.match(/ru/i)) {
-    //   this.changeLocale('ru');
-    // } else {
-    //   this.changeLocale('en');
-    // }
+    // clean params string on the first mount
+    if (Object.keys(window.store.params).length > 0) {
+      history.push('/');
+      // window.store.params = { from: referer, v: version, r: image file)}
+      // ym('reachGoal', '', '');
+    }
     ReactGA.initialize([GA_CONFIG]);
     this.loadData(['map.json'], (s, m) => ({ map: m }));
   }
@@ -132,11 +132,11 @@ class App extends React.Component {
     if ((prevState.i18n !== this.state.i18n) && prevState.shared === true) {
       this.share();
     } else if (prevState.selected !== this.state.selected) {
-      if (process.env !== 'production') {
-        // update (global) state for HMR
-        window.store.population = this.state.population;
-        window.store.selected = this.state.selected;
-      }
+      // if (process.env.NODE_ENV !== 'production') {
+      // update (global) state for HMR
+      window.store.population = this.state.population;
+      window.store.selected = this.state.selected;
+      // }
       if (this.state.clean === true) {
         history.push('/');
       }
@@ -168,18 +168,10 @@ class App extends React.Component {
   }
 
   setTooltip = (e, region) => {
-    // console.log('setTooltip');
     const field = (region) ? 'region' : 'admin';
     if (e.color === null) {
       this.disableTooltip();
     } else {
-      // this.setState(prevState => ({
-      //   tooltipActive: true,
-      //   tooltipPosition: e.pixel,
-      //   tooltipInfo: (prevState.i18n === 'ru')
-      //     ? e.object.properties[`${field}Ru`]
-      //     : e.object.properties[`${field}`],
-      // }));
       const info = (this.state.i18n === 'ru')
         ? e.object.properties[`${field}Ru`]
         : e.object.properties[`${field}`];
@@ -188,10 +180,6 @@ class App extends React.Component {
   }
 
   enableTooltip = (active, position, info) => {
-    // if (process.env !== 'production') {
-    //   console.log('enableTooltip');
-    //   console.log(active, position, info);
-    // }
     this.setState({
       tooltipActive: active,
       tooltipPosition: position,

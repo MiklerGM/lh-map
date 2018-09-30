@@ -9,11 +9,35 @@ import './assets/favicon.ico';
 window.store = {
   viewState: null,
   selected: null,
+  params: {},
 };
 
 function renderApp(component) {
   const Application = component;
   render(<Application />, document.body.appendChild(document.createElement('div')));
+}
+
+function getQueryParams() {
+  const query = window.location.search.substring(1);
+  return query.split('&').reduce((prev, q) => {
+    const pair = q.split('=').map(qa => decodeURIComponent(qa));
+    return {
+      ...prev,
+      [pair[0]]: pair[1],
+    };
+  }, {});
+}
+
+// parse incoming params
+window.store.params = getQueryParams();
+try {
+  if ('from' in window.store.params) {
+    Object.defineProperty(document, 'referrer', {
+      get: () => window.store.params.from
+    });
+  }
+} catch (e) {
+  console.error('Error fixing referer', e);
 }
 
 renderApp(App);
