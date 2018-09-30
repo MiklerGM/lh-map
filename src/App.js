@@ -120,8 +120,11 @@ class App extends React.Component {
     // clean params string on the first mount
     if (Object.keys(window.store.params).length > 0) {
       history.push('/');
+      const { v, r } = window.store.params;
       // window.store.params = { from: referer, v: version, r: image file)}
-      // ym('reachGoal', '', '');
+      if (typeof v !== 'undefined' && typeof r !== 'undefined') {
+        ym('reachGoal', 'resultReferer', { version: v, result: r });
+      }
     }
     ReactGA.initialize([GA_CONFIG]);
     this.loadData(['map.json'], (s, m) => ({ map: m }));
