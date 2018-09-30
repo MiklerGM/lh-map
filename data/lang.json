@@ -150,7 +150,7 @@
         "display":"Русский жестовый",
         "font": "Open Sans",
         "search": ["Russian Sign Language", "Sign Language", "Русский жестовый", "Жестовый", "Язык немых"],
-        "countries": ["SIGN"],
+        "countries": ["RUS"],
         "counter":120000
     },
     "HEB": {
@@ -264,7 +264,7 @@
         "counter":77200000
     },
     "LAT": {
-        "i18n": {
+        "i18n": {   
             "ru": "Латинский",
             "en": "Latin"
         },
@@ -612,7 +612,7 @@
         "display":"Esperanto",
         "font": "Open Sans",
         "search": ["Esperanto", "Эсперанто"],
-        "countries": ["ESPERANTO"],
+        "countries": [],
         "counter":5000000
     },
     "YKG": {
