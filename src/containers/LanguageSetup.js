@@ -34,7 +34,15 @@ class LanguageSetup extends React.Component {
         </div>
         <div className='lang-list'>
           {Object.keys(this.props.data)
-            .sort((a, b) => this.props.data[a].i18n.ru > this.props.data[b].i18n.ru)
+            .sort((a, b) => {
+              if (this.props.data[a].i18n.ru > this.props.data[b].i18n.ru) {
+                return 1;
+              }
+              if (this.props.data[a].i18n.ru < this.props.data[b].i18n.ru) {
+                return -1;
+              }
+              return 0;
+            })
             .map(lang => (
               <ButtonToggle
                 key={`key_${lang}`}
