@@ -33,14 +33,17 @@ class LanguageSetup extends React.Component {
           </h3>
         </div>
         <div className='lang-list'>
-          {Object.keys(this.props.selected).map(lang => (
-            <ButtonToggle
-              key={`key_${lang}`}
-              name={lang}
-              checked={this.props.selected[lang]}
-              select={this.props.select}
-            />
-          ))}
+          {Object.keys(this.props.data)
+            .sort((a, b) => this.props.data[a].i18n.ru > this.props.data[b].i18n.ru)
+            .map(lang => (
+              <ButtonToggle
+                key={`key_${lang}`}
+                name={lang}
+                checked={this.props.selected[lang]}
+                select={this.props.select}
+              />
+            ))
+          }
         </div>
         <hr />
       </div>
