@@ -28,7 +28,7 @@ class RareLanguages extends React.Component {
       <div className='rare-wrapper'>
         {Object.keys(decorations).map(d => (
           selected[d] &&
-          <FormattedMessage id={`${d}.full`}>
+          <FormattedMessage id={`${d}.full`} key={`${d}.key`}>
             {lang => (
               <img
                 key={d}
