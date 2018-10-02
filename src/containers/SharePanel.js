@@ -113,7 +113,7 @@ class SharePanel extends React.Component {
   render() {
     return (
       <div className='meme-panel layer-5'>
-        <div className='meme-panel__head' style={{ backgroundColor: '#C6E5EE' }}>
+        <div className='meme-panel__header' style={{ backgroundColor: '#C6E5EE' }}>
           <button
             className='button-wide__red'
             onClick={() => {
@@ -145,10 +145,8 @@ class SharePanel extends React.Component {
             <span className='lnr lnr-cross' />
           </button>
         </div>
-        <div className='meme-panel__main'>
-          <SocialButtonWrapper result={this.props.result} />
-          <ResultWrapper result={this.props.result} shared={this.props.shared} />
-        </div>
+        <SocialButtonWrapper result={this.props.result} />
+        <ResultWrapper result={this.props.result} shared={this.props.shared} />
         <div className='meme-panel__footer'>
           <UrlCopy result={this.props.result} />
         </div>

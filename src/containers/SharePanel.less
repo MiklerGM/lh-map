@@ -5,7 +5,8 @@
 .meme-panel {
   position: fixed;
   z-index: 53;
-  display: flex;
+  // display: flex;
+  // flex-direction: column;
   padding: 0;
   background-color: @white;
   min-width: 600px;
@@ -14,7 +15,6 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  flex-direction: column;
   justify-content: center;
   background-color: @blueish;
   // align-items: center;
@@ -24,14 +24,27 @@
   border: @border;
   border-radius: 2px;
 
+  display: grid;
+  grid-template-columns: 1fr 6fr;
+  // grid-template-rows: auto;
+  grid-template-areas:
+    "header header"
+    "circles result"
+    ". footer";
+
   @media screen and (max-width: 600px) {
     min-width: 98%;
     width: 98%;
-
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "circles"
+      "result"
+      "footer";
   }
 }
 
-.meme-panel__head {
+.meme-panel__header {
   box-sizing: border-box;
   padding: 4px;
   margin: 0;
@@ -39,7 +52,7 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  // border-radius: 2px;
+  grid-area: header;
   user-select: none;
   user-drag: none;
   user-select: none;
@@ -53,38 +66,40 @@
   }
 }
 
-.meme-panel__main {
-  display: flex;
-  padding: 4px;
-  background-color: @blueish;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-content: center;
-  box-sizing: border-box;
-  overflow: auto;
-  border: @border;
-  border-radius: 2px;
-  @media screen and (max-width: 600px) {
-    flex-direction: column;
-    width: 100%;
-  }
-}
+// .meme-panel__main {
+//   display: flex;
+//   padding: 5px 5px;
+//   background-color: @blueish;
+//   flex-direction: row;
+//   justify-content: flex-start;
+//   align-content: center;
+//   box-sizing: border-box;
+//   overflow: auto;
+//   border: @border;
+//   border-radius: 2px;
+//   @media screen and (max-width: 600px) {
+//     flex-direction: column;
+//     width: 100%;
+//   }
+// }
 
 .meme-panel__footer {
   display: flex;
-  margin-left: 80px;
+  justify-content: flex-start;
   padding: 4px;
+  grid-area: footer;
   @media screen and (max-width: 600px) {
     margin-left: 0px;
   }
 }
 
 .meme-panel__circles {
-  width: 80px;
+  width: 100px;
+  grid-area: circles;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // align-content: center;
+  align-content: center;
   @media screen and (max-width: 600px) {
     flex-direction: row;
     justify-content: space-between;
@@ -94,7 +109,8 @@
 }
 
 .meme-panel__result {
-  padding: 0px 10px 5px;
+  padding: 0px 20px 0px 5px;
+  grid-area: "result";
   width: auto;
   display: block;
   // background: #fafafa;
@@ -158,8 +174,8 @@
 .meme-panel_picwrapper {
   width: auto;
   height: auto;
-  margin: 0 0 10px;
-  padding: 5px 30px 30px;
+  margin: 0;
+  padding: 0;
   & img {
     box-shadow: 0 3px 12px rgba(17, 17, 17, 0.8);
   }
@@ -174,7 +190,7 @@
   // height: auto;
   border: none;
   outline: none;
-  padding: 0;
+  padding: auto;
   margin: auto;
   // background-color: #2f2f2f;
   // border-radius: 50%;
