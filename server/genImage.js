@@ -40,7 +40,7 @@ const getStyle = w => ([
   '' // for closing ';'
 ].join('; '));
 
-const baseFontSize = [60, 55, 48, 38, 28, 20];
+const baseFontSize = [60, 55, 48, 38, 34, 32, 30, 28];
 
 const drawEmitter = new EventEmitter();
 
