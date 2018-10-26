@@ -1,4 +1,4 @@
-export const version = 'ad';
+export const version = 'ae';
 
 // old versions before 'ad' was sorted
 // const lang = require('./lang_ac.json');
@@ -28,6 +28,7 @@ export const langList = (v) => {
     case 'ab': return aa;
     case 'ac': return ac;
     case 'ad':
+    case 'ae':
     default: return ad;
   }
 };

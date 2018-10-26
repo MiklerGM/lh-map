@@ -21,7 +21,7 @@ const dimensions = {
     width: 720,
     height: 340,
     x: 470,
-    y: 100,
+    y: 150,
   },
   en: {
     width: 720,

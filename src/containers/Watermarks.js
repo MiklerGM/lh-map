@@ -24,7 +24,7 @@ class Watermarks extends React.Component {
           </a>
         </div>
         <div className='watermark'>
-          <a className='decorless' href='http://petitepolyglot.com/category/language-heroes/'>
+          <a className='decorless' href='https://lh12.ru/'>
             <img src={lhLogo} alt='Language Heroes logo' />
           </a>
         </div>
