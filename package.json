@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "webpack.config.js",
   "keywords": [],
-  "author": "",
+  "author": "Michael Orlov",
   "license": "ISC",
-  "description": "",
+  "description": "Interactive atlas of popular languages",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.morlov.tk/chronist/lh"
+    "url": "https://github.com/MiklerGM/lh-map"
   },
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.dev.js",
