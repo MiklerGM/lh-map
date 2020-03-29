@@ -25,13 +25,13 @@ class Map extends React.Component {
     this.resize();
   }
 
-  componentWillReceiveProps(props) {
+  static getDerivedStateFromProps(props) {
     const { selected, lang } = props;
     // convert selected languages to countries
-    const adm = Object.keys(selected).filter(f => selected[f] === true)
+    const adm = Object.keys(selected).filter((f) => selected[f] === true)
       .reduce((p, c) => ([...p, ...lang[c].countries]), []) // list of all countries
       .reduce((p, c) => ({ ...p, [c]: true }), {}); // uniq countries
-    this.setState({ adm });
+    return adm;
   }
 
 
@@ -80,7 +80,7 @@ class Map extends React.Component {
       <DeckGL
         views={this.view}
         viewState={viewState}
-        onViewStateChange={v => this.updateViewState(v.viewState)}
+        onViewStateChange={(v) => this.updateViewState(v.viewState)}
         layers={[
           new GeoJsonLayer({
             id: 'geojson-layer',
@@ -120,8 +120,8 @@ class Map extends React.Component {
               getFillColor: 1000,
               geometry: 3000,
             },
-            onHover: e => this.setTooltip(e),
-            onClick: e => this.setTooltip(e)
+            onHover: (e) => this.setTooltip(e),
+            onClick: (e) => this.setTooltip(e)
           }),
         ]}
       />

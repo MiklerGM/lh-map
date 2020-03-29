@@ -17,7 +17,7 @@ fs.readdirSync(`${template}/planets`).forEach((file) => {
   planets.push(img);
 });
 
-Object.keys(locales).map(i18n => (
+Object.keys(locales).map((i18n) => (
   fs.readdirSync(`${template}/${i18n}`).forEach((file) => {
     const svg = fs.readFileSync(`${template}/${i18n}/${file}`);
     const key = file.replace('.xml', '');
@@ -35,7 +35,7 @@ const pluralRu = (count) => {
   return 'стран';
 };
 
-const pluralEn = count => (
+const pluralEn = (count) => (
   count === 1 ? 'country' : 'countries'
 );
 

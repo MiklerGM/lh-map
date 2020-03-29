@@ -20,7 +20,7 @@ function renderApp(component) {
 function getQueryParams() {
   const query = window.location.search.substring(1);
   return query.split('&').reduce((prev, q) => {
-    const pair = q.split('=').map(qa => decodeURIComponent(qa));
+    const pair = q.split('=').map((qa) => decodeURIComponent(qa));
     return {
       ...prev,
       [pair[0]]: pair[1],

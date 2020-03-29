@@ -13,7 +13,7 @@ mapGeo.features.map((f) => {
 const listOfRegions = Object.keys(regions);
 listOfRegions.map((r) => {
   regions[r].owner = regions[r].region !== ''
-    ? listOfRegions.find(f => regions[f].admin === regions[r].admin)
+    ? listOfRegions.find((f) => regions[f].admin === regions[r].admin)
     : null;
   return null;
 });

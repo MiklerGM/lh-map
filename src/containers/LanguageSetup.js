@@ -43,15 +43,14 @@ class LanguageSetup extends React.Component {
               }
               return 0;
             })
-            .map(lang => (
+            .map((lang) => (
               <ButtonToggle
                 key={`key_${lang}`}
                 name={lang}
                 checked={this.props.selected[lang]}
                 select={this.props.select}
               />
-            ))
-          }
+            ))}
         </div>
         <hr />
       </div>

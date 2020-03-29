@@ -32,8 +32,8 @@ class Main extends React.Component {
               uiState={langGrid}
               updateUI={this.props.updateUI}
               select={this.props.select}
-            />)
-        }
+            />
+          )}
         {sharePanel
           && (
             <SharePanel
@@ -42,21 +42,22 @@ class Main extends React.Component {
               updateUI={this.props.updateUI}
               uiState={this.props.UI}
               refresh={this.props.refresh}
-            />)
-        }
+            />
+          )}
         <NativeSpeakers population={this.props.population} />
         <Watermarks />
         <LocaleWidget
           locale={this.props.locale}
           onChangeLanguage={this.props.changeLocale}
         />
-        {(langGrid || sharePanel) &&
-          <div
-            className='overlay'
-            role='button'
-            onClick={() => this.props.updateUI({})}
-          />
-        }
+        {(langGrid || sharePanel)
+          && (
+            <div
+              className='overlay'
+              role='button'
+              onClick={() => this.props.updateUI({})}
+            />
+          )}
       </div>
     );
   }
