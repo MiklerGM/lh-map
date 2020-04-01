@@ -6,7 +6,7 @@ import svg2img from 'svg2img';
 import EventEmitter from 'events';
 
 import lang from '../data/lang.json';
-import regions from '../data/regions';
+import regions from '../data/regions.json';
 
 
 import compileTemplate from './template/template';
@@ -32,7 +32,7 @@ const dimensions = {
 };
 const sizeMultiplier = 2;
 
-const getStyle = w => ([
+const getStyle = (w) => ([
   `font-family:${w.font}`,
   `font-size:${w.size}px`,
   `fill:#${w.color}`,
@@ -46,7 +46,7 @@ const drawEmitter = new EventEmitter();
 
 function getWords(selected) {
   const base = baseFontSize[Math.round(selected.length * 0.1)];
-  return selected.map(d => ({
+  return selected.map((d) => ({
     text: lang[d].display,
     font: lang[d].font,
     size: base - lang[d].display.length + Math.round(Math.random() * (base / 2)),
@@ -70,7 +70,7 @@ function getSize(size) {
 }
 
 function genSVG(cloudWords, size, i18n) {
-  const svg = cloudWords.map(w => (
+  const svg = cloudWords.map((w) => (
     `<text
       style="${getStyle(w)}"
       transform="translate(${w.x}, ${w.y}) rotate(${w.rotate}, 0, 0)"
@@ -103,9 +103,9 @@ function calcCloud(words, endCb, size) {
       .canvas(c)
       .words(words)
       .padding(10)
-      .rotate(d => d.rotate)
-      .font(w => w.font)
-      .fontSize(d => d.size)
+      .rotate((d) => d.rotate)
+      .font((w) => w.font)
+      .fontSize((d) => d.size)
       .on('end', endCb)
       .start();
   } catch (e) {

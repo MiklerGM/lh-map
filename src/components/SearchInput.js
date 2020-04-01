@@ -14,7 +14,7 @@ class SearchInput extends React.Component {
         <Select
           disabled={this.state.disabled}
           style={{ width: '300px' }}
-          onSelect={e => this.props.cb(e)}
+          onSelect={(e) => this.props.cb(e)}
           notFoundContent=""
           dropdownMenuStyle={{ maxHeight: 300 }}
           placeholder='Placeholder'
@@ -28,17 +28,16 @@ class SearchInput extends React.Component {
           // onChange={this.onChange}
           filterOption={(s, o) => {
             const { search } = this.props.lang[o.key];
-            return search.some(f => f.toLowerCase().indexOf(s.toLowerCase()) > -1);
+            return search.some((f) => f.toLowerCase().indexOf(s.toLowerCase()) > -1);
           }}
         >
           {Object.keys(this.props.selected)
-            .filter(key => !this.props.selected[key])
-            .map(i => (
+            .filter((key) => !this.props.selected[key])
+            .map((i) => (
               <Option value={i} key={i} text={String(i)}>
                 <FormattedMessage id={`${i}.full`} />
               </Option>
-            ))
-          }
+            ))}
         </Select>
       </div>
     );

@@ -7,24 +7,24 @@ export function parseBinary(v) {
   switch (v) {
     case false:
       return { // old hash version, now binary masks
-        bin2text: m => m,
-        text2bin: m => m,
+        bin2text: (m) => m,
+        text2bin: (m) => m,
       };
     case 'aa':
     case 'ab':
     case 'ac':
       return {
         // old version before 'ad'
-        bin2text: mask => parseInt(mask, 2).toString(36),
-        text2bin: text => parseInt(text, 36).toString(2),
+        bin2text: (mask) => parseInt(mask, 2).toString(36),
+        text2bin: (text) => parseInt(text, 36).toString(2),
       };
     case 'ad':
     default:
       return { // each 5 bits converted into symbol
-        bin2text: mask => mask.match(/(\d{1,5})/g)
-          .map(m => parseInt(m, 2).toString(32)).join('')
+        bin2text: (mask) => mask.match(/(\d{1,5})/g)
+          .map((m) => parseInt(m, 2).toString(32)).join('')
           .replace(/0*$/, ''), // remove trailing zeros
-        text2bin: text => text.split('')
+        text2bin: (text) => text.split('')
           .map((t) => {
             const i = parseInt(t, 32).toString(2);
             // if text > v (z, x, y, w) use zero
@@ -57,7 +57,7 @@ export function parseURL(url) {
 export function getMask(selected, ver) {
   const selectedAsMap = selected
     .reduce((prev, cur) => ({ ...prev, [cur]: true }), {});
-  const mask = langList(ver).map(c => (c in selectedAsMap ? 1 : 0));
+  const mask = langList(ver).map((c) => (c in selectedAsMap ? 1 : 0));
   const text = parseBinary(ver).bin2text(mask.join(''));
   return text;
 }
@@ -71,7 +71,7 @@ function getLanguagesAA(text, ver) {
 }
 
 function getLanguagesAD(text, ver) {
-  const mask = parseBinary(ver).text2bin(text).split('').map(m => Number(m));
+  const mask = parseBinary(ver).text2bin(text).split('').map((m) => Number(m));
   return (mask.length <= langList(ver).length)
     ? mask.reduce((prev, cur, idx) => (
       cur === 1 ? [...prev, langList(ver)[idx]] : prev), [])
@@ -93,7 +93,7 @@ export function parseBody(body, ver = version) {
   const hash = getMask(selected, ver);
   const id = `${i18n}${version}${hash}`;
   const files = getImgUrl(id);
-  const valid = selected.every(s => s in lang);
+  const valid = selected.every((s) => s in lang);
   return {
     id, hash, valid, ...files
   };

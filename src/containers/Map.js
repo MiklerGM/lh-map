@@ -25,16 +25,6 @@ class Map extends React.Component {
     this.resize();
   }
 
-  componentWillReceiveProps(props) {
-    const { selected, lang } = props;
-    // convert selected languages to countries
-    const adm = Object.keys(selected).filter(f => selected[f] === true)
-      .reduce((p, c) => ([...p, ...lang[c].countries]), []) // list of all countries
-      .reduce((p, c) => ({ ...p, [c]: true }), {}); // uniq countries
-    this.setState({ adm });
-  }
-
-
   componentWillUnmount() {
     window.removeEventListener('resize', () => this.resize(), false);
   }
@@ -53,7 +43,7 @@ class Map extends React.Component {
     let condition = false;
     if (e.object) {
       const { region, adm0_a3: key } = e.object.properties;
-      const sel = this.state.adm[key] === true;
+      const sel = this.props.adm[key] === true;
       // const sub = (region !== '');
       condition = sel && region;
     }
@@ -75,12 +65,11 @@ class Map extends React.Component {
   render() {
     const { map } = this.props;
     const { viewState } = this.state;
-
     return (
       <DeckGL
         views={this.view}
         viewState={viewState}
-        onViewStateChange={v => this.updateViewState(v.viewState)}
+        onViewStateChange={(v) => this.updateViewState(v.viewState)}
         layers={[
           new GeoJsonLayer({
             id: 'geojson-layer',
@@ -93,7 +82,7 @@ class Map extends React.Component {
             lineWidthScale: 5,
             getLineColor: (f) => {
               const { region, adm0_a3: key } = f.properties;
-              const sel = this.state.adm[key] === true;
+              const sel = this.props.adm[key] === true;
               const sub = (region !== '');
               if (sub === true && sel === false) {
                 // return [100, 100, 100, 0];
@@ -103,25 +92,25 @@ class Map extends React.Component {
             },
             getFillColor: (f) => {
               const { region, adm0_a3: key } = f.properties;
-              const sel = this.state.adm[key] === true;
+              const sel = this.props.adm[key] === true;
               const sub = (region !== '');
               if (sub === true && sel === false) {
                 return [200, 200, 200, 0]; // transparent
               }
               return sel ? [217, 66, 102, 255] : [240, 248, 250, 255];
             },
-            updateTriggers: {
-              pickable: this.state.adm,
-              getLineColor: this.state.adm,
-              getFillColor: this.state.adm,
-              getElevation: this.state.adm,
-            },
+            // updateTriggers: {
+            //   pickable: this.props.adm,
+            //   getLineColor: this.props.adm,
+            //   getFillColor: this.props.adm,
+            //   getElevation: this.props.adm,
+            // },
             transitions: {
               getFillColor: 1000,
               geometry: 3000,
             },
-            onHover: e => this.setTooltip(e),
-            onClick: e => this.setTooltip(e)
+            onHover: (e) => this.setTooltip(e),
+            onClick: (e) => this.setTooltip(e)
           }),
         ]}
       />

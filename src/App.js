@@ -1,10 +1,8 @@
 import React from 'react';
 
-import { IntlProvider, addLocaleData } from 'react-intl';
-import ru from 'react-intl/locale-data/ru';
-import en from 'react-intl/locale-data/en';
+import { IntlProvider } from 'react-intl';
 
-import createHistory from 'history/createBrowserHistory';
+import { createBrowserHistory as createHistory } from 'history';
 
 import ym, { YMInitializer } from 'react-yandex-metrika';
 import ReactGA from 'react-ga';
@@ -51,8 +49,6 @@ const localeLang = Object.keys(lang).reduce((p, c) => ({
 }), { en: {}, ru: {} });
 console.timeEnd('Calculating Locales');
 
-addLocaleData([...en, ...ru]);
-
 const linkTemplate = window.location.origin;
 
 const genResultLink = (res, ts = new Date().getTime()) => ({
@@ -82,6 +78,7 @@ class App extends React.Component {
   }
 
   state = {
+    adm: {},
     map: {},
     i18n: 'ru',
     shared: false,
@@ -154,7 +151,7 @@ class App extends React.Component {
   }
 
   get adm() {
-    return Object.keys(this.state.selected).filter(f => this.state.selected[f] === true)
+    return Object.keys(this.state.selected).filter((f) => this.state.selected[f] === true)
       .reduce((p, c) => ([...p, ...lang[c].countries]), []) // list of all countries
       .reduce((p, c) => ({ ...p, [c]: true }), {}); // uniq countries
   }
@@ -184,7 +181,7 @@ class App extends React.Component {
   }
 
   updateUI = (v) => {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       UI: {
         // close all windows
         ...Object.keys(prevState.UI)
@@ -207,13 +204,18 @@ class App extends React.Component {
         ? prev + lang[cur].counter
         : prev), 0);
 
-    const dirty = Object.keys(selected).some(f => selected[f] === true);
+    const dirty = Object.keys(selected).some((f) => selected[f] === true);
     const result = dirty ? this.results.loading : this.results.hello;
+    // convert selected languages to countries
+    const adm = Object.keys(selected).filter((f) => selected[f] === true)
+      .reduce((p, c) => ([...p, ...lang[c].countries]), []) // list of all countries
+      .reduce((p, c) => ({ ...p, [c]: true }), {}); // uniq countries
     this.setState({
       clean: !dirty,
       population,
       selected,
       result,
+      adm,
       shared: false,
     });
   }
@@ -221,7 +223,7 @@ class App extends React.Component {
   share = (check = false, tryCount = 0, force = false) => {
     const { selected, population } = this.state;
     const body = {
-      selected: Object.keys(selected).filter(f => selected[f]),
+      selected: Object.keys(selected).filter((f) => selected[f]),
       pop: population,
       i18n: this.state.i18n,
       force,
@@ -255,7 +257,7 @@ class App extends React.Component {
           if (j.success) {
             this.setState((prevState) => {
               const curSelected = Object.keys(prevState.selected)
-                .filter(f => prevState.selected[f])
+                .filter((f) => prevState.selected[f])
                 .sort().join('');
               const flatSelected = j.selected.sort().join('');
               if (curSelected === flatSelected) {
@@ -309,7 +311,7 @@ class App extends React.Component {
         action: 'Language Change',
         value: loc
       });
-      this.setState(prevState => ({
+      this.setState((prevState) => ({
         result: prevState.clean ? this.results.hello : this.results.loading,
         shared: false,
         i18n: loc,
@@ -322,9 +324,9 @@ class App extends React.Component {
     if (files.length > 0) {
       const file = files.shift();
       fetch(`./${file}`)
-        .then(response => response.json())
-        .then(map => this.setState(
-          state => saveCb(state, map, file),
+        .then((response) => response.json())
+        .then((map) => this.setState(
+          (state) => saveCb(state, map, file),
           () => this.loadData(files, saveCb)
         ));
     }
@@ -333,6 +335,7 @@ class App extends React.Component {
   render() {
     const {
       UI,
+      adm,
       map,
       intl,
       selected,
@@ -347,6 +350,7 @@ class App extends React.Component {
     return (
       <div>
         <Map
+          adm={adm}
           map={map}
           lang={lang}
           selected={selected}
@@ -382,8 +386,8 @@ class App extends React.Component {
                     position={tooltipPosition}
                     info={tooltipInfo}
                     cb={this.disableTooltip}
-                  />)
-              }
+                  />
+                )}
               <RareLanguages
                 selected={selected}
                 enableTooltip={this.enableTooltip}

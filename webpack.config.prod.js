@@ -21,9 +21,9 @@ module.exports = {
   optimization: {
     noEmitOnErrors: true,
     nodeEnv: 'production',
-    minimizer: [
-      new UglifyJsPlugin()
-    ],
+    // minimizer: [
+    //   new UglifyJsPlugin()
+    // ],
     splitChunks: {
       chunks: 'async',
       maxAsyncRequests: 3,

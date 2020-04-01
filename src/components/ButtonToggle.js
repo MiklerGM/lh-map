@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 
 const ButtonToggle = ({ name, checked, select }) => (
   <FormattedMessage id={`${name}.full`}>
-    {fullName => (
+    {(fullName) => (
       <label
         htmlFor={name}
         className={checked ? 'button-toggle__checked button-toggle ' : 'button-toggle '}

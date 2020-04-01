@@ -7,6 +7,14 @@ import ReactGA from 'react-ga';
 import SocialButton from '../components/SocialButton';
 import './SharePanel.less';
 
+const urls = {
+  twitter: 'https://twitter.com/intent/tweet?url=',
+  facebook: 'https://www.facebook.com/sharer/sharer.php?u=',
+  gplus: 'https://plus.google.com/share?url=',
+  vk: 'https://vk.com/share.php?url=',
+  ok: 'https://connect.ok.ru/offer?url=',
+};
+
 class SocialButtonWrapper extends React.Component {
   url = window.location.href;
 
@@ -14,11 +22,11 @@ class SocialButtonWrapper extends React.Component {
 
   link = (s, title, desc) => {
     switch (s) {
-      case 'twitter': return `https://twitter.com/intent/tweet?url=${encodeURI(this.props.result.url)}&text=${desc}&via=chronist`;
-      case 'facebook': return `https://www.facebook.com/sharer/sharer.php?u=${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
-      case 'gplus': return `https://plus.google.com/share?url=${encodeURI(this.props.result.url)}`;
-      case 'vk': return `https://vk.com/share.php?url=${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
-      case 'ok': return `https://connect.ok.ru/offer?url=${encodeURI(this.props.result.url)}&description=${desc}`;
+      case 'twitter': return `${urls.twitter}${encodeURI(this.props.result.url)}&text=${desc}&via=chronist`;
+      case 'facebook': return `${urls.facebook}${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
+      case 'gplus': return `${urls.gplus}${encodeURI(this.props.result.url)}`;
+      case 'vk': return `${urls.vk}${encodeURI(this.props.result.url)}&title=${title}&description=${desc}`;
+      case 'ok': return `${urls.ok}${encodeURI(this.props.result.url)}&description=${desc}`;
       default: return 'error';
     }
   }
@@ -39,35 +47,33 @@ class SocialButtonWrapper extends React.Component {
   render() {
     return (
       <FormattedMessage id='share.description'>
-        {description => (
+        {(description) => (
           <FormattedMessage id='share.title'>
-            {title => (
+            {(title) => (
               <div className='meme-panel__circles'>
-                {this.social.map(sns => (
+                {this.social.map((sns) => (
                   <SocialButton
                     key={sns}
                     name={sns}
-                    cb={s => this.handleClick(s, { description, title })}
-                  />))}
-              </div>)}
-          </FormattedMessage>)}
+                    cb={(s) => this.handleClick(s, { description, title })}
+                  />
+                ))}
+              </div>
+            )}
+          </FormattedMessage>
+        )}
       </FormattedMessage>
     );
   }
 }
 
-class ResultWrapper extends React.Component {
-  render() {
-    const { img } = this.props.result;
-    return (
-      <div className='meme-panel__result'>
-        <div className='meme-panel_picwrapper'>
-          <img src={img} alt='Richpreview sharing' width='100%' />
-        </div>
-      </div>
-    );
-  }
-}
+const ResultWrapper = ({ result }) => (
+  <div className='meme-panel__result'>
+    <div className='meme-panel_picwrapper'>
+      <img src={result.img} alt='Richpreview sharing' width='100%' />
+    </div>
+  </div>
+);
 
 class UrlCopy extends React.Component {
   state = {
@@ -96,9 +102,9 @@ class UrlCopy extends React.Component {
         >
           <div style={{ display: 'flex', flexDirection: 'row' }}>
             <span style={{ display: 'inline-block', width: '40px' }}>
-              {'URL:'}
+              URL:
             </span>
-            <input type='text' value={url} readOnly onFocus={e => e.target.select()} />
+            <input type='text' value={url} readOnly onFocus={(e) => e.target.select()} />
           </div>
         </CopyToClipboard>
         <span className={this.state.class}>
@@ -109,51 +115,46 @@ class UrlCopy extends React.Component {
   }
 }
 
-class SharePanel extends React.Component {
-  render() {
-    return (
-      <div className='meme-panel layer-5'>
-        <div className='meme-panel__header' style={{ backgroundColor: '#C6E5EE' }}>
-          <button
-            className='button-wide__red'
-            onClick={() => {
-              ym('reachGoal', 'joinLinkClicked');
-              ReactGA.event({
-                category: 'Share',
-                action: 'Join Link Clicked'
-              });
-              window.location.href = 'http://lh12.ru/';
-              return 0;
-            }}
-          >
-            <FormattedMessage id='share.button' />
-          </button>
-          <button
-            style={{ alignSelf: 'flex-end' }}
-            onClick={this.props.refresh}
-            className='close-window'
-            type='button'
-          >
-            <span className="lnr lnr-sync" />
-          </button>
-          <button
-            style={{ alignSelf: 'flex-end' }}
-            onClick={() => this.props.updateUI({ sharePanel: false })}
-            className='close-window'
-            type='button'
-          >
-            <span className='lnr lnr-cross' />
-          </button>
-        </div>
-        <SocialButtonWrapper result={this.props.result} />
-        <ResultWrapper result={this.props.result} shared={this.props.shared} />
-        <div className='meme-panel__footer'>
-          <UrlCopy result={this.props.result} />
-        </div>
-      </div>
-    );
-  }
-}
-
+const SharePanel = (props) => (
+  <div className='meme-panel layer-5'>
+    <div className='meme-panel__header' style={{ backgroundColor: '#C6E5EE' }}>
+      <button
+        className='button-wide__red'
+        onClick={() => {
+          ym('reachGoal', 'joinLinkClicked');
+          ReactGA.event({
+            category: 'Share',
+            action: 'Join Link Clicked'
+          });
+          window.location.href = 'http://lh12.ru/';
+          return 0;
+        }}
+      >
+        <FormattedMessage id='share.button' />
+      </button>
+      <button
+        style={{ alignSelf: 'flex-end' }}
+        onClick={props.refresh}
+        className='close-window'
+        type='button'
+      >
+        <span className="lnr lnr-sync" />
+      </button>
+      <button
+        style={{ alignSelf: 'flex-end' }}
+        onClick={() => props.updateUI({ sharePanel: false })}
+        className='close-window'
+        type='button'
+      >
+        <span className='lnr lnr-cross' />
+      </button>
+    </div>
+    <SocialButtonWrapper result={props.result} />
+    <ResultWrapper result={props.result} shared={props.shared} />
+    <div className='meme-panel__footer'>
+      <UrlCopy result={props.result} />
+    </div>
+  </div>
+);
 
 export default SharePanel;

@@ -26,21 +26,23 @@ class RareLanguages extends React.Component {
     const { selected } = this.props;
     return (
       <div className='rare-wrapper'>
-        {Object.keys(decorations).map(d => (
-          selected[d] &&
-          <FormattedMessage id={`${d}.full`} key={`${d}.key`}>
-            {lang => (
-              <img
-                key={d}
-                src={decorations[d]}
-                alt={d}
-                onMouseOver={e => this.handleHover(e, lang)}
-                onFocus={e => this.handleHover(e, lang)}
-                onMouseOut={() => this.props.disableTooltip()}
-                onBlur={() => this.props.disableTooltip()}
-              />
-            )}
-          </FormattedMessage>
+        {Object.keys(decorations).map((d) => (
+          selected[d]
+          && (
+            <FormattedMessage id={`${d}.full`} key={`${d}.key`}>
+              {(lang) => (
+                <img
+                  key={d}
+                  src={decorations[d]}
+                  alt={d}
+                  onMouseOver={(e) => this.handleHover(e, lang)}
+                  onFocus={(e) => this.handleHover(e, lang)}
+                  onMouseOut={() => this.props.disableTooltip()}
+                  onBlur={() => this.props.disableTooltip()}
+                />
+              )}
+            </FormattedMessage>
+          )
         ))}
       </div>
     );

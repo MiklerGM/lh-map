@@ -6,8 +6,16 @@
     "node": true
   },
   "rules": {
+    "max-len": ["error", 128],
+    "max-classes-per-file": ["warn", 2],
+    "react/state-in-constructor": [2, "never"],
+    "react/jsx-props-no-spreading": "warn",
     "react/destructuring-assignment": "off",
     "react/button-has-type": "off",
+    "jsx-a11y/no-static-element-interactions": "warn",
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "jsx-a11y/control-has-associated-label": "warn",
+    "jsx-a11y/interactive-supports-focus" : "warn",
     "new-cap": [2, { "capIsNewExceptions": ["List", "Map", "Set"] }],
     "react/no-multi-comp": 0,
     "import/no-named-as-default": 2,
