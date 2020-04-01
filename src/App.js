@@ -2,7 +2,7 @@ import React from 'react';
 
 import { IntlProvider } from 'react-intl';
 
-import createHistory from 'history/createBrowserHistory';
+import { createBrowserHistory as createHistory } from 'history';
 
 import ym, { YMInitializer } from 'react-yandex-metrika';
 import ReactGA from 'react-ga';
@@ -78,6 +78,7 @@ class App extends React.Component {
   }
 
   state = {
+    adm: {},
     map: {},
     i18n: 'ru',
     shared: false,
@@ -205,11 +206,16 @@ class App extends React.Component {
 
     const dirty = Object.keys(selected).some((f) => selected[f] === true);
     const result = dirty ? this.results.loading : this.results.hello;
+    // convert selected languages to countries
+    const adm = Object.keys(selected).filter((f) => selected[f] === true)
+      .reduce((p, c) => ([...p, ...lang[c].countries]), []) // list of all countries
+      .reduce((p, c) => ({ ...p, [c]: true }), {}); // uniq countries
     this.setState({
       clean: !dirty,
       population,
       selected,
       result,
+      adm,
       shared: false,
     });
   }
@@ -329,6 +335,7 @@ class App extends React.Component {
   render() {
     const {
       UI,
+      adm,
       map,
       intl,
       selected,
@@ -343,6 +350,7 @@ class App extends React.Component {
     return (
       <div>
         <Map
+          adm={adm}
           map={map}
           lang={lang}
           selected={selected}
